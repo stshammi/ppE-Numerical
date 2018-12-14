@@ -1,0 +1,8 @@
+# overall_post.csv contains  the ligo data.
+1.Evaluate the notebook export_random_data.nb. It will export random 1000 ligo data to posterior_1000.csv and effective spins of those data to effective_spins.csv
+
+2.Run monte-carlo-1pn.f95. It will export beta at 1pn to monte-carlo-1pn.csv
+
+3. Copy the columns of m_1 and m_2 from posterior_1000.nb, and effective spins from effective_spins.csv to graviton_bound_input.csv
+
+4. Evaluate graviton_mass.csv
