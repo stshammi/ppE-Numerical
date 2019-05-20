@@ -1,0 +1,160 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[prd,aps,twocolumn,nofootinbib,showpacs,superscriptaddress]{revtex4-1}
+\documentclass[prd,twocolumn,nofootinbib]{revtex4-1}
+%\documentclass[prd,aps,nofootinbib,showpacs]{revtex4-1}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{dcolumn}
+\usepackage[dvips]{graphicx}
+\usepackage{graphics}
+%\usepackage[latin1]{inputenc}
+\usepackage{latexsym}
+\usepackage{rotating}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{xspace} % Sensible space treatment at end of simple macros
+\usepackage[usenames]{color}
+\usepackage{mathrsfs}
+\usepackage{multirow}
+\usepackage{pifont}
+\usepackage{enumitem}
+\usepackage{color}
+%\usepackage{ulem}
+%\usepackage{url}
+\usepackage{appendix}
+\usepackage[utf8]{inputenc}
+%\usepackage[toc,page]{appendix}
+\usepackage{comment}
+%% Try to control orphans, widows, and extra whitespace
+\widowpenalty=1000
+\clubpenalty=1000
+\raggedbottom
+
+\definecolor {darkgreen}{rgb}{0.2,0.7,0.2}
+\definecolor{purple}{rgb}{0.5,0,0.5}
+
+\newcommand\be{\begin{equation}}
+\newcommand\ba{\begin{eqnarray}}
+\newcommand\ee{\end{equation}}
+\newcommand\ea{\end{eqnarray}}
+\newcommand\bw{\begin{widetext}}
+\newcommand\ew{\end{widetext}}
+\newcommand{\lb}{\left(}
+\newcommand{\rb}{\right)}
+
+\newcommand{\EDGB}{{\mbox{\tiny EdGB}}}
+\newcommand{\BD}{{\mbox{\tiny BD}}}
+\newcommand{\NC}{{\mbox{\tiny NC}}}
+\newcommand{\PPE}{{\mbox{\tiny ppE}}}
+\newcommand{\KG}{{\mbox{\tiny kh}}}
+\newcommand{\EA}{{\mbox{\tiny EA}}}
+\newcommand{\ST}{{\mbox{\tiny ST}}}
+\newcommand{\NS}{{\mbox{\tiny NS}}}
+\newcommand{\DCS}{{\mbox{\tiny dCS}}}
+\newcommand{\GR}{{\mbox{\tiny GR}}}
+\newcommand{\Gdot}{{\mbox{\tiny $\dot G$}}}
+\newcommand{\GW}{{\mbox{\tiny GW}}}
+\newcommand{\ky}[1]{\textcolor{blue}{\it{\textbf{ky: #1}}} }
+\newcommand{\st}[1]{\textcolor{cyan}{\it{\textbf{st: #1}}} }
+
+%\bibliographystyle{apsrev}
+\begin{document}
+\title{Not decided yet}
+
+\author{Sharaban Tahura}
+\affiliation{Department of Physics, University of Virginia, Charlottesville, Virginia 22904, USA.}
+
+\author{Kent Yagi}
+\affiliation{Department of Physics, University of Virginia, Charlottesville, Virginia 22904, USA.}
+
+\begin{abstract}
+To be written later
+\end{abstract}
+
+\date{\today}
+
+
+
+
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Introduction}
+
+\section{PPE Formalism}\label{section:ppE}
+
+\section{Data Analysis Formalism}
+%Fisher Analysis
+%%Assumptions
+We are going to use Fisher analysis~\cite{Cutler:1994ys} to estimate the determination errors of the non-GR parameters in different theories. Fisher analysis is valid for GW events with sufficiently large signal-to-noise (SNR) ratios. We make the assumptions that the detector noise is Gaussian and stationary. Let us write the detector output as
+\be
+s(t)=n(t)+h(t)\,,
+\ee
+where n(t) is the noise and h(t) is the GW signal. Let us also define the inner product of two quantities $A$ and $B$ in the following way:
+ \be
+ \left(A|B\right)=4Re\int_0^\infty df \frac{\tilde{A}^*(f)\tilde{B}^(f)}{S_n \left( f \right)}\,,
+ \ee
+where $\tilde{A}(f)$ is the Fourier component of $A$ and an asterisk ($*$) superscript means the complex conjugate. $S_n\left(f\right)$ is the noise spectral density. With above definitions, the probability distribution of the noise can be written as
+ \be
+P\left(n=n_0(t)\right) \propto \text{exp}\left[-\left(n_0|n_0\right)\right]\,,
+\ee
+and the SNR for a given signal $h(t)$ can be defined as 
+\be
+\rho\left[h\right]\equiv\sqrt{\left(h|h\right)}\,.
+\ee
+With the assumptions of Gaussian and stationary noise, the posterior probability distribution of a binary parameter $\theta^a$ takes the following form~:
+\be
+P\left(\theta^a|s\right) \propto p^{(0)}\left(\theta^a\right) \text{exp}\left[-\frac{1}{2} \Gamma_{ab} \Delta\theta^a\Delta \theta^b \right]\,,
+\ee
+where $\Delta \theta^a=\hat{\theta}^a-\theta^a$, with $\hat{\theta}^a$ being the maximum likelihood value of the parameter $\theta^a$. $p^{(0)}\left(\theta^a\right)$ gives the probability distribution of the prior information. $\Gamma_{ab}$ is called the Fisher information matrix which is defined as
+\be
+\Gamma_{ab}=\left(\partial_a h|\partial_b h \right)\,,
+\ee
+where $\partial_b=\frac{\partial}{\partial \theta^b}$. One can estimate the root-mean-square of $\Delta \theta^a$ by taking the square root of the diagonal elements of the inverse Fisher matrix $\Sigma^{ab}$ : 
+\be
+\Sigma^{ab}=\left(\tilde{\Gamma}^{-1}\right)^{ab}=\langle\Delta\theta^a\Delta \theta^b\rangle\,,
+\ee
+where $\tilde{\Gamma}_{ab}$ is defined by
+\be
+p^{(0)}\left(\theta^a\right) \text{exp}\left[-\frac{1}{2} \Gamma_{ab} \Delta\theta^a\Delta \theta^b \right]=\text{exp}\left[-\frac{1}{2} \tilde{\Gamma}_{ab} \Delta\theta^a\Delta \theta^b \right]\,.
+\ee
+
+%%binary parameters
+We choose the following parameters as our variables for the Fisher analysis~:
+\bw
+\ba
+\theta^a\equiv \lb \ln{\mathcal{M}_z}, \ln{\eta}, \ln{D_L}, \ln{t_0}, \chi, \phi_0, \alpha, \delta, \psi, \theta_{\text{inc}}, \beta_{\PPE}, \alpha_{\PPE} \rb\,.
+\ea
+\ew
+Here, $\mathcal{M}_z$ is the the redshifted chirp mass and $\chi$ is the effective spin parameter~\footnote{The effective spin parameter is defined as $\chi\equiv\lb m_1 \chi_1+m_2\chi_2\rb /\lb m_1+m_2\rb$, where $\chi_1$ and $\chi_2$ are the dimensionless spins of $m_1$ and $m_2$ respectively.}. $\alpha, \delta, \psi$, and  $\theta_{\text{inc}}$ are the right ascension, polarization, declination, and inclination angles respectively in the detector frame. All other parameters have the same meanings as in Sec.~\ref{section:ppE}. 
+%Monte-Carlo
+Instead of choosing a sky-averaged waveform, we perform a Monte Carlo simulation. Namely, we uniformly distribute the polarization angle between $0$ to $\pi$ and the coalescence phase between $0$ to $2\pi$. For $\mathcal{M}_z, \eta, D_L, \chi, \alpha, \delta$, and $\theta_{\text{inc}}$ we use the full posterior sample released by LIGO~\cite{ligo:sample}. 
+%%prior on spin
+We impose the prior information such that the effective spin is less than 1.
+%%Detectors
+We use the detector sensitivity of Advanced LIGO (aLIGO) 01 run~\cite{LIGOScientific:2018mvr} and we consider the two detectors at Hanford and Livingstone. For simplicity, we assume that the Livingstone noise spectrum is identical to that of the Hanford~\cite{Yunes:2009yz}. For Fisher integration, the minimum frequency is taken to be 20 Hz while the maximum frequency is same as the cutoff frequency above which the signal power is negligible~\cite{Ajith:2009bn}.
+
+
+%The rule of compound probability
+Now we are going to discuss how we achieve the probability distribution of a non-GR parameter from the output of Fisher analysis with Monte Carlo. We set the  fiducial value of any non-GR parameter to be zero for our Fisher analysis. We perform the following integration numerically to obtain the compound probability density function~\footnote{If the distribution of a random variable $y$ depends on a parameter $x$, and if $x$ is not fixed rather a random variable, the marginal distribution of $y$ is called mixture distribution or compound probability distribution and is given by $P\left(y\right)=\int P\left(y|x\right) P\left(x\right)dx$. The underlying distribution $P\left(x\right)$ is called mixing distribution or latent distribution.~\cite{2016arXiv160204060R}} of any parameter $\xi$~:
+\be
+\label{eq3:1}
+P\lb\xi\rb=\int P\lb \xi|\sigma_{\xi}\rb P\lb \sigma_{\xi}\rb d\sigma_{\xi}\,,
+\ee
+where $P\lb\xi\rb$ is the marginal (unconditional) probability density function of $\xi$. $P\lb \xi|\sigma_{\xi}\rb$ is the conditional probability density function of $\xi$ given $\sigma_\xi$, where $\sigma_\xi$ is the 90\% CL estimation error of $\xi$ obtained from the Fisher analysis. $P\lb\sigma_\xi\rb$ is the probability distribution of $\sigma_\xi$ which is achieved by performing Fisher analyses for the entire posterior sample.
+%We perform the integration in Eq.~\ref{eq3:1} numerically to obtain the unconditional probability density function $P\lb\xi\rb$.
+\section{Example Theories}
+\subsection{Massive Gravity}
+\subsection{Scalar-Tensor Theories}
+\subsection{Einstein-Dilaton-Gauss-Bonnet Theory}
+\subsection{Varying- $G$ Theory}
+\section{Conlusion}
+\section{Appendix}
+%phenomB vs PhenomD for propagation mechanism
+%------------------------------------------------------- 
+\bibliography{ppE}
+\end{document}
