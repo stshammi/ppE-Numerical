@@ -1,6 +1,6 @@
 # Grace project file
 #
-@version 50125
+@version 50123
 @page size 792, 612
 @page scroll 5%
 @page inout 5%
@@ -54,7 +54,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Sun May 26 14:58:01 2019"
+@timestamp def "Sun May 26 15:20:12 2019"
 @r0 off
 @link r0 to g0
 @r0 type above
@@ -127,7 +127,7 @@
 @    xaxis  label "\xa\f{}\S2\N\s\-EdGB\N [km\S4\N]"
 @    xaxis  label layout para
 @    xaxis  label place auto
-@    xaxis  label char size 1.000000
+@    xaxis  label char size 1.300000
 @    xaxis  label font 0
 @    xaxis  label color 1
 @    xaxis  label place normal
@@ -148,8 +148,8 @@
 @    xaxis  tick minor grid off
 @    xaxis  tick minor size 0.500000
 @    xaxis  ticklabel on
-@    xaxis  ticklabel format general
-@    xaxis  ticklabel prec 5
+@    xaxis  ticklabel format power
+@    xaxis  ticklabel prec 0
 @    xaxis  ticklabel formula ""
 @    xaxis  ticklabel append ""
 @    xaxis  ticklabel prepend ""
@@ -163,7 +163,7 @@
 @    xaxis  ticklabel start 10000.000000
 @    xaxis  ticklabel stop type auto
 @    xaxis  ticklabel stop 0.000000
-@    xaxis  ticklabel char size 1.000000
+@    xaxis  ticklabel char size 1.250000
 @    xaxis  ticklabel font 0
 @    xaxis  ticklabel color 1
 @    xaxis  tick place both
@@ -175,15 +175,15 @@
 @    yaxis  bar color 1
 @    yaxis  bar linestyle 1
 @    yaxis  bar linewidth 1.0
-@    yaxis  label "Cumulative Distribution Function"
+@    yaxis  label "Cumulative Probability Distribution "
 @    yaxis  label layout para
 @    yaxis  label place auto
-@    yaxis  label char size 1.000000
+@    yaxis  label char size 1.300000
 @    yaxis  label font 0
 @    yaxis  label color 1
 @    yaxis  label place normal
 @    yaxis  tick on
-@    yaxis  tick major 0.25
+@    yaxis  tick major 0.2
 @    yaxis  tick minor ticks 1
 @    yaxis  tick default 9
 @    yaxis  tick place rounded true
@@ -214,22 +214,11 @@
 @    yaxis  ticklabel start 0.000000
 @    yaxis  ticklabel stop type auto
 @    yaxis  ticklabel stop 0.000000
-@    yaxis  ticklabel char size 0.930000
+@    yaxis  ticklabel char size 1.250000
 @    yaxis  ticklabel font 0
 @    yaxis  ticklabel color 1
 @    yaxis  tick place both
-@    yaxis  tick spec type ticks
-@    yaxis  tick spec 10
-@    yaxis  tick major 0, 0.9
-@    yaxis  tick minor 1, 0.125
-@    yaxis  tick major 2, 0.25
-@    yaxis  tick minor 3, 0.375
-@    yaxis  tick major 4, 0.5
-@    yaxis  tick minor 5, 0.625
-@    yaxis  tick major 6, 0.75
-@    yaxis  tick minor 7, 0.875
-@    yaxis  tick major 8, 1
-@    yaxis  tick minor 9, 10000
+@    yaxis  tick spec type none
 @    altxaxis  off
 @    altyaxis  off
 @    legend on
@@ -242,7 +231,7 @@
 @    legend box fill color 0
 @    legend box fill pattern 1
 @    legend font 0
-@    legend char size 1.000000
+@    legend char size 1.300000
 @    legend color 1
 @    legend length 4
 @    legend vgap 1
@@ -270,7 +259,7 @@
 @    s0 symbol skip 0
 @    s0 line type 1
 @    s0 line linestyle 1
-@    s0 line linewidth 1.0
+@    s0 line linewidth 2.0
 @    s0 line color 4
 @    s0 line pattern 1
 @    s0 baseline type 0
@@ -303,7 +292,7 @@
 @    s0 errorbar riser clip off
 @    s0 errorbar riser clip length 0.100000
 @    s0 comment "cdfphase.dat"
-@    s0 legend  "Phase Correction Only"
+@    s0 legend  "Phase Only"
 @    s1 hidden false
 @    s1 type xy
 @    s1 symbol 0
@@ -319,7 +308,7 @@
 @    s1 symbol skip 0
 @    s1 line type 1
 @    s1 line linestyle 1
-@    s1 line linewidth 1.0
+@    s1 line linewidth 2.0
 @    s1 line color 2
 @    s1 line pattern 1
 @    s1 baseline type 0
@@ -352,7 +341,7 @@
 @    s1 errorbar riser clip off
 @    s1 errorbar riser clip length 0.100000
 @    s1 comment "cdfamp.dat"
-@    s1 legend  "Amplitude Correction Only"
+@    s1 legend  "Amplitude Only"
 @    s2 hidden false
 @    s2 type xy
 @    s2 symbol 0
@@ -368,7 +357,7 @@
 @    s2 symbol skip 0
 @    s2 line type 1
 @    s2 line linestyle 1
-@    s2 line linewidth 1.0
+@    s2 line linewidth 2.0
 @    s2 line color 3
 @    s2 line pattern 1
 @    s2 baseline type 0
@@ -401,7 +390,7 @@
 @    s2 errorbar riser clip off
 @    s2 errorbar riser clip length 0.100000
 @    s2 comment "cdfcomb.dat"
-@    s2 legend  "Phase & Amplitude Corrections Combined"
+@    s2 legend  "Phase & Amplitude Combined"
 @    s3 hidden false
 @    s3 type xy
 @    s3 symbol 0
@@ -417,7 +406,7 @@
 @    s3 symbol skip 0
 @    s3 line type 1
 @    s3 line linestyle 3
-@    s3 line linewidth 1.0
+@    s3 line linewidth 2.0
 @    s3 line color 3
 @    s3 line pattern 1
 @    s3 baseline type 0
@@ -466,7 +455,7 @@
 @    s4 symbol skip 0
 @    s4 line type 1
 @    s4 line linestyle 3
-@    s4 line linewidth 1.0
+@    s4 line linewidth 2.0
 @    s4 line color 4
 @    s4 line pattern 1
 @    s4 baseline type 0
@@ -515,7 +504,7 @@
 @    s7 symbol skip 0
 @    s7 line type 1
 @    s7 line linestyle 3
-@    s7 line linewidth 1.0
+@    s7 line linewidth 2.0
 @    s7 line color 2
 @    s7 line pattern 1
 @    s7 baseline type 0
@@ -553,9 +542,9 @@
 @    s9 type xy
 @    s9 symbol 0
 @    s9 symbol size 1.000000
-@    s9 symbol color 10
+@    s9 symbol color 1
 @    s9 symbol pattern 1
-@    s9 symbol fill color 10
+@    s9 symbol fill color 1
 @    s9 symbol fill pattern 0
 @    s9 symbol linewidth 1.0
 @    s9 symbol linestyle 1
@@ -564,8 +553,8 @@
 @    s9 symbol skip 0
 @    s9 line type 1
 @    s9 line linestyle 3
-@    s9 line linewidth 1.0
-@    s9 line color 10
+@    s9 line linewidth 2.0
+@    s9 line color 1
 @    s9 line pattern 1
 @    s9 baseline type 0
 @    s9 baseline off
@@ -587,7 +576,7 @@
 @    s9 avalue offset 0.000000 , 0.000000
 @    s9 errorbar on
 @    s9 errorbar place both
-@    s9 errorbar color 10
+@    s9 errorbar color 1
 @    s9 errorbar pattern 1
 @    s9 errorbar size 1.000000
 @    s9 errorbar linewidth 1.0
