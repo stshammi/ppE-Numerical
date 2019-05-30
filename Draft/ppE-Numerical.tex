@@ -21,7 +21,7 @@
 \usepackage{enumitem}
 \usepackage{color}
 \usepackage{ulem}
-%\usepackage{url}
+\usepackage{url}
 \usepackage{appendix}
 \usepackage[utf8]{inputenc}
 %\usepackage[toc,page]{appendix}
@@ -96,11 +96,11 @@ To be written later
 \section{Data Analysis Formalism}
 %Fisher Analysis
 %%Assumptions
-We \sout{are going to use} \kent{adopt a} Fisher analysis~\cite{Cutler:1994ys} to estimate the \sout{determination} \kent{statistical} errors of the non-GR parameters in \sout{different} \kent{various} theories. \sout{Fisher} \kent{Such an} analysis is valid for GW events with sufficiently large signal-to-noise (SNR) ratios. We make the assumptions that the detector noise is Gaussian and stationary. Let us write the detector output as
+We adopt a Fisher analysis~\cite{Cutler:1994ys} to estimate the statistical errors of the non-GR parameters in various theories. Such an analysis is valid for GW events with sufficiently large signal-to-noise (SNR) ratios. We make the assumptions that the detector noise is Gaussian and stationary. Let us write the detector output as
 \be
 s(t)=n(t)+h(t)\,,
 \ee
-where \sout{$n(t)$ is the noise and $h(t)$ is the GW signal} \kent{$n(t)$ and $h(t)$ are the noise and the GW signal respectively}. Let us also define the inner product of two quantities $A(t)$ and $B(t)$ \kent{as} \sout{in the following way:}
+where $n(t)$ and $h(t)$ are the noise and the GW signal respectively. Let us also define the inner product of two quantities $A(t)$ and $B(t)$ as
  \be
  \left(A|B\right)=4\Re\int_0^\infty df \frac{\tilde{A}^*(f)\tilde{B}(f)}{S_n \left( f \right)}\,.
  \ee
@@ -108,11 +108,11 @@ Here $\tilde{A}(f)$ is the Fourier component of $A$, an asterisk ($*$) superscri
  \be
 P\left(n=n_0(t)\right) \propto \text{exp}\left[-\left(n_0|n_0\right)\right]\,,
 \ee
-and the SNR for a given signal $h(t)$ can be defined as \ky{I removed $[h]$ from $\rho$.}
+and the SNR for a given signal $h(t)$ can be defined as
 \be
 \rho \equiv\sqrt{\left(h|h\right)}\,.
 \ee
-\sout{With} \kent{Under} the assumptions of a Gaussian and stationary noise, the posterior probability distribution of binary parameters $\theta^a$ takes the following form: \ky{No need to add a space before a colon.}
+Under the assumptions of a Gaussian and stationary noise, the posterior probability distribution of binary parameters $\theta^a$ takes the following form:
 \be
 P\left(\theta^a|s\right) \propto p^{(0)}\left(\theta^a\right) \text{exp}\left[-\frac{1}{2} \Gamma_{ab} \Delta\theta^a\Delta \theta^b \right]\,,
 \ee
@@ -130,40 +130,81 @@ p^{(0)}\left(\theta^a\right) \text{exp}\left[-\frac{1}{2} \Gamma_{ab} \Delta\the
 \ee
 
 %%binary parameters
-We choose the following parameters as our variables for the Fisher analysis: \ky{Did you use $\ln t_0$ instead of $t_0$? (Just checking.)}
+We choose the following parameters as our variables for the Fisher analysis:
 \bw
 \ba
 \theta^a\equiv \lb \ln{\mathcal{M}_z}, \ln{\eta}, \ln{D_L}, \ln{t_0}, \chi, \phi_0, \alpha, \delta, \psi, \theta_{\text{inc}}, \beta_{\PPE}, \alpha_{\PPE} \rb\,.
 \ea
 \ew
-Here, $\mathcal{M}_z$ is the the redshifted chirp mass and $\chi$ is the effective spin parameter~\footnote{The effective spin parameter is defined as $\chi\equiv\lb m_1 \chi_1+m_2\chi_2\rb /\lb m_1+m_2\rb$, where \kent{$\chi_A$ with $A=(1,2)$} \sout{$\chi_1$ and $\chi_2$} is the dimensionless spin of \sout{$m_1$ and $m_2$ respectively} \kent{the $A$th body}.}. $\alpha, \delta, \psi$, and  $\theta_{\text{inc}}$ are the right ascension, \sout{polarization}, declination, \kent{polarization} and inclination angles respectively in the detector frame. All other parameters have the same meanings as in Sec.~\ref{section:ppE}. 
+Here, $\mathcal{M}_z$ is the the redshifted chirp mass and $\chi$ is the effective spin parameter~\footnote{The effective spin parameter is defined as $\chi\equiv\lb m_1 \chi_1+m_2\chi_2\rb /\lb m_1+m_2\rb$, where $\chi_A$ with $A=(1,2)$ is the dimensionless spin of the $A$th body.}. $\alpha, \delta, \psi$, and  $\theta_{\text{inc}}$ are the right ascension, declination, polarization and inclination angles respectively in the detector frame. All other parameters have the same meanings as in Sec.~\ref{section:ppE}. 
 %Monte-Carlo
-\sout{Instead of choosing a sky-averaged waveform,} We perform a Monte Carlo simulation \kent{by using each set of the posterior samples released by LIGO~\cite{ligo:sample} for $(\mathcal{M}_z, \eta, D_L, \chi, \alpha, \delta$, $\theta_{\text{inc}})$, while we randomly sample the polarization angle $\psi$ and the coalescence phase $\phi_0$ in $[0,\pi]$ and $[0,2\pi]$ respectively.}
-\sout{Namely, we uniformly distribute the polarization angle between $0$ to $\pi$ and the coalescence phase between $0$ to $2\pi$. For $\mathcal{M}_z, \eta, D_L, \chi, \alpha, \delta$, and $\theta_{\text{inc}}$ we use the full posterior sample released by LIGO~\cite{ligo:sample}. }
+We perform a Monte Carlo simulation by using each set of the posterior samples released by LIGO~\cite{ligo:sample} for $(\mathcal{M}_z, \eta, D_L, \chi, \alpha, \delta$, $\theta_{\text{inc}})$, while we randomly sample the polarization angle $\psi$ and the coalescence phase $\phi_0$ in $[0,\pi]$ and $[0,2\pi]$ respectively.
 %%prior on spin
 We impose the prior information such that the effective spin is less than 1.
 
 %%Detectors
-\ky{I started a new paragraph here. Please keep in mind that each paragraph should start with a topic sentence that summarizes that paragraph. In the previous paragraph, your topic sentence is ``We choose the following parameters as our variables for the Fisher analysis.'' So the explanation of the detector noise should be explained in a separate paragraph.}
 We use the detector sensitivity of Advanced LIGO (aLIGO) O1 run~\cite{LIGOScientific:2018mvr} and we consider the two detectors at Hanford and Livingstone. For simplicity, we assume that the Livingstone noise spectrum is identical to that of the Hanford~\cite{Yunes:2009yz}. For Fisher integration, the minimum frequency is taken to be 20 Hz while the maximum frequency is same as the cutoff frequency above which the signal power is negligible~\cite{Ajith:2009bn}.
 
 
 %The rule of compound probability
-Now we are going to discuss how we achieve the probability distribution of a non-GR parameter from the output of \kent{a} Fisher analysis with a Monte Carlo \kent{simulation}. We set the  fiducial value of any non-GR parameter to be zero for our \sout{Fisher} \ky{avoid repetition} analysis. We perform the following integration numerically to obtain the compound probability density function~\footnote{If the distribution of a random variable $y$ depends on a parameter $x$, and if $x$ is not fixed rather a random variable, the marginal distribution of $y$ is called mixture distribution or compound probability distribution and is given by $P\left(y\right)=\int P\left(y|x\right) P\left(x\right)dx$. The underlying distribution $P\left(x\right)$ is called mixing distribution or latent distribution.~\cite{2016arXiv160204060R}} of any parameter $\xi$~:
+Now we are going to discuss how we achieve the probability distribution of a non-GR parameter from the output of a Fisher analysis with a Monte Carlo simulation. We set the  fiducial value of any non-GR parameter to be zero for our analysis. We perform the following integration numerically to obtain the compound probability density function~\footnote{If the distribution of a random variable $y$ depends on a parameter $x$, and if $x$ is not fixed rather a random variable, the marginal distribution of $y$ is called mixture distribution or compound probability distribution and is given by $P\left(y\right)=\int P\left(y|x\right) P\left(x\right)dx$. The underlying distribution $P\left(x\right)$ is called mixing distribution or latent distribution.~\cite{2016arXiv160204060R}} of any parameter $\xi$~:
 \be
 \label{eq3:1}
 P\lb\xi\rb=\int P\lb \xi|\sigma_{\xi}\rb P\lb \sigma_{\xi}\rb d\sigma_{\xi}\,,
 \ee
-where $P\lb\xi\rb$ is the marginal (unconditional) probability density function of $\xi$. \kent{$P\lb \xi|\sigma_{\xi}\rb \propto \exp[-(\xi-\bar \xi)^2/2\sigma_{\xi}^2]$} is the conditional probability density function of $\xi$ \sout{given $\sigma_\xi$} \kent{which we assume to be a Gaussian distribution with a mean $\bar \xi$ and a standard deviation $\sigma_\xi$.} \sout{where $\sigma_\xi$ is the 90\% CL estimation error of $\xi$ obtained from the Fisher analysis.} $P\lb\sigma_\xi\rb$ is the probability distribution of $\sigma_\xi$ \sout{which is achieved by performing Fisher analyses} \kent{computed from the Fisher analysis} for the entire posterior sample.
+where $P\lb\xi\rb$ is the marginal (unconditional) probability density function of $\xi$. $P\lb \xi|\sigma_{\xi}\rb \propto \exp[-(\xi-\bar \xi)^2/2\sigma_{\xi}^2]$ is the conditional probability density function of $\xi$ which we assume to be a Gaussian distribution with a mean $\bar \xi$ and a standard deviation $\sigma_\xi$. $P\lb\sigma_\xi\rb$ is the probability distribution of $\sigma_\xi$ computed from the Fisher analysis for the entire posterior distribution.
 %We perform the integration in Eq.~\ref{eq3:1} numerically to obtain the unconditional probability density function $P\lb\xi\rb$.
 \section{Example Theories}
+\subsection{Einstein-Dilaton-Gauss-Bonnet Gravity}
+%Introduction
+%%Importance
+EdGB gravity gives one of the simplest high-energy modification to GR~\cite{Moura:2006pz,Pani:2009wy}. Such a theory is motivated from low-energy effective string theories and also arises as a special case of Horndeski gravity~\cite{Zhang:2017unx,Berti:2015itd}. 
+%%Definition
+One obtains the EdGB action by adding a quadratic-curvature correction to the GR action, while the correction is achieved by non-minimally coupling a scalar field (dilaton) to the Gauss-Bonnet term with a coupling constant $\bar{\alpha}_\EDGB$~\cite{Kanti:1995vq}\footnote{We use barred quantities for coupling constants in order to distinguish them from the PPE parameters.}.
+%%Existing bounds
+
+%ppE parameters
+In EdGB gravity BHs can acquire scalar monopole charges which can  generate scalar dipole radiation~\cite{Yagi:2011xp,Sotiriou:2014pfa,Berti:2018cxi,Prabhu:2018aun}. Such radiations lead to an earlier coalescence of BH binaries compared to that of GR and modifies the GW phase with the PPE parameters given by~\cite{Yunes:2016jcc,Yagi:2011xp}
+\begin{equation}
+ \beta_\EDGB=-\frac{5}{7168}\zeta_\EDGB\frac{(m_1^2\tilde s_2^\EDGB-m_2^2\tilde s_1^\EDGB)^2}{m^4\eta^{18/5}}
+ \end{equation}
+ with $b=-7$ and 
+  \begin{equation}
+ \alpha_\EDGB=-\frac{5}{192}\zeta_\EDGB\frac{(m_1^2 \tilde s_2^\EDGB-m_2^2 \tilde s_1^\EDGB)^2}{m^4\eta^{18/5}}
+ \end{equation}
+ with $a=-2$.  Here, $\zeta_\EDGB\equiv 16 \pi \bar{\alpha}_\EDGB^2/m^4$ is the dimensionless EdGB coupling parameter and $\tilde s_{A}^\EDGB$ are the spin-dependent factors of the BH scalar charges given by $\tilde s_{A}^\EDGB\equiv 2(\sqrt{1-{\chi_A}^2}-1+{\chi_A}^2)/{\chi_A}^2~$~\cite{Berti:2018cxi,Prabhu:2018aun}\footnote{For ordinary stars like NSs $\tilde s_A^\EDGB$ are zero~\cite{Yagi:2011xp,Yagi:2015oca}.}.
+\st{I did not really use the ppE parameters anywhere later. But still I think we should show the parameters}
+
+\begin{figure}[htb]
+\includegraphics[width=8.5cm]{histogram-gw150914.eps}
+\caption{Histogram distribution of $\zeta_{\EDGB}$ from the posterior distribution of  GW150914. The horizontal axis shows the Logarithm of $\Delta\zeta_{\EDGB}$,  where $\Delta\zeta_{\EDGB}$ is the 90\% CL constraint obtained from a Fisher analysis. The vertical axis shows the number of samples that produce a particular value of $\Delta\zeta_{\EDGB}$. The samples that lie on the left side of the vertical black dashed line satisfy small coupling approximation with 90\% CL.}
+\label{fig:histogram-edgb}
+\end{figure}
+
+
+%Small coupling approximation
+We derive constraints on EdGB gravity from GW150914 and GW151226. First we want to estimate how well those events satisfy the small coupling approximation $\zeta_{\EDGB}<1$. In order to do that we extract the 90\% CL upper bound $\Delta\zeta_{\EDGB}$ from each sample of the posterior distribution of a particular event. Then we make a histogram plot with all the samples (see Fig.~\ref{fig:histogram-edgb}) and calculate the fraction of the samples satisfying $\Delta\zeta_{\EDGB}<1$.  For GW150914,  72\% of the samples satisfy small coupling approximation if $\Delta\zeta_{\EDGB}$ is derived from phase correction, while for amplitude correction it is only 42\%. On the other hand, 70\% of the posterior distribution satisfies such approximation if phase and amplitude corrections are combined and correlated \st{I will explain how we combine the phase and amplitude correction in the data anlysis section once I have finished writing the ppE section}. A similar analysis with GW151226 gives 98\% and 87\% for phase and amplitude respectively while combining phase with amplitude produces the same result as that of the phase-only case. Since the percentage of samples satisfying $\zeta_{\EDGB}<1$ is much higher for GW151226 than GW150914, the former event places more reliable constraints on EdGB gravity compared to the later one.
+
+
+\begin{figure}[htb]
+\includegraphics[width=8.5cm]{edgb-gw150914.eps}
+\caption{Cumulative probability distributions of $\bar{\alpha}^2_{\EDGB}$ obtained from GW150914 for three different cases: phase-only, amplitude-only, and phase and amplitude combined. The horizontal axis gives the upper bound on $\bar{\alpha}^2_{\EDGB}$ while the vertical axis gives the corresponding cumulative probability. A vertical dashed line shows the 90\% CL upper bound of a solid line of same color.}
+\label{fig:pdf-edgb}
+\end{figure}
+
+
+%Results
+Following the formula in Eq.~\eqref{eq3:1} we compute the probability distribution of $\bar{\alpha}^2_{\EDGB}$ for GW150914 (see Fig.~\ref{fig:pdf-edgb}) and extract the 90\% CL constraints on  $\sqrt{\bar{\alpha}_{\EDGB}}$ from phase and amplitude as 50.5 km and 76.3 km respectively. Notice that the bounds from phase and amplitude have same order magnitude. Combining amplitude and phase corrections leads to an upper bound of 51.5 km, which is larger than the  phase-only constraint by 2\%.
+%The 90\% CL upper bound on Including amplitude correction worsens the constraint obtained from phase by 2\%. 
+Similar analyses with GW151226 yield 4.3 km and 10.5 km respectively from phase and amplitude\footnote{The upper bound on $\sqrt{\bar{\alpha}_{\EDGB}}$ derived from the phase correction with GW151226 agrees with those of ref.~\cite{Nair:2019iur} and~\cite{Yamada:2019zrb}}, while difference between phase-only and combined analysis is only 0.01\%. As we can see, although GW150914 leads to worse constraints on EdGB gravity compared to GW151226, the effect of amplitude correction is more manifest for the former event. 
+
+
 \subsection{Massive Gravity}
-\subsection{Scalar-Tensor Theories}
-\subsection{Einstein-Dilaton-Gauss-Bonnet Theory}
 \subsection{Varying- $G$ Theory}
-\section{Conlusion}
+\subsection{Scalar-Tensor Theories}
+\section{Conclusion}
 \section{Appendix}
-%phenomB vs PhenomD for propagation mechanism
+%phenomB vs PhenomD for generation mechanism
 %------------------------------------------------------- 
 \bibliography{ppE}
 \end{document}
