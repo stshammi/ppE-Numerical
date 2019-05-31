@@ -46,7 +46,7 @@
 \newcommand{\EDGB}{{\mbox{\tiny EdGB}}}
 \newcommand{\BD}{{\mbox{\tiny BD}}}
 \newcommand{\NC}{{\mbox{\tiny NC}}}
-\newcommand{\PPE}{{\mbox{\tiny ppE}}}
+\newcommand{\PPE}{{\mbox{\tiny PPE}}}
 \newcommand{\KG}{{\mbox{\tiny kh}}}
 \newcommand{\EA}{{\mbox{\tiny EA}}}
 \newcommand{\ST}{{\mbox{\tiny ST}}}
@@ -91,7 +91,114 @@ To be written later
 
 \section{Introduction}
 
-\section{PPE Formalism}\label{section:ppE}
+\section{PPE Waveform}\label{section:ppE}
+%Introduction
+We begin by reviewing the PPE formalism briefly. PPE gravitational waveform for a compact binary inspiral in the frequency domain is given by~\cite{Yunes:2009ke}
+\begin{equation}\label{eq:2a}
+\tilde{h}(f)=\tilde{h}_{\GR}(1+\alpha_{\PPE}\, u^a)e^{i\delta\Psi}\,,
+\end{equation}
+where $\tilde{h}_{\GR}$ is the gravitational waveform in GR. $\delta\Psi$ corresponds to the non-GR correction to the GW phase, while $\alpha_{\PPE}\, u^a$ to the GW amplitude with $u\equiv(\pi \mathcal{M} f)^{1/3}$. $\mathcal{M}\equiv(m_1m_2)^{3/5}/(m_1+m_2)^{1/5}$ is the chirp mass with component masses $m_1$ and $m_2$ and $f$ is the frequency of the GW. One can write the phase correction in a similar manner as that of the amplitude as
+\begin{equation}\label{eq:2b}
+\delta\Psi=\beta_{\PPE} u^b\,.
+\end{equation}
+Together $\left(\alpha_{\PPE},a\right)$ and $\left(\beta_{\PPE},b\right)$ are called the PPE parameters.
+
+
+%Parametrization
+PPE modifications in Eq.~\eqref{eq:2a} can enter through the non-GR corrections to the binding energy and the GW luminosity~\cite{Yunes:2009ke,Chatziioannou:2012rf}, or alternatively to the frequency evolution and the Kepler's law~\cite{Tahura:2018zuq}. We are going to follow the latter approach and write the modified Kepler's law as
+\begin{equation}
+ \label{eq:2c}
+ r=r_{\GR}(1+\gamma_r u^{c_r})\,,
+ \end{equation}
+and the frequency evolution as
+\begin{equation}\label{eq:2d}
+\dot{f}=\dot{f}_{\GR}\left(1+\gamma_{\dot{f}}u^{c_{\dot{f}}}\right)\,.
+\end{equation}
+Here, $\lb\gamma_r,c_r\rb$ and $\lb\gamma_{\dot{f}},c_{\dot{f}}\rb$ parametrize the non-GR corrections to the binary separation $r$ and the frequency evolution $\dot{f}$ respectively. $r_{\GR}$ is given by the Newtonian Kepler's law as $r_{\GR}=\left(m/\Omega^2\right)^{1/3}$, where $m$ is the total mass of the binary and $\Omega=\pi f$ is the orbital angular frequency. $\dot{f}_{\GR}$ is the frequency evolution in GR and to the leading PN order is given by $\dot{f}_{\GR}=\frac{96}{5}\pi^{8/3}\mathcal{M}^{5/3}f^{11/3}$~\cite{cutlerflanagan,Blanchet:1995ez}.
+
+%Amplitude and phase correction
+Utilizing the stationary phase approximation~\cite{PhysRevD.62.084036,Yunes:2009yz} and the quadrupole formula for the metric perturbation~\cite{Blanchet:2002av}, one can easily derive the amplitude and phase of the dominant quadrupolar mode in Fourier space from  Eq.~\eqref{eq:2c} and Eq.~\eqref{eq:2d} as
+\begin{equation}\label{eq:amp}
+\tilde{\mathcal{A}}(f)=\tilde{\mathcal{A}}_{\GR} \left(1+2\gamma_ru^{c_r}-\frac{1}{2}\gamma_{\dot{f}}u^{c_{\dot{f}}}\right)\,,
+\end{equation}
+and
+\be
+\label{eq:Psi}
+\Psi = \Psi_\GR  -\frac{15 \text{$\gamma_{\dot{f}} $}}{16 (\text{$c_{\dot{f}}$}-8) (\text{$c_{\dot{f}}$}-5)} u^{c_{\dot{f}}-5}\,
+\ee
+respectively. Eq.~\eqref{eq:Psi} is already in the PPE format, while  Eq.~\eqref{eq:amp} can be reduced to such form by knowing at which PN orders the dissipative and the conservative corrections enter and hence by choosing the dominant one\footnote{A detailed derivation can be found in Ref.~\cite{Tahura:2018zuq}}.\st{somewhere we have to give the definitions of dissipative and conservative corrections}
+
+
+
+
+%Relation among ppE parameters
+We now show the relations among the PPE phase and the amplitude parameters. 
+If the dissipative correction dominates over the conservative one, we find
+\begin{equation}\label{eq:2w2}
+\alpha_{\PPE} = \frac{8}{15} (a-8)(a-5) \, \beta_{\PPE}\,,
+\end{equation}
+while for conservative-dominant case one obtains
+\begin{equation}\label{eq:2w3}
+\alpha_{\PPE} =\frac{8}{15} \frac{(8-a)(5-a)(a^2-4a-6)}{a^2-2a-6} \beta_{\PPE}\,.
+\end{equation}
+When the aforementioned corrections enter at the same PN order, no direct relation between $\alpha_{\PPE}$ and $\beta_{\PPE}$ exists. On the other hand, the exponent corrections $a$ and $b$ are related by the following equation which is valid for all three cases:
+\begin{equation}
+b=a-5\,.
+\end{equation}
+
+
+%Varying-G
+We would like to mention that Eqs.~\eqref{eq:amp}-\eqref{eq:2w3} do not apply to the theories containing time-varying gravitational constants. Variations in the gravitational constants cause the masses  of the binary components to vary as well~\cite{PhysRevLett.65.953}, and one needs to take that fact into account while deriving the PPE parameters~\cite{Tahura:2018zuq}.
+%The derivation of PPE parameters for such theories can be found in Ref.~\cite{Tahura:2018zuq}
+
+
+
+
+
+
+%Amplitude Correction
+%Let us first derive the PPE correction to the GW amplitude. One can employ the stationary phase approximation~\cite{PhysRevD.62.084036,Yunes:2009yz} and write the amplitude of the dominant quadrupolar radiation in Fourier domain as
+%\begin{equation}\label{eq:2e}
+%\tilde{\mathcal{A}}(f)=\frac{A(\bar{t})}{2\sqrt{\dot{f}}}\,,
+%\end{equation}
+%where $A(\bar{t})$ is the GW amplitude in time domain with $\bar{t}$ representing the time corresponding to the stationary phase. $\mathcal{A}(\bar t)$ can be obtained from the quadrupole formula for the metric %perturbation~\cite{Blanchet:2002av},
+% \begin{equation}\label{eq:2f}
+%h^{ij}(t)\propto \frac{d^2 }{d t^2}Q^{ij}\,.
+ %\end{equation}
+%Here, $h^{ij}$ and $Q^{ij}$ are the $(i,j)$ components of the metric perturbation and the quadruple moment tensor respectively. For a quasi-circular binary one obtains $A(\bar{t})\propto \mu r^2f^2$ from Eq.~\eqref{eq:2f}, which after substituting to Eq.~\eqref{eq:2e} gives
+%\begin{equation}\label{eq:2g}
+%\tilde{\mathcal{A}}(f) \propto\frac{r^2}{\sqrt{\dot{f}}}  \,.
+%\end{equation}
+%Using Eq.~\eqref{eq:2c} and Eq.~\eqref{eq:2d} to Eq.~\eqref{eq:2g} one obtains, to the leading order in non-GR corrections,
+%\begin{equation}\label{eq:2h}
+%\tilde{\mathcal{A}}(f)=\tilde{\mathcal{A}}_{\GR} \left(1+2\gamma_ru^{c_r}-\frac{1}{2}\gamma_{\dot{f}}u^{c_{\dot{f}}}\right)\,.
+%\end{equation}
+%Here $\tilde{\mathcal{A}}_{\GR} $ is the amplitude of the Fourier waveform in GR. Comparing Eq.~\eqref{eq:2g} with Eq.~\eqref{eq:2a} one can read off the PPE amplitude parameters for three different cases in the following way:
+%\begin{itemize}
+
+%\item
+%\emph{Dissipative-dominated Case:}
+%When dissipative corrections dominate, non-GR corrections to the binary separation is negligible and one can set $\gamma_{r} = 0$. Then the PPE parameters are given by
+%\begin{equation}\label{eq:2t}
+%\alpha_{\PPE}=-\frac{\gamma_{\dot{f}}}{2},\quad a=c_{\dot{f}}\,.
+%\end{equation}
+
+%\item
+%\emph{Conservative-dominated Case}
+%When conservative corrections dominate, $c_r = c_{\dot f}$ and there is an explicit relation between $\gamma_{r}$ and $\gamma_{\dot f}$. Though finding such a relation is quite involved and one needs to go back to the original PPE formalism as explained in App.~\ref{appendix}. Non-GR corrections to the GW amplitude in such a formalism is shown in Eq.~\eqref{eq:o}. Setting the dissipative correction to zero, one finds 
+%\begin{align}\label{eq:2u}
+%\alpha_{\PPE}=-\frac{\gamma_r}{a}(a^2-4a-6)\,, \quad a=c_r = c_{\dot f}\,.
+%\end{align} 
+%\item
+%\emph{Comparable Dissipative and Conservative Case}
+%When dissipative and conservative corrections enter at the same PN order, $c_r=c_{\dot{f}}$ and one finds
+%\begin{equation}
+%\label{eq:amp-ppE-comparable}
+%\alpha_{\PPE}=2 \text{$\gamma_r $}-\frac{\text{$\gamma_{\dot{f}} $}}{2}\,, \quad a=c_{r}=c_{\dot{f}}\,.
+%\end{equation}
+%\end{itemize}
+
+
 
 \section{Data Analysis Formalism}
 %Fisher Analysis
@@ -154,17 +261,20 @@ P\lb\xi\rb=\int P\lb \xi|\sigma_{\xi}\rb P\lb \sigma_{\xi}\rb d\sigma_{\xi}\,,
 \ee
 where $P\lb\xi\rb$ is the marginal (unconditional) probability density function of $\xi$. $P\lb \xi|\sigma_{\xi}\rb \propto \exp[-(\xi-\bar \xi)^2/2\sigma_{\xi}^2]$ is the conditional probability density function of $\xi$ which we assume to be a Gaussian distribution with a mean $\bar \xi$ and a standard deviation $\sigma_\xi$. $P\lb\sigma_\xi\rb$ is the probability distribution of $\sigma_\xi$ computed from the Fisher analysis for the entire posterior distribution.
 %We perform the integration in Eq.~\ref{eq3:1} numerically to obtain the unconditional probability density function $P\lb\xi\rb$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Example Theories}
+
 \subsection{Einstein-Dilaton-Gauss-Bonnet Gravity}
 %Introduction
 %%Importance
 EdGB gravity endows one of the simplest high-energy modification to GR~\cite{Moura:2006pz,Pani:2009wy}. Such a theory is motivated from low-energy effective string theories and also arises as a special case of Horndeski gravity~\cite{Zhang:2017unx,Berti:2015itd}. 
 %%Definition
-\sout{One obtains} The EdGB action \kent{is given by introducing} \sout{by adding} a quadratic-curvature correction \kent{(Gauss-Bonnet invariant)} to the GR action \sout{while the correction is achieved by} \kent{that is} non-minimally \kent{coupled to} a scalar field (dilaton) \sout{to the Gauss-Bonnet term} with a coupling constant $\bar{\alpha}_\EDGB$~\cite{Kanti:1995vq}\footnote{We use barred quantities for coupling constants in order to distinguish them from the PPE parameters.}.
-%%Existing bounds
+The EdGB action is given by introducing a quadratic-curvature correction (Gauss-Bonnet invariant) to the GR action that is non-minimally coupled to a scalar field (dilaton) with a coupling constant $\bar{\alpha}_\EDGB$~\cite{Kanti:1995vq}\footnote{We use barred quantities for coupling constants in order to distinguish them from the PPE parameters.}.
 
 %ppE parameters
-In EdGB gravity, BHs acquire scalar monopole charges which may generate scalar dipole radiation \kent{if they form binaries}~\cite{Yagi:2011xp,Sotiriou:2014pfa,Berti:2018cxi,Prabhu:2018aun}. Such radiation leads to an earlier coalescence of BH binaries compared to that of GR and modifies the \sout{GW phase} \kent{gravitational waveform} with the PPE parameters given by~\cite{Yunes:2016jcc,Yagi:2011xp}
+In EdGB gravity, BHs acquire scalar monopole charges which may generate scalar dipole radiation if they form binaries~\cite{Yagi:2011xp,Sotiriou:2014pfa,Berti:2018cxi,Prabhu:2018aun}. Such radiation leads to an earlier coalescence of BH binaries compared to that of GR and modifies the gravitational waveform with the PPE parameters given by~\cite{Yunes:2016jcc,Yagi:2011xp}
 \begin{equation}
  \beta_\EDGB=-\frac{5}{7168}\zeta_\EDGB\frac{(m_1^2\tilde s_2^\EDGB-m_2^2\tilde s_1^\EDGB)^2}{m^4\eta^{18/5}}\,,
  \end{equation}
@@ -175,32 +285,30 @@ In EdGB gravity, BHs acquire scalar monopole charges which may generate scalar d
  with $a=-2$.  Here, $\zeta_\EDGB\equiv 16 \pi \bar{\alpha}_\EDGB^2/m^4$ is the dimensionless EdGB coupling parameter and $\tilde s_{A}^\EDGB$ are the spin-dependent factors of the BH scalar charges given by $\tilde s_{A}^\EDGB\equiv 2(\sqrt{1-{\chi_A}^2}-1+{\chi_A}^2)/{\chi_A}^2~$~\cite{Berti:2018cxi,Prabhu:2018aun}\footnote{For ordinary stars like NSs $\tilde s_A^\EDGB$ are zero~\cite{Yagi:2011xp,Yagi:2015oca}.}.
 
 \begin{figure}[htb]
-\includegraphics[width=8.5cm]{histogram-gw150914.eps}
-\caption{Histogram distributions of \kent{the 90\% CL bounds on} $\zeta_{\EDGB}$ from \kent{a Fisher analysis with the phase correction only (blue solid), the amplitude correction only (red dashed) and combining the two corrections (green dotted-dashed). Fiducial values are taken from} the posterior \sout{distribution} \kent{samples} of GW150914. \sout{The horizontal axis shows the Logarithm of $\Delta\zeta_{\EDGB}$,  where $\Delta\zeta_{\EDGB}$ is the 90\% CL constraint obtained from a Fisher analysis. The vertical axis shows the number of samples that produce a particular value of $\Delta\zeta_{\EDGB}$.} The samples that lie on the left side of the vertical black dashed line satisfy \kent{the} small coupling approximation with 90\% CL.}
+\includegraphics[width=8.5cm]{histogram-gw150914.pdf}
+\caption{Histogram distributions of the 90\% CL bounds on $\zeta_{\EDGB}$ from a Fisher analysis with the phase correction only (blue solid), the amplitude correction only (red dashed) and combining the two corrections (green dotted-dashed). Fiducial values are taken from the posterior samples of GW150914. The samples that lie on the left side of the vertical black dashed line satisfy the small coupling approximation with 90\% CL.}
 \label{fig:histogram-edgb}
 \end{figure}
 
 
 %Small coupling approximation
-We now derive constraints on EdGB gravity from GW150914 and GW151226. First we \sout{want to} estimate how well those events satisfy the small coupling approximation $\zeta_{\EDGB}<1$. \sout{In order to do that} \kent{To do so,} we extract the 90\% CL upper bound $\Delta\zeta_{\EDGB}$ from each sample of the posterior distribution of a particular event. \sout{Then} We \kent{then create} \sout{make a} histograms \sout{plot} with all the samples (see Fig.~\ref{fig:histogram-edgb}) and calculate the fraction \sout{of the samples} satisfying $\Delta\zeta_{\EDGB}<1$.  For GW150914, 72\% \kent{(40\%)} of the samples satisfy \kent{the} small coupling approximation if $\Delta\zeta_{\EDGB}$ is derived from \kent{the} phase \kent{(amplitude)} correction, while \sout{for amplitude correction it is only 42\%. On the other hand,} 70\% of the posterior distribution satisfies such approximation if \kent{the} phase and amplitude corrections are combined. A similar analysis with GW151226 gives 98\% and 87\% for the phase and amplitude corrections respectively while combining \sout{phase with amplitude produces} \kent{the two yields almost} the same result as that of the phase-only case. Since the fraction of samples satisfying $\zeta_{\EDGB}<1$ is much higher for GW151226 than GW150914 \kent{due to a larger number of GW cycles and slower relative velocity of binary constituents}, the former event places more reliable constraints on EdGB gravity compared to the latter one.
+We now derive constraints on EdGB gravity from GW150914 and GW151226. First we estimate how well those events satisfy the small coupling approximation $\zeta_{\EDGB}<1$. To do so, we extract the 90\% CL upper bound $\Delta\zeta_{\EDGB}$ from each sample of the posterior distribution of a particular event. We then create histograms with all the samples (see Fig.~\ref{fig:histogram-edgb}) and calculate the fraction satisfying $\Delta\zeta_{\EDGB}<1$.  For GW150914, 72\% (42\%) of the samples satisfy the small coupling approximation if $\Delta\zeta_{\EDGB}$ is derived from the phase (amplitude) correction, while 70\% of the posterior distribution satisfies such approximation if the phase and amplitude corrections are combined. A similar analysis with GW151226 gives 98\% and 87\% for the phase and amplitude corrections respectively while combining the two yields almost the same result as that of the phase-only case. Since the fraction of samples satisfying $\zeta_{\EDGB}<1$ is much higher for GW151226 than GW150914 due to a larger number of GW cycles and slower relative velocity of the binary constituents, the former event places more reliable constraints on EdGB gravity compared to the latter one.
 
 
 \begin{figure}[htb]
-\includegraphics[width=8.5cm]{edgb-gw150914.eps}
-\caption{\ky{Please add a bar on top of $\alpha$ on the horizontal axis label.}
-Cumulative probability distributions of $\bar{\alpha}^2_{\EDGB}$ obtained from GW150914 for \sout{three different cases: phase-only, amplitude-only, and phase and amplitude combined. } \kent{the same three cases as in Fig.~\ref{fig:histogram-edgb}.} \sout{The horizontal axis gives the upper bound on $\bar{\alpha}^2_{\EDGB}$ while the vertical axis gives the corresponding cumulative probability.} \ky{I'm removing this sentence since it's just a repetition of the first line.} \kent{Each} vertical dashed line shows the \kent{corresponding} 90\% CL upper bound of a solid line of the same color.}
+\includegraphics[width=8.5cm]{edgb-gw150914.pdf}
+\caption{Cumulative probability distributions of $\bar{\alpha}^2_{\EDGB}$ obtained from GW150914 for the same three cases as in Fig.~\ref{fig:histogram-edgb}. Each vertical dashed line shows the corresponding 90\% CL upper bound of a solid line of the same color.}
 \label{fig:pdf-edgb}
 \end{figure}
 
 
 %Results
-\kent{Figure~\ref{fig:pdf-edgb} presents cumulative probability distributions of $\bar{\alpha}^2_{\EDGB}$\footnote{\kent{We show the distribution of $\bar{\alpha}^2_{\EDGB}$ instead of $\sqrt{\bar{\alpha}_{\EDGB}}$ as it is the former that directly enters in the waveform.}} for GW150914 for three different cases with vertical lines showing the 90\% CL of the corresponding distribution. We found}
-\sout{Following the formula in Eq.~\eqref{eq3:1} we compute the probability distribution of $\bar{\alpha}^2_{\EDGB}$ for GW150914 (see Fig.~\ref{fig:pdf-edgb}) and extract} the 90\% CL constraints on  $\sqrt{\bar{\alpha}_{\EDGB}}$ from \kent{each of} the phase and amplitude corrections as 50.5 km and 76.3 km respectively. Notice that these bounds \sout{from phase and amplitude} have the same order of magnitude. On the other hand, combining the amplitude and phase corrections leads to an upper bound of 51.5 km, which is \sout{larger} \kent{weaker} than the  phase-only constraint by 2\%.
-Similar analyses with GW151226 yield 4.3 km and 10.5 km respectively from \kent{the} phase and amplitude \kent{corrections},
+Figure~\ref{fig:pdf-edgb} presents cumulative probability distributions of $\bar{\alpha}^2_{\EDGB}$\footnote{We show the distribution of $\bar{\alpha}^2_{\EDGB}$ instead of $\sqrt{\bar{\alpha}_{\EDGB}}$ as it is the former that directly enters in the waveform.} for GW150914 for three different cases with vertical lines showing the 90\% CL of the corresponding distribution. We found the 90\% CL constraints on  $\sqrt{\bar{\alpha}_{\EDGB}}$ from each of the phase and amplitude corrections as 50.5 km and 76.3 km respectively. Notice that these bounds have the same order of magnitude. On the other hand, combining the amplitude and phase corrections leads to an upper bound of 51.5 km, which is weaker than the  phase-only constraint by 2\%.
+Similar analyses with GW151226 yield 4.3 km and 10.5 km respectively from th phase and amplitude corrections,
 %\footnote{The upper bound on $\sqrt{\bar{\alpha}_{\EDGB}}$ derived from the phase correction with GW151226 agrees with those of ref.~\cite{Nair:2019iur} and~\cite{Yamada:2019zrb}}, 
 while \kent{combining the two only changes the result from including only the phase correction by 0.01\%.} \sout{the difference between the phase-only case and the combined analysis  is only 0.01\%. As we can see,} 
-\kent{These bounds are consistent with those in a recent paper~\cite{Nair:2019iur} while Ref.~\cite{Yamada:2019zrb} found even stronger bounds by combining multiple GW events. These GW bounds are comparable to the one obtained from low-mass X-ray binaries~\cite{Yagi:2012gp}.}
-Although GW150914 leads to \sout{worse} \kent{weaker} \ky{Try to avoid using ``good'' and ``bad'' but use more specific adjectives instead.} constraints on EdGB gravity compared to GW151226, the effect of amplitude correction is more manifest for the former event. \kent{This is because GW150914 has a smaller number of GW cycles and thus the amplitude contribution becomes relatively higher than GW151226.}
+These bounds are consistent with those in a recent paper~\cite{Nair:2019iur} while Ref.~\cite{Yamada:2019zrb} found even stronger bounds by combining multiple GW events. These GW bounds are comparable to the one obtained from low-mass X-ray binaries~\cite{Yagi:2012gp}.
+Although GW150914 leads to weaker constraints on EdGB gravity compared to GW151226, the effect of amplitude correction is more manifest for the former event. \kent{This is because GW150914 has a smaller number of GW cycles and thus the amplitude contribution becomes relatively higher than GW151226.}
 
 \ky{I added this paragraph.}
 Why does the inclusion of the amplitude correction deteriorates the bound slightly from the case where one only includes the phase correction? This may sound counter-intuitive as one might think adding more EdGB corrections should improve the bound. Indeed, if one neglects correlations among $\bar \alpha^2_\EDGB$ and other binary parameters, addition of the amplitude correction improves the bound. However, such amplitude correction introduces a strong correlation between $\bar \alpha^2_\EDGB$ and the luminosity distance. As a result, the bound derived by including both the amplitude and phase corrections becomes weaker than that from the latter only.
