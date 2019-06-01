@@ -61,7 +61,7 @@
 
 %\bibliographystyle{apsrev}
 \begin{document}
-\title{Not decided yet}
+\title{Testing Gravity with Gravitational Waves from Binary Black Hole Mergers: \\ Contributions from Amplitude Corrections}
 
 \author{Sharaban Tahura}
 \affiliation{Department of Physics, University of Virginia, Charlottesville, Virginia 22904, USA.}
@@ -73,6 +73,9 @@
 \affiliation{Department of Physics, University of Virginia, Charlottesville, Virginia 22904, USA.}
 
 \begin{abstract}
+
+\ky{I've added the tentative title. We can change it later if we'd like.}
+
 \ky{I added Zack in the author list. Somewhere in the paper, we need to show the comparison of the PPE bounds with PhenomB (that you computed) and PhenomD (that Zack computed) to justify the use of PhenomB for negative PN corrections.}
 
 To be written later
@@ -91,13 +94,19 @@ To be written later
 
 \section{Introduction}
 
-\section{PPE Waveform}\label{section:ppE}
+
+\section{Methodology}
+
+\kent{In this section, we explain how we perform our analysis. We first explain the PPE formalism and non-GR waveform templates. We then describe the Fisher analysis and how we construct probability distributions of non-GR parameters.}
+
+%------------------------------
+\subsection{PPE Waveform}\label{section:ppE}
 %Introduction
 We begin by reviewing the PPE formalism briefly. PPE gravitational waveform for a compact binary inspiral in the frequency domain is given by~\cite{Yunes:2009ke}
 \begin{equation}\label{eq:2a}
 \tilde{h}(f)=\tilde{h}_{\GR}(1+\alpha_{\PPE}\, u^a)e^{i\delta\Psi}\,,
 \end{equation}
-where $\tilde{h}_{\GR}$ is the gravitational waveform in GR. $\delta\Psi$ corresponds to the non-GR correction to the GW phase, while $\alpha_{\PPE}\, u^a$ to the GW amplitude with $u\equiv(\pi \mathcal{M} f)^{1/3}$. $\mathcal{M}\equiv(m_1m_2)^{3/5}/(m_1+m_2)^{1/5}$ is the chirp mass with component masses $m_1$ and $m_2$ and $f$ is the frequency of the GW. One can write the phase correction in a similar manner as that of the amplitude as
+where $\tilde{h}_{\GR}$ is the gravitational waveform in GR. \sout{$\delta\Psi$ corresponds to the non-GR correction to the GW phase while} $\alpha_{\PPE}\, u^a$ \kent{corresponds to the non-GR correction} to the GW amplitude with $u\equiv(\pi \mathcal{M} f)^{1/3}$.  $\mathcal{M}\equiv(m_1m_2)^{3/5}/(m_1+m_2)^{1/5}$ is the chirp mass with component masses $m_1$ and $m_2$ and $f$ is the frequency of the GW. \kent{The constant $\alpha_{\PPE}$ controls the overall magnitude of the correction while the index $a$ specifies at which PN order the correction enters.} One can write the \kent{non-GR} phase correction \kent{$\delta\Psi$} in a similar manner as that of the amplitude as
 \begin{equation}\label{eq:2b}
 \delta\Psi=\beta_{\PPE} u^b\,.
 \end{equation}
@@ -105,7 +114,7 @@ Together $\left(\alpha_{\PPE},a\right)$ and $\left(\beta_{\PPE},b\right)$ are ca
 
 
 %Parametrization
-PPE modifications in Eq.~\eqref{eq:2a} can enter through the non-GR corrections to the binding energy and the GW luminosity~\cite{Yunes:2009ke,Chatziioannou:2012rf}, or alternatively to the frequency evolution and the Kepler's law~\cite{Tahura:2018zuq}. We are going to follow the latter approach and write the modified Kepler's law as
+PPE modifications in Eq.~\eqref{eq:2a} can enter through the non-GR corrections to the binding energy and the GW luminosity~\cite{Yunes:2009ke,Chatziioannou:2012rf}, or alternatively to the frequency evolution and the Kepler's law~\cite{Tahura:2018zuq}. We \sout{are going to} \kent{will} follow the latter approach and write the modified Kepler's law as
 \begin{equation}
  \label{eq:2c}
  r=r_{\GR}(1+\gamma_r u^{c_r})\,,
@@ -114,41 +123,47 @@ and the frequency evolution as
 \begin{equation}\label{eq:2d}
 \dot{f}=\dot{f}_{\GR}\left(1+\gamma_{\dot{f}}u^{c_{\dot{f}}}\right)\,.
 \end{equation}
-Here, $\lb\gamma_r,c_r\rb$ and $\lb\gamma_{\dot{f}},c_{\dot{f}}\rb$ parametrize the non-GR corrections to the binary separation $r$ and the frequency evolution $\dot{f}$ respectively. $r_{\GR}$ is given by the Newtonian Kepler's law as $r_{\GR}=\left(m/\Omega^2\right)^{1/3}$, where $m$ is the total mass of the binary and $\Omega=\pi f$ is the orbital angular frequency. $\dot{f}_{\GR}$ is the frequency evolution in GR and to the leading PN order is given by $\dot{f}_{\GR}=\frac{96}{5}\pi^{8/3}\mathcal{M}^{5/3}f^{11/3}$~\cite{cutlerflanagan,Blanchet:1995ez}.
+Here, $\lb\gamma_r,c_r\rb$ and $\lb\gamma_{\dot{f}},c_{\dot{f}}\rb$ parametrize the non-GR corrections to the binary separation $r$ and the frequency evolution $\dot{f}$ respectively. 
+\kent{To leading PN order, the GR contribution is given by~\cite{cutlerflanagan,Blanchet:1995ez}
+\begin{equation}
+r_{\GR}=\left(\frac{m}{\Omega^2}\right)^{1/3}\,, \quad
+\dot{f}_{\GR}=\frac{96}{5}\pi^{8/3}\mathcal{M}^{5/3}f^{11/3}\,,
+\end{equation}
+}
+\sout{$r_{\GR}$ is given by the Newtonian Kepler's law as $r_{\GR}=\left(m/\Omega^2\right)^{1/3}$,} where $m$ represents the total mass of the binary and $\Omega=\pi f$ is the orbital angular frequency. \sout{$\dot{f}_{\GR}$ is the frequency evolution in GR and to the leading PN order, it is given by $\dot{f}_{\GR}=\frac{96}{5}\pi^{8/3}\mathcal{M}^{5/3}f^{11/3}$.}
 
 %Amplitude and phase correction
-Utilizing the stationary phase approximation~\cite{PhysRevD.62.084036,Yunes:2009yz} and the quadrupole formula for the metric perturbation~\cite{Blanchet:2002av}, one can easily derive the amplitude and phase of the dominant quadrupolar mode in Fourier space from  Eq.~\eqref{eq:2c} and Eq.~\eqref{eq:2d} as
+Utilizing the stationary phase approximation~\cite{PhysRevD.62.084036,Yunes:2009yz} and the quadrupole formula for the metric perturbation~\cite{Blanchet:2002av}, one can easily derive the amplitude and phase of the dominant quadrupolar mode in Fourier space from  \kent{Eqs.}~\eqref{eq:2c} and \sout{Eq.}~\eqref{eq:2d} as
 \begin{equation}\label{eq:amp}
 \tilde{\mathcal{A}}(f)=\tilde{\mathcal{A}}_{\GR} \left(1+2\gamma_ru^{c_r}-\frac{1}{2}\gamma_{\dot{f}}u^{c_{\dot{f}}}\right)\,,
 \end{equation}
 and
 \be
 \label{eq:Psi}
-\Psi = \Psi_\GR  -\frac{15 \text{$\gamma_{\dot{f}} $}}{16 (\text{$c_{\dot{f}}$}-8) (\text{$c_{\dot{f}}$}-5)} u^{c_{\dot{f}}-5}\,
+\Psi = \Psi_\GR  -\frac{15 \text{$\gamma_{\dot{f}} $}}{16 (\text{$c_{\dot{f}}$}-8) (\text{$c_{\dot{f}}$}-5)} u^{c_{\dot{f}}-5}\,,
 \ee
-respectively. Eq.~\eqref{eq:Psi} is already in the PPE format, while  Eq.~\eqref{eq:amp} can be reduced to such form by knowing at which PN orders the dissipative and the conservative corrections enter and hence by choosing the dominant one\footnote{A detailed derivation can be found in Ref.~\cite{Tahura:2018zuq}}.\st{somewhere we have to give the definitions of dissipative and conservative corrections}
-
-
+respectively. Eq.~\eqref{eq:Psi} is already in the PPE format, while  Eq.~\eqref{eq:amp} can be reduced to such a form by \sout{knowing at which PN orders the dissipative and the conservative corrections enter and hence by choosing the dominant one} \kent{keeping only the dominant correction}\footnote{A detailed derivation can be found in Ref.~\cite{Tahura:2018zuq}}.\st{somewhere we have to give the definitions of dissipative and conservative corrections}
 
 
 %Relation among ppE parameters
-We now show the relations among the PPE phase and the amplitude parameters. 
+\kent{In fact, }
+\sout{We now show the relations among} the PPE phase and the amplitude parameters \kent{may be related as follows}. 
 If the dissipative correction dominates over the conservative one, we find
 \begin{equation}\label{eq:2w2}
 \alpha_{\PPE} = \frac{8}{15} (a-8)(a-5) \, \beta_{\PPE}\,,
 \end{equation}
-while for conservative-dominant case one obtains
+while for the conservative-dominanted case, we obtain
 \begin{equation}\label{eq:2w3}
 \alpha_{\PPE} =\frac{8}{15} \frac{(8-a)(5-a)(a^2-4a-6)}{a^2-2a-6} \beta_{\PPE}\,.
 \end{equation}
-When the aforementioned corrections enter at the same PN order, no direct relation between $\alpha_{\PPE}$ and $\beta_{\PPE}$ exists. On the other hand, the exponent corrections $a$ and $b$ are related by the following equation which is valid for all three cases:
+On the other hand, when the aforementioned corrections enter at the same PN order, no direct relation between $\alpha_{\PPE}$ and $\beta_{\PPE}$ exists. The exponents \sout{corrections} $a$ and $b$ \kent{in the correction terms} are related by the following equation which is valid for all three cases:
 \begin{equation}
 b=a-5\,.
 \end{equation}
 
 
 %Varying-G
-We would like to mention that Eqs.~\eqref{eq:amp}-\eqref{eq:2w3} do not apply to the theories containing time-varying gravitational constants. Variations in the gravitational constants cause the masses  of the binary components to vary as well~\cite{PhysRevLett.65.953}, and one needs to take that fact into account while deriving the PPE parameters~\cite{Tahura:2018zuq}.
+\sout{We would like to mention that Eqs.~\eqref{eq:amp}-\eqref{eq:2w3} do not apply to the} \kent{The above formalism needs to be slightly modified for} theories containing time-varying gravitational constants. Variations in the gravitational constants cause the masses  of the binary components to vary as well~\cite{PhysRevLett.65.953}, and one needs to take this into account when deriving the PPE parameters~\cite{Tahura:2018zuq}.
 %The derivation of PPE parameters for such theories can be found in Ref.~\cite{Tahura:2018zuq}
 
 
@@ -199,8 +214,9 @@ We would like to mention that Eqs.~\eqref{eq:amp}-\eqref{eq:2w3} do not apply to
 %\end{itemize}
 
 
+%-------------------
+\subsection{Data Analysis Formalism}
 
-\section{Data Analysis Formalism}
 %Fisher Analysis
 %%Assumptions
 We adopt a Fisher analysis~\cite{Cutler:1994ys} to estimate the statistical errors of the non-GR parameters in various theories. Such an analysis is valid for GW events with sufficiently large signal-to-noise (SNR) ratios. We make the assumptions that the detector noise is Gaussian and stationary. Let us write the detector output as
@@ -264,7 +280,12 @@ where $P\lb\xi\rb$ is the marginal (unconditional) probability density function 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Example Theories}
+\section{Results in Example Theories}
+
+\ky{I'd bring massive gravity first since this one is special. It doesn't involve amplitude corrections and the modification comes from propagation mechanisms while all the remaining theories involve generation mechanism modifications.}
+
+\ky{I'd bring ST after EdGB since both corrections enter at $-1$PN, plus PPE for varying-G theories are a bit special.}
+
 
 \subsection{Einstein-Dilaton-Gauss-Bonnet Gravity}
 %Introduction
@@ -315,7 +336,7 @@ Why does the inclusion of the amplitude correction deteriorates the bound slight
 
 
 \subsection{Massive Gravity}
-\subsection{Varying- $G$ Theory}
+\subsection{Varying- $G$ Theories}
 \subsection{Scalar-Tensor Theories}
 \section{Conclusion}
 \section{Appendix}
