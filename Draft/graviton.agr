@@ -1,6 +1,6 @@
 # Grace project file
 #
-@version 50125
+@version 50123
 @page size 792, 612
 @page scroll 5%
 @page inout 5%
@@ -54,7 +54,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Sun Jun  2 00:14:41 2019"
+@timestamp def "Sun Jun  2 14:57:12 2019"
 @r0 off
 @link r0 to g0
 @r0 type above
@@ -148,8 +148,8 @@
 @    xaxis  tick minor grid off
 @    xaxis  tick minor size 0.500000
 @    xaxis  ticklabel on
-@    xaxis  ticklabel format general
-@    xaxis  ticklabel prec 5
+@    xaxis  ticklabel format power
+@    xaxis  ticklabel prec 0
 @    xaxis  ticklabel formula ""
 @    xaxis  ticklabel append ""
 @    xaxis  ticklabel prepend ""
@@ -389,7 +389,7 @@
 @    s3 errorbar riser linestyle 1
 @    s3 errorbar riser clip off
 @    s3 errorbar riser clip length 0.100000
-@    s3 comment ""
+@    s3 comment "graviton.agr"
 @    s3 legend  ""
 @    s5 hidden false
 @    s5 type xy
@@ -438,7 +438,7 @@
 @    s5 errorbar riser linestyle 1
 @    s5 errorbar riser clip off
 @    s5 errorbar riser clip length 0.100000
-@    s5 comment ""
+@    s5 comment "graviton.agr"
 @    s5 legend  ""
 @target G0.S0
 @type xy
