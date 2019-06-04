@@ -288,32 +288,34 @@ We now apply our analysis to some example theories. To save computational time f
 
 \subsection{Massive Gravity}
 %Intro
-The idea of introducing mass to gravitons is rather old~\cite{Fierz:1939ix} and many attempts have been made to construct a feasible theory that allows to do so~\cite{deRham:2014zqa}.  Such a theory may arise in higher-dimensional setups~\cite{Hinterbichler:2011tt} and has the potential to solve the cosmic acceleration problem~\cite{deRham:2014zqa}. Although gravitons with non-zero masses may have extra polarizations as well~\cite{dePaula:2004bc}, here we study the non-GR effects due to a massive dispersion relation only.
+The idea of introducing the mass to gravitons is rather old~\cite{Fierz:1939ix} and many attempts have been made to construct a feasible theory that allows to do so~\cite{deRham:2014zqa}.  Such a theory may arise in higher-dimensional setups~\cite{Hinterbichler:2011tt} and has the potential to solve the cosmic acceleration problem~\cite{deRham:2014zqa}. Although gravitons with non-vanishing masses may have additional polarizations as well~\cite{dePaula:2004bc}, \sout{here we study} \kent{we here restrict our attention to} the non-GR effects \kent{on the tensor modes} due to a massive dispersion relation \sout{only}.
 
 %such as Fierz-Pauli theory and Lorentz violating massive gravity~\cite{Fierz:1939ix,Rubakov:2008nh,Rubakov:2004eb,Dubovsky:2004sg}.
 
 
 %PPE parameters
-We will focus on the non-GR corrections specifically to GW phase. Gravitons with non-zero mass travel at a speed smaller than the speed of light and the non-GR effects accumulate over the distance. Modified dispersion relation for such gravitons is given by $ E^2=p^2c^2+m_g^2c^4$, where $m_g$ is the mass of the graviton while $E$ and $p$ are the energy and the momentum respectively. PPE phase parameters are~\cite{Will:1997bb}
+We will focus on the non-GR corrections specifically to the GW phase. \kent{Thus, the purpose of this section is simply to compare our Fisher analysis with the Bayesian one performed by the LVC.} Gravitons with a non-vanishing mass travel at a speed smaller than the speed of light and the non-GR effects accumulate over the distance. Modified dispersion relation for such gravitons is given by $ E^2=p^2c^2+m_g^2c^4$, where $m_g$ is the mass of the graviton while $E$ and $p$ are the energy and the momentum respectively. The PPE phase parameters are~\cite{Will:1997bb}
 \be
-\beta=\frac{\pi^2}{\lambda_g^2}\frac{\mathcal{M}}{1+z}D\,, \qquad \text{and}\qquad b=3\,,
+\beta=\frac{\pi^2}{\lambda_g^2}\frac{\mathcal{M}}{1+z}D\,, \qquad \qquad b=3\,,
 \ee
 where
 \be
 D=\frac{z}{H_0\sqrt{\Omega_M+\Omega_{\Lambda}}}\left[1-\frac{z}{4}\left(\frac{3\Omega_M}{\Omega_M+\Omega_{\Lambda}} \right )+\mathcal{O}(z^2)\right]\,.
 \ee
-Here , $\Omega_M$ and $\Omega_\Lambda$ are the energy density of matter and dark energy respectively. $H_0$ is the Hubble constant while $z$ is the redshift of the source. $\lambda_g$ is the compton wavelength of graviton that is related to $m_g$ as $\lambda_g\equiv h/\lb m_gc\rb$, where $h$ is the Planck's constant.
+Here, $\Omega_M$ and $\Omega_\Lambda$ are the energy density of matter and dark energy respectively. $H_0$ is the Hubble constant while $z$ is the redshift of the source. $\lambda_g$ is the \sout{compton} \kent{Compton} wavelength of the graviton that is related to $m_g$ as $\lambda_g\equiv h/\lb m_gc\rb$, where $h$ is the Planck's constant.
 
 \begin{figure}[htb]
 \includegraphics[width=8.5cm]{graviton.pdf}
-\caption{Cumulative probability distribution of the compton wavelength of graviton from GW150914. The solid blue line is  obtained from a Fisher analysis with Monte Carlo simulation, while the red one is found by LVC via  Bayesian analysis. Each of the vertical dashed lines corresponds to the lower bound of a solid line of same color with 90\% confidence.}
+\caption{Cumulative probability distribution of the Compton wavelength of the graviton from GW150914. \kent{We show the ones} \sout{The solid blue line is} obtained from a Fisher analysis with Monte Carlo simulations \kent{(blue solid)} \sout{while the red one is found by LVC via} \kent{and from} a Bayesian analysis \kent{by the LVC (red solid)}. Each of the vertical dashed lines corresponds to the \sout{lower} \kent{upper} bound of \sout{a solid line} \kent{the distribution} of the same color with 90\% confidence. \kent{Observe how the two different analyses give similar bounds.}}
 \label{fig:graviton}
 \end{figure}
 
 %Result
-We compute the probability distribution of $\lambda_g$ from GW150914 according to the procedure outlined in Sec.~\ref{section:ppE} and compare with the one obtained by the LVC~\cite{TheLIGOScientific:2016src} (see Fig.~\ref{fig:graviton}). The Fisher analysis with Monte Carlo simulation yields $\lambda_g<1.2\times 10^{13}$ km at 90\% CL which is in well agreement with the LVC bound of $1.04\times10^{13}$ km. The difference in the two cumulative distributions of $\lambda_g$ presented in Fig.~\ref{fig:graviton} can be attributed to the factors that the LVC used a more accurate Baysian analysis and imposed a uniform prior on the graviton mass.
+We compute the probability distribution of $\lambda_g$ from GW150914 according to the procedure outlined in Sec.~\ref{section:ppE} and compare with the one obtained by the LVC~\cite{TheLIGOScientific:2016src} (Fig.~\ref{fig:graviton}). The Fisher analysis with Monte Carlo simulation yields $\lambda_g<1.2\times 10^{13}$ km at 90\% CL which is in a good agreement with the LVC bound of \sout{$1.04\times10^{13}$} \kent{$1.0\times10^{13}$} km \ky{LVC only gives the bound on $m_g$ up to 2 digits, so we should do the same for $\lambda_g$. Can you please change the vertical line in the figure to also $1.0 \times 10^{13}$?}. The difference in the two cumulative distributions of $\lambda_g$ presented in Fig.~\ref{fig:graviton} can be attributed to the fact that the LVC used a more accurate Baysian analysis and imposed a uniform prior on the graviton mass.
 %assuming a standard \text{$\Lambda$}CDM cosmology.
-The GW bounds are stronger than the current solar-system and binary pulsar constraints~\cite{Talmadge:1988qz,Will:1997bb,Finn:2001qi}, while weaker than the ones from the observations of galactic clusters~\cite{Goldhaber:1974wg}, gravitational lensing~\cite{Choudhury:2002pu}, and the absence of superradiant instability in supermassive black holes~\cite{Brito:2013wya}.
+The GW bound \kent{has recently been updated by combining multiple events~\cite{LIGOScientific:2019fpa}. The new bound is stronger than binary pulsar constraints~\cite{Finn:2001qi,Miao:2019nhf} but slightly weaker than the updated solar system bounds~\cite{Will:2018gku}. The bound is also} 
+\sout{are stronger than the current solar system and binary pulsar constraints, while} 
+weaker than the ones from the observations of galactic clusters~\cite{Goldhaber:1974wg}, gravitational lensing~\cite{Choudhury:2002pu}, and the absence of superradiant instability in supermassive black holes~\cite{Brito:2013wya}.
 
 \subsection{Einstein-Dilaton-Gauss-Bonnet Gravity}
 %Introduction
