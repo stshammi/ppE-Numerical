@@ -54,7 +54,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Thu Jun  6 16:24:18 2019"
+@timestamp def "Fri Jun  7 01:41:09 2019"
 @r0 off
 @link r0 to g0
 @r0 type above
@@ -292,7 +292,7 @@
 @    s0 errorbar riser clip off
 @    s0 errorbar riser clip length 0.100000
 @    s0 comment "PhenomB.dat"
-@    s0 legend  "PhenomB"
+@    s0 legend  "PhenomD"
 @    s1 hidden false
 @    s1 type xy
 @    s1 symbol 3
@@ -341,7 +341,7 @@
 @    s1 errorbar riser clip off
 @    s1 errorbar riser clip length 0.100000
 @    s1 comment "PhenomD.dat"
-@    s1 legend  "PhenomD"
+@    s1 legend  "PhenomB"
 @target G0.S0
 @type xy
 -4 1.3302155e-06
