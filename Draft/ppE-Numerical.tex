@@ -287,6 +287,7 @@ We now apply our analysis to some example theories. To save computational time f
 
 
 \subsection{Massive Gravity}
+\label{sec:massive}
 %Intro
 The idea of introducing the mass to gravitons is rather old~\cite{Fierz:1939ix} and many attempts have been made to construct a feasible theory that allows to do so~\cite{deRham:2014zqa}.  Such a theory may arise in higher-dimensional setups~\cite{Hinterbichler:2011tt} and has the potential to solve the cosmic acceleration problem~\cite{deRham:2014zqa}. Although gravitons with non-vanishing masses may have additional polarizations as well~\cite{dePaula:2004bc}, we here restrict our attention to the non-GR effects on the tensor modes due to a massive dispersion relation.
 
@@ -409,12 +410,21 @@ Let us derive the PPE corrections.
 \section{Conclusion}
 \acknowledgments
  \appendix 
-\section{Constraining PPE parameters with PhenomB and PhenomD Waveforms}\label{Appendix}
+%\section{Constraining PPE parameters with PhenomB and PhenomD Waveforms}\label{Appendix}
+\section{Comparison of Bounds on PPE parameters with PhenomB and PhenomD Waveforms}\label{Appendix}
+\ky{Changed the section title a bit.}
+
 %Introduction
-Despite the fact that PhenomD waveform produces more accurate results, we utilized PhenomB  in this paper since the latter is simpler and time-saving when it comes to Monte Carlo simulations. It is only reasonable to ask the validity of such choice and one may want to justify our results against the PhenomD ones. Hence in this appendix we compare the constraints on PPE parameters from both waveforms. 
+Despite the fact that the PhenomD waveform produces more accurate results, we utilized the PhenomB one in this paper throughout since the latter is simpler and \sout{time-saving when it comes to } \kent{saves computational time when performing} Monte Carlo simulations. \sout{It is only reasonable to ask the validity of such choice and one may want to justify our results against the PhenomD ones. Hence} In this appendix, we compare constraints on the PPE parameter $\alpha_\PPE$ from both waveforms \kent{to justify our method}. 
  
  %Comparison of waveforms
-Let us discuss the distinct features of the two waveforms first. Both PhenomB and PhenomD are aligned-spin (non-precessing) frequency-domain phenomenological models of gravitational waveforms~\cite{Ajith:2009bn,Khan:2015jqa}. PhenomB is calibrated for mass ratios upto $m_1/m_2\equiv4$ and spin components of $\chi_i\in[-0.85,0.85]$. One the other hand, PhenomD covers a larger region of the parameter space with a mass ratio of 18 and spins of $\chi_i\in[-0.95,0.95]$. Moreover, PhenomD waveform amplitude and phase are continuous over the  inspiral, merger and  ringdown stages, while in PhenomB the continuity is ensured only in the amplitude. There is also an intermediate segment connecting the inspiral and the merger-ringdown parts in the former waveform. The spin-dependence in PhenomD is employed by two parameters, while PhenomB has one single effective spin parameter. The former also contains higher order GR terms which make such waveforms more reliable compared to the PhenomB ones.
+Let us discuss the distinct features of the two waveforms first. Both PhenomB and PhenomD \kent{waveforms} \ky{Saying just``PhenomB'' or ``PhenomD'' is too colloquial. I've added ``waveform'' throughout.} are spin-aligned (non-precessing) frequency-domain phenomenological models of gravitational waveforms~\cite{Ajith:2009bn,Khan:2015jqa}. 
+\ky{I edited below so that we explain PhenomB first and next PhenomD, rather than going back and forth.}
+The PhenomB waveform is calibrated for mass ratios up to $m_1/m_2 = 4$ and spin components of $\chi_i\in[-0.85,0.85]$ \kent{are unified into a single effective spin}. On the other hand, the PhenomD waveform covers a larger region of the parameter space with a mass ratio of 18 and spins of $\chi_i\in[-0.95,0.95]$ \kent{with both spins introduced independently. The waveform  contains higher order PN terms in the inspiral and further introduces an intermediate phase connecting the inspiral and merger-ringdown portions,} 
+%Moreover, the PhenomD amplitude and phase are continuous over the inspiral, merger and  ringdown stages, while in PhenomB the continuity is ensured only in the amplitude. 
+\ky{I commented out a sentence regarding the continuity of Phenom waveforms since everything is continuous in the original Phenom waveforms. We could say that the PhenomB phase gets discontinuous once we add non-GR terms, but this is not important for our case.}
+\sout{There is also an intermediate phase connecting the inspiral and merger-ringdown parts of the PhenomD waveform. The spin-dependence in the PhenomD waveform is employed by two parameters, while the PhenomB  one has one single effective spin parameter. The former also contains higher order PN terms}
+which make such waveforms more reliable than the PhenomB ones.
 
 \begin{figure}[htb]
 \includegraphics[width=8.5cm]{phenomBvsphenomD.pdf}
@@ -424,15 +434,17 @@ Let us discuss the distinct features of the two waveforms first. Both PhenomB an
 
 \begin{figure}[htb]
 \includegraphics[width=8.5cm]{phenomBvsphenomD-insp.pdf}
-\caption{Comparison of 90\% confidence constraint on $\alpha_{\PPE}$ with GW150914 from the the inspirals of PhenomB and PhenomD waveforms. The Fisher analyses are truncated at 104Hz which is the transition frequency between inspiral and merger of the PhenomB waveform.}
+\caption{\sout{Comparison of 90\% confidence constraint on $\alpha_{\PPE}$ with GW150914 from the the inspirals of PhenomB and PhenomD waveforms.} \kent{Similar to Fig.~\ref{fig:phenomBvsD} but with inspirals only.} The Fisher analyses are truncated at 104Hz which is the transition frequency between inspiral and merger of the PhenomB waveform, \kent{and we use the inspiral portion of the PhenomD waveform all the way up to this cutoff frequency.}}
 \label{fig:phenomBvsD-insp}
 \end{figure}
 
 %Amplitude corrction
-Now we estimate the constraints on PPE amplitude modification from the two waveforms. Since the propagation effect entered only in massive gravity where we did not utilize the amplitude correction, focusing on the generation mechanism should suffice here. We perform Fisher analyses with sky-averaged waveforms and derive upper bounds on $\alpha_{\PPE}$ at different PN orders. As shown Fig.~\ref{fig:phenomBvsD}, the two waveforms agree very well at negative PN corrections but deviate from each other at the positive ones. Removing the higher order GR terms from PhenomD to match with that of PhenomB does not change the outcome, which eliminates such terms as sources of discrepancy. On the other hand, truncating the Fisher analyses at the end of inspiral phase show significant agreement between the two waveforms at $n>0$, suggesting a considerable amount of deviation coming from the intermediate-merger-ringdown portion (Fig.~\ref{fig:phenomBvsD-insp}).
+We now estimate the constraints on the PPE amplitude modification from the two waveforms. Since \kent{modifications to propagation mechanisms used for massive gravity in Sec.~\ref{sec:massive} do not give rise to amplitude corrections, we here focus on modifications to generation mechanisms.}
+\sout{the propagation effect entered only in massive gravity where we did not utilize the amplitude correction, focusing on the generation mechanism should suffice here.} We performed Fisher analyses with sky-averaged PhenomB and PhenomD waveforms and derived upper bounds on $\alpha_{\PPE}$ at different PN orders. As shown in Fig.~\ref{fig:phenomBvsD}, \kent{the results from} the two waveforms agree very well at negative PN corrections but deviate from each other at the positive ones. \ky{I won't touch below since it's likely that it gets modified once we update the plot.}
+Removing the higher order GR terms from PhenomD to match with that of PhenomB does not change the outcome, which eliminates such terms as sources of discrepancy. On the other hand, truncating the Fisher analyses at the end of inspiral phase show significant agreement between the two waveforms at $n>0$, suggesting a considerable amount of deviation coming from the intermediate-merger-ringdown portion (Fig.~\ref{fig:phenomBvsD-insp}).
 
 %Conclusion
-The example theories considered in this paper achieve leading non-GR corrections either from propagation effects or from the generation effects entering in negative PN orders. A comparison between PhenomB and PhenomD for constraining $\beta_{\PPE}$ presented in Ref~\citep{Yunes:2016jcc} reveal consistent results with propagation mechanisms at both positive and negative PN orders, while for generation mechanisms the two waveforms show agreement only at $n<0$. Together this with the nature of amplitude corrections discussed above confirm that the results of this paper should not change significantly if one utilizes PhenomD instead of PhenomB. One the other hand, for constraining theories like dynamic Chern-Simon or noncommutative gravity where the leading correction enters at $n>0$ PhenomB is not expected to produce reliable results.
+The example theories considered in this paper \sout{achieve} \kent{acquire} leading non-GR corrections either from propagation effects or from the generation effects entering in negative PN orders. A comparison between the PhenomB and PhenomD results for constraining $\beta_{\PPE}$ presented in Ref~\citep{Yunes:2016jcc} reveals \kent{consistency on constraining modifications to} \sout{consistent results with} propagation mechanisms at both positive and negative PN orders, while \sout{for generation mechanisms} the two waveforms show agreement only at negative PN orders \kent{for constraining modifications to generation mechanisms}. Together with the results on amplitude corrections discussed above confirms that the results of this paper should not change significantly if one utilizes the PhenomD waveform instead. On the other hand, for constraining theories like dynamical Chern-Simons or noncommutative gravity where the leading correction enters at a positive PN order, the PhenomB waveform is not expected to produce reliable results.
 
 
 
