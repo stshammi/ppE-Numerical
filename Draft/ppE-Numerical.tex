@@ -255,11 +255,12 @@ We choose the following parameters as our variables for the Fisher analysis:
 \theta^a\equiv \lb \ln{\mathcal{M}_z}, \ln{\eta}, \ln{D_L}, \ln{t_0}, \chi, \phi_0, \alpha, \delta, \psi, \theta_{\text{inc}}, \beta_{\PPE}, \alpha_{\PPE} \rb\,.
 \ea
 \ew
-Here, $\mathcal{M}_z$ is the the redshifted chirp mass and $\chi$ is the effective spin parameter~\footnote{The effective spin parameter is defined as $\chi\equiv\lb m_1 \chi_1+m_2\chi_2\rb /\lb m_1+m_2\rb$, where $\chi_A$ with $A=(1,2)$ is the dimensionless spin of the $A$th body.}. $\alpha, \delta, \psi$, and  $\theta_{\text{inc}}$ are the right ascension, declination, polarization and inclination angles respectively in the detector frame. All other parameters have the same meanings as in Sec.~\ref{section:method}. 
+Here, $\mathcal{M}_z$ is the the redshifted chirp mass and $\chi$ is the effective spin parameter~\footnote{The effective spin parameter is defined as $\chi\equiv\lb m_1 \chi_1+m_2\chi_2\rb /\lb m_1+m_2\rb$, where $\chi_A$ with $A=(1,2)$ is the dimensionless spin of the $A$th body.}. $\alpha, \delta, \psi$, and  $\theta_{\text{inc}}$ are the right ascension, declination, polarization and inclination angles respectively in the detector frame.
+%All other parameters have the same meanings as in Sec.~\ref{section:method}. 
 %Monte-Carlo
 We perform a Monte Carlo simulation by using each set of the posterior samples released by LIGO~\cite{ligo:sample} for $(\mathcal{M}_z, \eta, D_L, \chi, \alpha, \delta$, $\theta_{\text{inc}})$, while we randomly sample the polarization angle $\psi$ and the coalescence phase $\phi_0$ in $[0,\pi]$ and $[0,2\pi]$ respectively.
 %%prior on spin
-We impose the prior information such that the effective spin is less than 1.
+\st{We impose the prior information such that $-1 \leq \chi \leq 1$, $-\pi \leq (\phi_0, \alpha, \psi) \leq \pi$, and $-\pi/2 \leq ( \delta, \theta_{\text{inc}}) \leq \pi/2$.}
 
 %%Detectors
 We use the detector sensitivity of Advanced LIGO (aLIGO) O1 run~\cite{LIGOScientific:2018mvr} and we consider the two detectors at Hanford and Livingstone. For simplicity, we assume that the Livingstone noise spectrum is identical to that of the Hanford~\cite{Yunes:2009yz}. For Fisher integration, the minimum frequency is taken to be 20 Hz while the maximum frequency is same as the cutoff frequency above which the signal power is negligible~\cite{Ajith:2009bn}.
@@ -388,25 +389,37 @@ One can use Eqs.~\eqref{eq:betaST}--\eqref{eq:alpha_A} and the numerical anlaysi
 
 \subsection{Varying- $G$ Theories}
 %Introduction
-Many metric theories of gravity that violate strong equivalence principle predicts time-varying gravitational constants. For instance, in scalar-tensor theories $G$ varies as a function of the time derivative of the asymptotic scalar field. Any variation in $G$ leads to a variation in the masses of the compact bodies and cause anomalous acceleration. Such effects cause the gravitational waveform to deviate from that of GR at -4PN order.
+Many metric theories of gravity that violate strong equivalence principle~\cite{DiCasola:2013iia,Will:2014kxa,0264-9381-7-10-007} predicts time variation in the gravitational coupling parameter $G$~\cite{uzan:2010pm}. Scalar-tensor theories are examples where $G$ varies as a function of the time derivative of the asymptotic scalar field~\cite{Will2006}. Any such time-dependence of $G$ leads to a variation in the effective masses of the compact bodies, which in turn makes them experience anomalous cosmic acceleration~\cite{PhysRevLett.65.953}. Such phenomena alters the gravitational waveform through the modifications of the binary orbital period evolution and the energy balance law~\cite{Tahura:2018zuq}.
 
-Let us derive the PPE corrections.
- \begin{eqnarray}\label{eq:3.7a2}
- m_A(t)\approx m_{A,0}+\dot{m}_{A,0}(t-t_0)\,, \\
-   \label{eq:3.7a4}  G_C(t)\approx  G_{C,0}+\dot{G}_{C,0}(t-t_0)\,, \\
-   \label{eq:3.7a4-2}  G_D(t)\approx  G_{D,0}+(1+\delta_\Gdot)\dot{G}_{C,0}(t-t_0)\, , 
+%PPE parameters
+We now show the PPE modifications due to a time variation in the gravitational constant. The constants that appear in different sectors of a  gravitational theory may not be unique. Einstein-\AE ther theory~\citep{Yagi:2013ava} and Brans-Dicke theory with a cosmologically evolving scalar field~\cite{Will2006} are examples of such theories.
+Ref.~\citep{Tahura:2018zuq} studies a generic case with two distinct gravitational constants in Kepler's law and GW luminosity. Here we place constraint on the special case where those two constants are same. Let the masses and the Newton's constant vary according to the following equations:
+ \begin{eqnarray}\label{eq:gdot-1}
+ m_A(t)\approx m_{A,0}+\dot{m}_{A,0}(t-t_0)\,, \\\label{eq:gdot-2}
+   \label{eq:3.7a4}  G(t)\approx  G_{0}+\dot{G}_{0}(t-t_0)\,.
+  % \label{eq:3.7a4-2}  G_D(t)\approx  G_{D,0}+(1+\delta_\Gdot)\dot{G}_{C,0}(t-t_0)\, , 
  \end{eqnarray}
+ Here, a subscript $0$ denotes that the quantity is measured at the time $t=t_0$, and an overhead dot means a derivative with respect to time. Eqs.~\eqref{eq:gdot-1} and~\eqref{eq:gdot-2} modify the GW phase and amplitude as~\cite{Tahura:2018zuq}
 %PPE parameters
  \begin{eqnarray}\label{eq:beta_gdot}
  \beta_{\dot{G}}&=&-\frac{25}{851968}\dot{G}_{C,0}\,\eta_0^{3/5}\left[11m_0 +3(s_{1,0}+s_{2,0}-\delta_\Gdot)m_0 \right. \nonumber \\
- && \left. -41 (m_{1,0}s_{1,0}+m_{2,0}s_{2,0})\right]\,. 
-  \end{eqnarray}
-\begin{eqnarray}
+ && \left. -41 (m_{1,0}s_{1,0}+m_{2,0}s_{2,0})\right]\,
+  \end{eqnarray} 
+with $b=-13$, and 
+\begin{eqnarray}\label{eq:alpha_gdot}
 \label{eq:3.7d2}
  \alpha_{\dot{G}}&=&\frac{5}{512}\eta_0^{3/5}\dot{G}_{C,0}\left[-7m_0+(s_{1,0}+s_{2,0}-\delta_\Gdot)m_0 \right. \nonumber \\
- && \left.+13 (m_{1,0}s_{1,0}+m_{2,0}s_{2,0})\right]\,.
+ && \left.+13 (m_{1,0}s_{1,0}+m_{2,0}s_{2,0})\right]\, 
  \end{eqnarray}
+with $a=-8$ respectively. Here $s_A$ is the sensitivity of the Ath binary component.
+ 
 %Results
+Employing Eqs.~\eqref{eq:beta_gdot} and~\eqref{eq:alpha_gdot} GW150914 (GW151226) imposes constraints on $|\dot{G_0}/G_0|$ from the phase-only and the amplitude-only analyses as $1.2\times10^7\, \mathrm{yr}^{-1}$ ($3.6\times10^5\, \mathrm{yr}^{-1}$) and $1.8\times10^8\, \mathrm{yr}^{-1}$ ($6\times10^7\, \mathrm{yr}^{-1}$) respectively, with the combined analyses producing slight improvements over the phase-only outcomes.
+These bounds are much less stringent compared to the other contemporary constraints~\cite{Will2006}. 
+However, future space-borne detectors such as  eLISA~\cite{Seoane:2013qna} and DECIGO~\cite{Seto:2001qf} will be able to obtain constraints up to 13 orders of magnitude stronger compared to  the aLIGO ones~\cite{Chamberlain:2017fjl}.
+%The most stringent bound on $|\dot{G}/G|$ is of the order $\lesssim 10^{-14} \,\mathrm{yr}^{-1}$~\cite{2018NatCo...9..289G}.
+
+
 \section{Conclusion}
 \acknowledgments
  \appendix 
@@ -436,8 +449,7 @@ which make such waveforms more reliable than the PhenomB ones.
 %Amplitude corrction
 We now estimate the constraints on the PPE amplitude modification from the two waveforms. Since modifications to propagation mechanisms used for massive gravity in Sec.~\ref{sec:massive} do not give rise to amplitude corrections, we here focus on modifications to generation mechanisms. We performed Fisher analyses with sky-averaged PhenomB and PhenomD waveforms and derived upper bounds on $\alpha_{\PPE}$ at different PN orders. As shown in Fig.~\ref{fig:phenomBvsD}, the results from the two waveforms agree very well at negative PN corrections but deviate from each other at the positive ones. 
 %Removing the higher order GR terms from PhenomD to match with that of PhenomB does not change the outcome, which eliminates such terms as sources of discrepancy.
-On the other hand, truncating the Fisher analyses at the end of the inspiral phase shows significant agreement between the two waveforms at positive PN orders (Fig.~\ref{fig:phenomBvsD-insp}), suggesting \kent{that the deviation in Fig.~\ref{fig:phenomBvsD} originates mainly}
-\sout{a considerable amount of deviation coming} from the intermediate/merger-ringdown portion.
+On the other hand, truncating the Fisher analyses at the end of the inspiral phase shows significant agreement between the two waveforms at positive PN orders (Fig.~\ref{fig:phenomBvsD-insp}), suggesting that the deviation in Fig.~\ref{fig:phenomBvsD} originates mainly from the intermediate/merger-ringdown portion.
 
 %Conclusion
 The example theories considered in this paper acquire leading non-GR corrections either from propagation effects or from the generation effects entering in negative PN orders. A comparison between the PhenomB and PhenomD results for constraining $\beta_{\PPE}$ presented in Ref~\cite{Yunes:2016jcc} reveals consistency on constraining modifications to propagation mechanisms at both positive and negative PN orders, while the two waveforms show agreement only at negative PN orders for constraining modifications to generation mechanisms. Together with the results on amplitude corrections discussed above confirms that the results of this paper should not change significantly if one utilizes the PhenomD waveform instead. On the other hand, for constraining theories like dynamical Chern-Simons or noncommutative gravity where the leading correction enters at a positive PN order, the PhenomB waveform is not expected to produce reliable results.
