@@ -260,7 +260,7 @@ Here, $\mathcal{M}_z$ is the the redshifted chirp mass and $\chi$ is the effecti
 %Monte-Carlo
 We perform a Monte Carlo simulation by using each set of the posterior samples released by LIGO~\cite{ligo:sample} for $(\mathcal{M}_z, \eta, D_L, \chi, \alpha, \delta$, $\theta_{\text{inc}})$, while we randomly sample the polarization angle $\psi$ and the coalescence phase $\phi_0$ in $[0,\pi]$ and $[0,2\pi]$ respectively.
 %%prior on spin
-\st{We impose the prior information such that $-1 \leq \chi \leq 1$, $-\pi \leq (\phi_0, \alpha, \psi) \leq \pi$, and $-\pi/2 \leq ( \delta, \theta_{\text{inc}}) \leq \pi/2$.}
+We impose the prior information such that $-1 \leq \chi \leq 1$, $-\pi \leq (\phi_0, \alpha, \psi) \leq \pi$, and $-\pi/2 \leq ( \delta, \theta_{\text{inc}}) \leq \pi/2$.
 
 %%Detectors
 We use the detector sensitivity of Advanced LIGO (aLIGO) O1 run~\cite{LIGOScientific:2018mvr} and we consider the two detectors at Hanford and Livingstone. For simplicity, we assume that the Livingstone noise spectrum is identical to that of the Hanford~\cite{Yunes:2009yz}. For Fisher integration, the minimum frequency is taken to be 20 Hz while the maximum frequency is same as the cutoff frequency above which the signal power is negligible~\cite{Ajith:2009bn}.
@@ -389,11 +389,11 @@ One can use Eqs.~\eqref{eq:betaST}--\eqref{eq:alpha_A} and the numerical anlaysi
 
 \subsection{Varying- $G$ Theories}
 %Introduction
-Many metric theories of gravity that violate strong equivalence principle~\cite{DiCasola:2013iia,Will:2014kxa,0264-9381-7-10-007} predicts time variation in the gravitational coupling parameter $G$~\cite{uzan:2010pm}. Scalar-tensor theories are examples where $G$ varies as a function of the time derivative of the asymptotic scalar field~\cite{Will2006}. Any such time-dependence of $G$ leads to a variation in the effective masses of the compact bodies, which in turn makes them experience anomalous cosmic acceleration~\cite{PhysRevLett.65.953}. Such phenomena alters the gravitational waveform through the modifications of the binary orbital period evolution and the energy balance law~\cite{Tahura:2018zuq}.
+Many metric theories of gravity that violate strong equivalence principle~\cite{DiCasola:2013iia,Will:2014kxa,0264-9381-7-10-007} predicts time variation in the gravitational coupling parameter $G$~\cite{uzan:2010pm}. Scalar-tensor theories are examples where $G$ varies as a function of \sout{the time derivative of} the asymptotic scalar field~\cite{Will2006}, \kent{which may vary over time}. Any such time-dependence of $G$ leads to a variation in the effective masses of compact bodies, which in turn makes them experience anomalous cosmic acceleration~\cite{PhysRevLett.65.953}. Such phenomena alter the gravitational waveform through the modifications of the binary orbital evolution and the energy balance law~\cite{Tahura:2018zuq}.
 
 %PPE parameters
-We now show the PPE modifications due to a time variation in the gravitational constant. The constants that appear in different sectors of a  gravitational theory may not be unique. Einstein-\AE ther theory~\citep{Yagi:2013ava} and Brans-Dicke theory with a cosmologically evolving scalar field~\cite{Will2006} are examples of such theories.
-Ref.~\citep{Tahura:2018zuq} studies a generic case with two distinct gravitational constants in Kepler's law and GW luminosity. Here we place constraint on the special case where those two constants are same. Let the masses and the Newton's constant vary according to the following equations:
+We now show the PPE modifications due to a time variation in the gravitational constant. \kent{In fact, the amount of gravitational coupling} \sout{The constants} that appear in different sectors of a  gravitational theory may not be unique. Einstein-\AE ther theory~\citep{Yagi:2013ava} and Brans-Dicke theory with a cosmologically evolving scalar field~\cite{Will2006} are examples of such theories \kent{in which various gravitational constants exist}.
+\sout{Ref.} \kent{Reference}~\citep{Tahura:2018zuq} studied a generic case with two distinct gravitational constants in Kepler's law \kent{(conservative sector)} and GW luminosity \kent{(dissipative sector)}. Here we place constraints on the special case where these two constants coincide with each other. Let the masses and the Newton's constant vary according to the following equations:
  \begin{eqnarray}\label{eq:gdot-1}
  m_A(t)\approx m_{A,0}+\dot{m}_{A,0}(t-t_0)\,, \\\label{eq:gdot-2}
    \label{eq:3.7a4}  G(t)\approx  G_{0}+\dot{G}_{0}(t-t_0)\,.
@@ -411,17 +411,22 @@ with $b=-13$, and
  \alpha_{\dot{G}}&=&\frac{5}{512}\eta_0^{3/5}\dot{G}_{C,0}\left[-7m_0+(s_{1,0}+s_{2,0}-\delta_\Gdot)m_0 \right. \nonumber \\
  && \left.+13 (m_{1,0}s_{1,0}+m_{2,0}s_{2,0})\right]\, 
  \end{eqnarray}
-with $a=-8$ respectively. Here $s_A$ is the sensitivity of the Ath binary component.
+with $a=-8$ respectively. Here $s_A$ is the sensitivity of the $A$th binary component.
  
 %Results
-Employing Eqs.~\eqref{eq:beta_gdot} and~\eqref{eq:alpha_gdot} GW150914 (GW151226) imposes constraints on $|\dot{G_0}/G_0|$ from the phase-only and the amplitude-only analyses as $1.2\times10^7\, \mathrm{yr}^{-1}$ ($3.6\times10^5\, \mathrm{yr}^{-1}$) and $1.8\times10^8\, \mathrm{yr}^{-1}$ ($6\times10^7\, \mathrm{yr}^{-1}$) respectively, with the combined analyses producing slight improvements over the phase-only outcomes.
+Employing Eqs.~\eqref{eq:beta_gdot} and~\eqref{eq:alpha_gdot}, GW150914 (GW151226) imposes constraints on $|\dot{G_0}/G_0|$ from the phase-only and amplitude-only analyses as $1.2\times10^7\, \mathrm{yr}^{-1}$ ($3.6\times10^5\, \mathrm{yr}^{-1}$) and $1.8\times10^8\, \mathrm{yr}^{-1}$ ($6\times10^7\, \mathrm{yr}^{-1}$) respectively, with the combined analyses yielding slight improvements over the phase-only results.
 These bounds are much less stringent compared to the other contemporary constraints~\cite{Will2006}. 
-However, future space-borne detectors such as  eLISA~\cite{Seoane:2013qna} and DECIGO~\cite{Seto:2001qf} will be able to obtain constraints up to 13 orders of magnitude stronger compared to  the aLIGO ones~\cite{Chamberlain:2017fjl}.
+However, future space-borne detectors such as LISA~\cite{Seoane:2013qna,Audley:2017drz} \sout{and DECIGO~\cite{Seto:2001qf}} \ky{I think nobody has derived bounds on $\dot G$ with DECIGO.} will be able to obtain constraints up to 13 orders of magnitude stronger compared to  the aLIGO ones~\cite{Yunes:2009bv,Chamberlain:2017fjl}.
 %The most stringent bound on $|\dot{G}/G|$ is of the order $\lesssim 10^{-14} \,\mathrm{yr}^{-1}$~\cite{2018NatCo...9..289G}.
 
 
 \section{Conclusion}
 \acknowledgments
+
+We thank Carl-Johan Haster for providing valuable comments on the LIGO posterior samples. 
+K.Y. acknowledge support from NSF Award PHY-1806776. 
+K.Y. would like to also acknowledge support by the COST Action GWverse CA16104 and JSPS KAKENHI Grants No. JP17H06358.
+
  \appendix 
 %\section{Constraining PPE parameters with PhenomB and PhenomD Waveforms}\label{Appendix}
 \section{Comparison of Bounds on PPE parameters with PhenomB and PhenomD Waveforms}\label{Appendix}
