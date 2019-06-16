@@ -93,7 +93,42 @@ To be written later
 
 
 \section{Introduction}
-%accuracy in measuring ampltiude correction by LIGO
+%GWs & their  importance in testing gravity
+%Model independent test of gravity:ppE formalism
+%non-GR modifications: generation and propagation mechanism
+%Amplitude corrections
+%Table
+{
+\newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
+\renewcommand{\arraystretch}{2.}
+\begingroup 
+\begin{table*}[htb]
+\begin{centering}
+\begin{tabular}{c|c|c|c|c|c|c|c}
+\hline
+\hline
+\noalign{\smallskip}
+\multirow{1}{*}{Theories}&\multirow{1}{*}{Repr. Parameter}&\multicolumn{6}{c}{Constraints} \\ \cline{3-8}
+&&\multicolumn{3}{c|}{GW150914}&\multicolumn{3}{c}{GW151226}  \\ \cline{3-8}
+&&Phase&Amplitude&Combined&Phase&Amplitude&Combined\\ \hline
+Scalar-Tensor~\cite{Scharre:2001hn,Berti:2004bd}&$|\dot{\phi}|$ [1/sec]&&&&&\\ \hline
+EdGB~\cite{Yagi:2011xp}&$\sqrt{|\bar{\alpha}_{\EDGB}|}$ [km]&50.5&76.3&&4.3&10.5&\\ \hline
+Varying-$G$~\cite{Tahura:2018zuq,Yunes:2009bv}&$|\dot{G_0}/G_0|$ [1/yr]& & & & &\\ 
+\noalign{\smallskip}
+\hline
+\hline
+\end{tabular}
+\end{centering}
+\caption{}
+\label{table:ppE}
+\end{table*}
+\endgroup
+}
+
+%Our work
+%Organization of the paper
+
+
 
 \section{Methodology}\label{section:method}
 
@@ -355,7 +390,7 @@ We now derive constraints on EdGB gravity from GW150914 and GW151226. First we e
 
 %Results
 Figure~\ref{fig:pdf-edgb} presents cumulative probability distributions of $\bar{\alpha}^2_{\EDGB}$\footnote{We show the distribution of $\bar{\alpha}^2_{\EDGB}$ instead of $\sqrt{\bar{\alpha}_{\EDGB}}$ as it is the former that directly enters in the waveform.} for GW150914 for three different cases with vertical lines showing the 90\% CL of the corresponding distribution. We found the 90\% CL constraints on  $\sqrt{\bar{\alpha}_{\EDGB}}$ from each of the phase and amplitude corrections as 50.5 km and 76.3 km respectively. Notice that these bounds have the same order of magnitude. On the other hand, combining the amplitude and phase corrections leads to an upper bound of 51.5 km, which is weaker than the  phase-only constraint by 2\%.
-Similar analyses with GW151226 yield 4.3 km and 10.5 km respectively from th phase and amplitude corrections,
+Similar analyses with GW151226 yield 4.3 km and 10.5 km respectively from thephase and amplitude corrections,
 %\footnote{The upper bound on $\sqrt{\bar{\alpha}_{\EDGB}}$ derived from the phase correction with GW151226 agrees with those of ref.~\cite{Nair:2019iur} and~\cite{Yamada:2019zrb}}, 
 while \kent{combining the two only changes the result from including only the phase correction by 0.01\%.} \sout{the difference between the phase-only case and the combined analysis  is only 0.01\%. As we can see,} 
 These bounds are consistent with those in a recent paper~\cite{Nair:2019iur} while Ref.~\cite{Yamada:2019zrb} found even stronger bounds by combining multiple GW events. These GW bounds are comparable to the one obtained from low-mass X-ray binaries~\cite{Yagi:2012gp}.
