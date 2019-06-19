@@ -94,9 +94,31 @@ To be written later
 
 \section{Introduction}
 %GWs & their  importance in testing gravity
+General relativity (GR) is the most successful theory of gravitation to this day. This century-old theory that exquisitely describes gravity as a curvature of spacetime has also passed numerous tests with high accuracy~\cite{Will:2014kxa}. Nonetheless, GR is not expected to be a complete description of gravity. The inconsistency in the galaxy rotation curve~\cite{article,Bosma:1981zz,Begeman:1991iy,Rubin:1970zza,Rubin:1980zd,1973ApJ...186..467O,Ostriker:1993fr} and the accelerated expansion of the universe~\cite{Abbott:1988nx,Copeland:2006wr,Perlmutter:1998np,Riess:1998cb,Riess:2004nr,RevModPhys.61.1,vanAlbada:1984js,WEINBERG201387}  cannot be explained in the formulation of GR without introducing dark matter and dark energy. A new theory is required to incorporate quantum mechanics into gravity as well~\cite{Adler:2010wf,Ng:2003jk}. Hence, people continue to test GR through various experimentations. Gravitational wave (GW) observation is the recent addition to this venture which enabled us to probe the formerly inaccessible strong and highly nonlinear regime of gravity. Since strong-field gravity is precisely the place to look for the evidence of beyond-GR phenomenona, it is important to extract as much physics as possible from the available GW data. 
+
+
+%Current and future status of GW astrophysics
+During the first two LIGO/Virgo observing runs ten binary black hole mergers and one neutron star merger were confirmed~\cite{LIGOScientific:2018mvr}. Recently LIGO recommenced the hunt for gravitational waves with a third observing run after going through multiple upgrades~\cite{ligo:news}.
+With KAGRA in Japan near completion and \cite{Akutsu:2018axf} and LIGO-India under active study~\cite{LIGOScientific:2019vkc}, a stronger ground-based gravitational wave network is ensured in next five years.
+%In 2025 LIGO-India will join the global network of detectors
+Space-based detector LISA~\cite{Audley:2017drz} will inaugurate around mid-2030's and will be able to observe GWs at much lower frequency.
+The third generation detectors such as Cosmic Explorer and Einstein Telescope will provide us with improved sensitivities~\cite{Evans:2016mbw,Punturo:2010zz}.
+%Decigo~\cite{Kawamura:2011zz} and BBO~\cite{Corbin:2005ny}
+With more detectors joining the quest we will achieve better precision in parameter estimation and source localization.
+
+
 %Model independent test of gravity:ppE formalism
+
+
+
+
+
 %non-GR modifications: generation and propagation mechanism
+
+
 %Amplitude corrections
+
+
 %Table
 {
 \newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
@@ -108,24 +130,27 @@ To be written later
 \hline
 \hline
 \noalign{\smallskip}
-\multirow{1}{*}{Theories}&\multirow{1}{*}{Repr. Parameter}&\multicolumn{6}{c}{Constraints} \\ \cline{3-8}
+\multirow{3}{*}{Theories}&\multirow{3}{*}{Repr. Parameter}&\multicolumn{6}{c}{Constraints} \\ \cline{3-8}
 &&\multicolumn{3}{c|}{GW150914}&\multicolumn{3}{c}{GW151226}  \\ \cline{3-8}
 &&Phase&Amplitude&Combined&Phase&Amplitude&Combined\\ \hline
-Scalar-Tensor~\cite{Scharre:2001hn,Berti:2004bd}&$|\dot{\phi}|$ [1/sec]&&&&&\\ \hline
-EdGB~\cite{Yagi:2011xp}&$\sqrt{|\bar{\alpha}_{\EDGB}|}$ [km]&50.5&76.3&&4.3&10.5&\\ \hline
-Varying-$G$~\cite{Tahura:2018zuq,Yunes:2009bv}&$|\dot{G_0}/G_0|$ [1/yr]& & & & &\\ 
+\multirow{2}{*}{Scalar-Tensor~\cite{Scharre:2001hn,Berti:2004bd}}&$|\dot{\phi}|$ [$10^4/\mathrm{sec}$]&3.6390&7.2990&3.7696&1.0937&5.6005&1.0939\\
+&$|m_1\dot{\phi}|$&6.8677&16.4181&7.1501&0.6880&3.6597&0.6882\\ \hline
+\multirow{2}{*}{EdGB~\cite{Yagi:2011xp}}&$\sqrt{|\bar{\alpha}_{\EDGB}|}$ [km]&50.4553&76.3376&51.4716&4.3193&10.4464&4.3197\\
+&$\zeta_{\EDGB}$&3.6206&32.4331&3.9087&0.02069&0.70930&0.02070\\ \hline
+Varying-$G$~\cite{Tahura:2018zuq,Yunes:2009bv}&$|\dot{G_0}/G_0|$ [$10^6/\mathrm{yr}$]&7.3024&136.643&7.1753&0.0224&0.3824&0.0220\\ 
 \noalign{\smallskip}
 \hline
 \hline
 \end{tabular}
 \end{centering}
-\caption{}
+\caption{Constraints on representative parameters of various modified theories of gravity from GW150914 and GW151226. For each of the GW events in the last column `phase' and `amplitude' correspond to the cases where we include non-GR corrections only to GW phase and amplitude respectively, while `combined' is the case where we include both. $\bar{\alpha}_{\EDGB}$ is the EdGB coupling parameter which is related to the dimensionless coupling $\zeta_{\EDGB}$ by $\zeta_\EDGB\equiv 16 \pi \bar{\alpha}_\EDGB^2/m^4$ with $m$ being the total mass of the binary. $m_1\dot{\phi}$ controls the amount of small coupling in scalar-tensor theory where $m_1$ is the larger binary mass component and $\phi$ is the scalar field. $G$ is the gravitational constant with the subscript 0 representing the time of coalescence. An overhead dot denotes a derivative with respect to time.}
 \label{table:ppE}
 \end{table*}
 \endgroup
 }
 
 %Our work
+
 %Organization of the paper
 
 
@@ -424,11 +449,10 @@ One can use Eqs.~\eqref{eq:betaST}--\eqref{eq:alpha_A} and the numerical anlaysi
 
 \subsection{Varying- $G$ Theories}
 %Introduction
-Many metric theories of gravity that violate strong equivalence principle~\cite{DiCasola:2013iia,Will:2014kxa,0264-9381-7-10-007} predicts time variation in the gravitational coupling parameter $G$~\cite{uzan:2010pm}. Scalar-tensor theories are examples where $G$ varies as a function of \sout{the time derivative of} the asymptotic scalar field~\cite{Will2006}, \kent{which may vary over time}. Any such time-dependence of $G$ leads to a variation in the effective masses of compact bodies, which in turn makes them experience anomalous cosmic acceleration~\cite{PhysRevLett.65.953}. Such phenomena alter the gravitational waveform through the modifications of the binary orbital evolution and the energy balance law~\cite{Tahura:2018zuq}.
+Many metric theories of gravity that violate strong equivalence principle~\cite{DiCasola:2013iia,Will:2014kxa,0264-9381-7-10-007} predicts time variation in the gravitational coupling parameter $G$~\cite{uzan:2010pm}. Scalar-tensor theories are examples where $G$ varies as a function of the asymptotic scalar field~\cite{Will2006}, which may vary over time. Any such time-dependence of $G$ leads to a variation in the effective masses of compact bodies, which in turn makes them experience anomalous cosmic acceleration~\cite{PhysRevLett.65.953}. Such phenomena alter the gravitational waveform through the modifications of the binary orbital evolution and the energy balance law~\cite{Tahura:2018zuq}.
 
 %PPE parameters
-We now show the PPE modifications due to a time variation in the gravitational constant. \kent{In fact, the amount of gravitational coupling} \sout{The constants} that appear in different sectors of a  gravitational theory may not be unique. Einstein-\AE ther theory~\citep{Yagi:2013ava} and Brans-Dicke theory with a cosmologically evolving scalar field~\cite{Will2006} are examples of such theories \kent{in which various gravitational constants exist}.
-\sout{Ref.} \kent{Reference}~\citep{Tahura:2018zuq} studied a generic case with two distinct gravitational constants in Kepler's law \kent{(conservative sector)} and GW luminosity \kent{(dissipative sector)}. Here we place constraints on the special case where these two constants coincide with each other. Let the masses and the Newton's constant vary according to the following equations:
+We now show the PPE modifications due to a time variation in the gravitational constant. In fact, the amount of gravitational coupling that appear in different sectors of a  gravitational theory may not be unique. Einstein-\AE ther theory~\cite{Yagi:2013ava} and Brans-Dicke theory with a cosmologically evolving scalar field~\cite{Will2006} are examples of such theories in which various gravitational constants exist. Reference~\cite{Tahura:2018zuq} studied a generic case with two distinct gravitational constants in Kepler's law (conservative sector) and GW luminosity (dissipative sector). Here we place constraints on the special case where these two constants coincide with each other. Let the masses and the Newton's constant vary according to the following equations:
  \begin{eqnarray}\label{eq:gdot-1}
  m_A(t)\approx m_{A,0}+\dot{m}_{A,0}(t-t_0)\,, \\\label{eq:gdot-2}
    \label{eq:3.7a4}  G(t)\approx  G_{0}+\dot{G}_{0}(t-t_0)\,.
@@ -451,7 +475,7 @@ with $a=-8$ respectively. Here $s_A$ is the sensitivity of the $A$th binary comp
 %Results
 Employing Eqs.~\eqref{eq:beta_gdot} and~\eqref{eq:alpha_gdot}, GW150914 (GW151226) imposes constraints on $|\dot{G_0}/G_0|$ from the phase-only and amplitude-only analyses as $1.2\times10^7\, \mathrm{yr}^{-1}$ ($3.6\times10^5\, \mathrm{yr}^{-1}$) and $1.8\times10^8\, \mathrm{yr}^{-1}$ ($6\times10^7\, \mathrm{yr}^{-1}$) respectively, with the combined analyses yielding slight improvements over the phase-only results.
 These bounds are much less stringent compared to the other contemporary constraints~\cite{Will2006}. 
-However, future space-borne detectors such as LISA~\cite{Seoane:2013qna,Audley:2017drz} \sout{and DECIGO~\cite{Seto:2001qf}} \ky{I think nobody has derived bounds on $\dot G$ with DECIGO.} will be able to obtain constraints up to 13 orders of magnitude stronger compared to  the aLIGO ones~\cite{Yunes:2009bv,Chamberlain:2017fjl}.
+However, future space-borne detectors such as LISA~\cite{Seoane:2013qna,Audley:2017drz} will be able to obtain constraints up to 13 orders of magnitude stronger compared to  the aLIGO ones~\cite{Yunes:2009bv,Chamberlain:2017fjl}.
 %The most stringent bound on $|\dot{G}/G|$ is of the order $\lesssim 10^{-14} \,\mathrm{yr}^{-1}$~\cite{2018NatCo...9..289G}.
 
 
@@ -497,5 +521,5 @@ The example theories considered in this paper acquire leading non-GR corrections
 
 
 %------------------------------------------------------- 
-\bibliography{ppE}
+`\bibliography{ppE}
 \end{document}
