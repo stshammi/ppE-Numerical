@@ -145,7 +145,7 @@ Varying-$G$~\cite{Tahura:2018zuq,Yunes:2009bv}&$|\dot{G_0}/G_0|$ [$10^6/\mathrm{
 \hline
 \end{tabular}
 \end{centering}
-\caption{90\% credible constraints on representative parameters of various modified theories of gravity from GW150914 and GW151226. For each of the GW events, ``phase'' and ``amplitude'' correspond to the cases where we include non-GR corrections only to the GW phase and amplitude respectively, while ``combined'' is the case where we include both. $\bar{\alpha}_{\EDGB}$ is the EdGB coupling parameter which is related to the dimensionless coupling $\zeta_{\EDGB}$ by $\zeta_\EDGB\equiv 16 \pi \bar{\alpha}_\EDGB^2/m^4$ with $m$ being the total mass of the binary. $m_1\dot{\phi}$ corresponds to a dimensionless parameter in the theory where $m_1$ is the mass of the primary BH while $\phi$ is the scalar field. Non-GR corrections are \sout{always} required to be  subdominant \st{which happens in EdGB (scalar-tensor) gravity} whenever $\zeta_\EDGB \ll 1$ \sout{or} \st{($m_1\dot{\phi} \ll 1$)}. \st{A number inside a bracket means such criterion is violated and the constraint drawn on that theory from the corresponding dataset is not reliable.} $G$ is the gravitational constant with the subscript 0 representing the time of coalescence. An overhead dot denotes a derivative with respect to time.}
+\caption{90\% credible constraints on representative parameters of various modified theories of gravity from GW150914 and GW151226. For each of the GW events, ``phase'' and ``amplitude'' correspond to the cases where we include non-GR corrections only to the GW phase and amplitude respectively, while ``combined'' is the case where we include both. $\bar{\alpha}_{\EDGB}$ is the EdGB coupling parameter which is related to the dimensionless coupling $\zeta_{\EDGB}$ by $\zeta_\EDGB\equiv 16 \pi \bar{\alpha}_\EDGB^2/m^4$ with $m$ being the total mass of the binary. $m_1\dot{\phi}$ corresponds to a dimensionless parameter in the theory where $m_1$ is the mass of the primary BH while $\phi$ is the scalar field. \kent{The bounds are derived by assuming} non-GR corrections are subdominant,  which is realized whenever $\zeta_\EDGB \ll 1$ ($m_1\dot{\phi} \ll 1$) in EdGB (scalar-tensor) gravity . Numbers inside brackets mean such criterion is violated and the constraints \kent{are unreliable} \sout{drawn on that theory from the corresponding dataset is not reliable}. $G$ is the gravitational constant with the subscript 0 representing the time of coalescence. An overhead dot denotes a derivative with respect to time.}
 \label{table:ppE}
 \end{table*}
 \endgroup
@@ -505,26 +505,27 @@ However, future space-borne detectors such as LISA~\cite{Seoane:2013qna,Audley:2
 
 \section{Conclusion and Discussion}
 %What we did
-We derived constraints on scalar-tensor, EdGB and varying-$G$ theories from GW150914 and GW151226. To do so we performed Fisher analyses with Monte-Carlo simulations using a phenomB waveform.
+We derived constraints on scalar-tensor, EdGB and varying-$G$ theories from GW150914 and GW151226. To do so we performed Fisher analyses with Monte-Carlo simulations using the PhenomB waveform.
 %We focused on theories where the leading correction enters at a negative PN order.
-In particular, we derived reliable constraints on scalar-tensor theory from GW observations for the first time.
+In particular, we derived reliable constraints on \kent{the time-evolution of the scalar field in} \ky{I added this since bounds on ST from GWs have been placed from the GW speed bound with GW170817 in a different context.} scalar-tensor theory from GW observations for the first time. 
 %massive gravity?
 
 
 %Amplitude correction
 We explored how amplitude corrections contribute to the constraints on such theories. We derived three set of bounds on each theory: phase-only, amplitude-only, and combined.
 %Most of the previous work on testing gravity with GWs were focused on phase corrections only since matched filtering is more sensitive to phase corrections.
-We found that for binaries with large masses such as GW150914 where we have less number of cycles the bounds from amplitude and phase can be comparable to each other.
+We found that for binaries with large masses, such as GW150914 where we have less number of cycles, the bounds from the amplitude and phase can be comparable to each other.
 %Also, a combined analysis where we include no-GR corrections to both phase and amplitude is more accurate compared to a phase-only analysis.
-On the other hand, combined analyses yield constraints that differ from the phase-only case at most by 3.6\% for the theories under consideration. Hence at least in the theories where the leading correction enters at a negative PN order the phase correction only can produce a sufficiently accurate constraint.
+On the other hand, combined analyses yield constraints that differ from the phase-only case at most by 3.6\% for the theories under consideration. Hence at least in theories where the leading corrections enter at negative PN orders, the phase-only corrections can produce sufficiently accurate constraints.
 \begin{figure}[htb]
 \includegraphics[width=8.5cm]{combinedvsphase.pdf}
-\caption{Comparision of combined and phase-only analyses at different PN orders from GW150914 with a sky-averaged waveform. $\delta_{\beta}=\lb\beta_{\text{comb}}-\beta_{\text{phase}}\rb/\beta_{\text{phase}}$, where $\beta_{\text{phase}}$ and $\beta_{\text{comb}}$ are the $\beta_{\PPE}$ from phase-only and combined analysis respectively. }
+\caption{Comparision of combined and phase-only analyses at different PN orders from GW150914 with a sky-averaged waveform. We show $\delta_{\beta}=\lb\beta_{\text{comb}}-\beta_{\text{phase}}\rb/\beta_{\text{phase}}$, where $\beta_{\text{phase}}$ and $\beta_{\text{comb}}$ are $\beta_{\PPE}$ from phase-only and combined analyses respectively. }
 \label{fig:combinedvsphase}
 \end{figure}
 
 %whether combined analyses give better bound
-Depending on the prior information and the PN order of the non-GR correction a combined analysis can yield stronger or weaker constraint compared to a phase-only one. With the priors mentioned in Sec.~\ref{data} the fractional difference between the $\beta_{\PPE}$'s of the two cases is presented in Fig.~\ref{fig:combinedvsphase}. From -4 PN to -2.5 PN the combined analyses produce slight improvements over the phase-only constraints, while otherwise the former is weaker with a maximum deterioration of 8.5\% at -1 PN. Nonetheless, combined analyses are more reliable since excluding amplitude corrections from the waveform causes more uncertainty in the luminosity distance.
+Depending on the prior information and the PN order of the non-GR correction, a combined analysis can yield stronger or weaker constraint compared to a phase-only one. With the priors mentioned in Sec.~\ref{data}, the fractional difference between $\beta_{\PPE}$ for the two cases is presented in Fig.~\ref{fig:combinedvsphase}. From $-4$ PN to $-2.5$ PN correction, the combined analyses give rise to slight improvements over the phase-only constraints, while for other cases, the former is weaker with a maximum deterioration of 8.5\% at $-1$ PN order. Nonetheless, \kent{it would be safer to include both phase and amplitude corrections in the analysis as a lack of the former}
+\sout{the combined analyses are more reliable since amplitude corrections} in the \kent{template} waveform may cause \sout{more uncertainty in} \kent{systematic errors on GR parameters such as} luminosity distance \kent{if non-GR corrections exist in nature}.
 
 
 \acknowledgments
