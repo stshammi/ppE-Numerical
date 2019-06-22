@@ -57,7 +57,7 @@
 \newcommand{\GW}{{\mbox{\tiny GW}}}
 \newcommand{\ky}[1]{\textcolor{blue}{\it{\textbf{ky: #1}}} }
 \newcommand{\kent}[1]{\textcolor{magenta}{\textbf{#1}} }
-\newcommand{\st}[1]{\textcolor{cyan}{\it{\textbf{st: #1}}} }
+\newcommand{\st}[1]{\textcolor{cyan}{\it{\textbf{ #1}}} }
 
 %\bibliographystyle{apsrev}
 \begin{document}
@@ -96,16 +96,18 @@ To be written later
 %GWs & their  importance in testing gravity
 General relativity (GR) is the most successful theory of gravitation to date. This century-old theory that exquisitely describes gravity as a curvature of spacetime has passed numerous tests with high precision~\cite{Will:2014kxa}. Nonetheless, GR is not expected to be a complete description of gravity. The inconsistency in  galaxy rotation curves~\cite{article,Bosma:1981zz,Begeman:1991iy,Rubin:1970zza,Rubin:1980zd,1973ApJ...186..467O,Ostriker:1993fr} and the accelerated expansion of the universe~\cite{Abbott:1988nx,Copeland:2006wr,Perlmutter:1998np,Riess:1998cb,Riess:2004nr,RevModPhys.61.1,vanAlbada:1984js,WEINBERG201387}  is difficult to explain within the formulation of GR without introducing dark matter and dark energy. Moreover, a new theory is required to reconcile quantum mechanics with classical gravity~\cite{Adler:2010wf,Ng:2003jk}. Hence, one needs to continue testing GR through various experiments and observations. Gravitational wave (GW) observations are the recent addition to this venture~\cite{TheLIGOScientific:2016src,Yunes:2016jcc,LIGOScientific:2019fpa,Monitor:2017mdv,Abbott:2018lct} which enabled us to probe the formerly inaccessible strong, highly nonlinear and dynamical regime of gravity. Since strong-field regime is precisely the place to look for evidence of beyond-GR phenomenona due to quantum gravity corrections, it is important to extract as much physics as possible from the available GW data. 
 
-\ky{The first paragraph is great, but I'm not sure if we need this second paragraph...The focus of our paper is to derive current bounds including amplitude corrections, and not how such bounds will improve with future detectors. Given that most of things explained in this paragraph is not directly related to what we do in our paper, I'm more inclined to comment out this paragraph completely, sorry... (If we decide to keep this paragraph, we should also comment on other space detectors, like DECIGO, B-DECIGO, TianQin etc., that are also actively studied, but then it gets longer and longer...)}
+
+
+\begin{comment}
 %Current and future status of GW astrophysics
-During the first two LIGO/Virgo observing runs, ten binary black hole mergers and one neutron star merger were confirmed~\cite{LIGOScientific:2018mvr}. Recently LIGO recommenced the hunt for gravitational waves with a third observing run after going through multiple upgrades~\cite{ligo:news}.
+During the first two LIGO/Virgo observing runs, ten binary black hole mergers and one neutron star merger were confirmed~\cite{LIGOScientific:2018mvr}. Recently LIGO recommenced the hunt for gravitational waves with a third observing run after going through multiple upgrades~\cite{Ligo_News}.
 With KAGRA in Japan near its completion~\cite{Akutsu:2018axf} and LIGO-India under active study~\cite{LIGOScientific:2019vkc}, a stronger ground-based gravitational wave network will be realized in the next five years.
 %In 2025 LIGO-India will join the global network of detectors
 The third generation detectors such as Cosmic Explorer and Einstein Telescope will provide us with improved sensitivities~\cite{Evans:2016mbw,Punturo:2010zz}.
 The space-based detector LISA~\cite{Audley:2017drz} will inaugurate around mid-2030's and will be able to observe GWs at much lower frequency.
 %Decigo~\cite{Kawamura:2011zz} and BBO~\cite{Corbin:2005ny}
 With more detectors joining the quest we will achieve better precision in parameter estimation and source localization.
-
+\end{comment}
 
 %Model independent test of gravity:ppE formalism
 
@@ -133,26 +135,44 @@ With more detectors joining the quest we will achieve better precision in parame
 \multirow{3}{*}{Theories}&\multirow{3}{*}{Repr. Parameter}&\multicolumn{6}{c}{Constraints} \\ \cline{3-8}
 &&\multicolumn{3}{c|}{GW150914}&\multicolumn{3}{c}{GW151226}  \\ \cline{3-8}
 &&Phase&Amplitude&Combined&Phase&Amplitude&Combined\\ \hline
-\multirow{2}{*}{Scalar-Tensor~\cite{Scharre:2001hn,Berti:2004bd}}&$|\dot{\phi}|$ [$10^4/\mathrm{sec}$]&3.6390&7.2990&3.7696&1.0937&5.6005&1.0939\\
-&$|m_1\dot{\phi}|$&6.8677&16.4181&7.1501&0.6880&3.6597&0.6882\\ \hline
-\multirow{2}{*}{EdGB~\cite{Yagi:2011xp}}&$\sqrt{|\bar{\alpha}_{\EDGB}|}$ [km]&50.4553&76.3376&51.4716&4.3193&10.4464&4.3197\\
-&$\zeta_{\EDGB}$&3.6206&32.4331&3.9087&0.02069&0.70930&0.02070\\ \hline
-Varying-$G$~\cite{Tahura:2018zuq,Yunes:2009bv}&$|\dot{G_0}/G_0|$ [$10^6/\mathrm{yr}$]&7.3024&136.643&7.1753&0.0224&0.3824&0.0220\\ 
+\multirow{2}{*}{Scalar-Tensor~\cite{Scharre:2001hn,Berti:2004bd}}&$|\dot{\phi}|$ [$10^4/\mathrm{sec}$]&(3.64)&(7.30)&(3.77)&1.09&(5.60)&1.09\\
+&$|m_1\dot{\phi}|$&6.87&16.4&7.15&0.688&3.66&0.688\\ \hline
+\multirow{2}{*}{EdGB~\cite{Yagi:2011xp}}&$\sqrt{|\bar{\alpha}_{\EDGB}|}$ [km]&(50.5)&(76.3)&(51.5)&4.32&10.5&4.32\\
+&$\zeta_{\EDGB}$&3.62&32.4&3.91&0.0207&0.709&0.0207\\ \hline
+Varying-$G$~\cite{Tahura:2018zuq,Yunes:2009bv}&$|\dot{G_0}/G_0|$ [$10^6/\mathrm{yr}$]&7.30&137&7.18&0.0224&0.382&0.0220\\ 
 \noalign{\smallskip}
 \hline
 \hline
 \end{tabular}
 \end{centering}
-\caption{\kent{90\% credible} constraints on representative parameters of various modified theories of gravity from GW150914 and GW151226. For each of the GW events, ``phase'' and ``amplitude'' correspond to the cases where we include non-GR corrections only to the GW phase and amplitude respectively, while ``combined'' is the case where we include both. $\bar{\alpha}_{\EDGB}$ is the EdGB coupling parameter which is related to the dimensionless coupling $\zeta_{\EDGB}$ by $\zeta_\EDGB\equiv 16 \pi \bar{\alpha}_\EDGB^2/m^4$ with $m$ being the total mass of the binary. $m_1\dot{\phi}$ \kent{corresponds to a dimensionless parameter in the theory where $m_1$ is the mass of the primary BH while $\phi$ is the scalar field. Non-GR corrections are always subdominant whenever $\zeta_\EDGB \ll 1$ or $m_1\dot{\phi} \ll 1$.} 
-\ky{I realized that the word ``small coupling'' is a bad phrasing for ST since $\dot \phi$ is not a coupling parameter of the theory...}
-\sout{controls the amount of small coupling in scalar-tensor theory where $m_1$ is the larger binary mass component and $\phi$ is the scalar field.} $G$ is the gravitational constant with the subscript 0 representing the time of coalescence. An overhead dot denotes a derivative with respect to time.
-\ky{I see inconsistency in number of digits...Sometimes, it only has 3 digits (like 0.0220) while it sometimes go up to 6 digits (136.643). I now think we should probably show everything up to 3 digits. I don't think our Fortran Fisher code is numerically accurate to 6 digits...In some cases, it's true that if we only show up to 3 digits, we don't get any difference between phase and combined, but that's what it is and I think that's fine. Also, I suggest to add brackets in bounds on EdGB and ST that don't satisfy the small coupling approx.}
-}
+\caption{90\% credible constraints on representative parameters of various modified theories of gravity from GW150914 and GW151226. For each of the GW events, ``phase'' and ``amplitude'' correspond to the cases where we include non-GR corrections only to the GW phase and amplitude respectively, while ``combined'' is the case where we include both. $\bar{\alpha}_{\EDGB}$ is the EdGB coupling parameter which is related to the dimensionless coupling $\zeta_{\EDGB}$ by $\zeta_\EDGB\equiv 16 \pi \bar{\alpha}_\EDGB^2/m^4$ with $m$ being the total mass of the binary. $m_1\dot{\phi}$ corresponds to a dimensionless parameter in the theory where $m_1$ is the mass of the primary BH while $\phi$ is the scalar field. Non-GR corrections are \sout{always} required to be  subdominant \st{which happens in EdGB (scalar-tensor) gravity} whenever $\zeta_\EDGB \ll 1$ \sout{or} \st{($m_1\dot{\phi} \ll 1$)}. \st{A number inside a bracket means such criterion is violated and the constraint drawn on that theory from the corresponding dataset is not reliable.} $G$ is the gravitational constant with the subscript 0 representing the time of coalescence. An overhead dot denotes a derivative with respect to time.}
 \label{table:ppE}
 \end{table*}
 \endgroup
 }
-
+%{
+%\newcommand{\minitab}[2][l]{\begin{tabular}{#1}#2\end{tabular}}
+%\renewcommand{\arraystretch}{2.}
+%\begingroup 
+%\begin{table*}[htb]
+%\begin{centering}
+%\begin{tabular}{c|c|c|c|c|c|c|c}
+%\hline
+%\hline
+%\noalign{\smallskip}
+%\multirow{3}{*}{Theories}&\multirow{3}{*}{Repr. Parameter}&\multicolumn{6}{c}{Constraints} \\ \cline{3-8}
+%&&\multicolumn{3}{c|}{GW150914}&\multicolumn{3}{c}{GW151226}  \\ \cline{3-8}
+%&&Phase&Amplitude&Combined&Phase&Amplitude&Combined\\ \hline
+%\multirow{2}{*}{Scalar-Tensor~\cite{Scharre:2001hn,Berti:2004bd}}&$|\dot{\phi}|$ [$10^4/\mathrm{sec}$]&3.6390&7.2990&3.7696&1.0937&5.6005&1.0939\\
+%&$|m_1\dot{\phi}|$&6.8677&16.4181&7.1501&0.6880&3.6597&0.6882\\ \hline
+%\multirow{2}{*}{EdGB~\cite{Yagi:2011xp}}&$\sqrt{|\bar{\alpha}_{\EDGB}|}$ [km]&50.4553&76.3376&51.4716&4.3193&10.4464&4.3197\\
+%&$\zeta_{\EDGB}$&3.6206&32.4331&3.9087&0.02069&0.70930&0.02070\\ \hline
+%Varying-$G$~\cite{Tahura:2018zuq,Yunes:2009bv}&$|\dot{G_0}/G_0|$ [$10^6/\mathrm{yr}$]&7.3024&136.643&7.1753&0.0224&0.3824&0.0220\\ 
+%\noalign{\smallskip}
+%\hline
+%\hline
+%\end{tabular}
+%\end{centering}
 %Our work
 
 %Organization of the paper
@@ -204,7 +224,7 @@ and
 \label{eq:Psi}
 \Psi = \Psi_\GR  -\frac{15 \text{$\gamma_{\dot{f}} $}}{16 (\text{$c_{\dot{f}}$}-8) (\text{$c_{\dot{f}}$}-5)} u^{c_{\dot{f}}-5}\,,
 \ee
-respectively. Eq.~\eqref{eq:Psi} is already in the PPE format, while  Eq.~\eqref{eq:amp} can be reduced to such a form by keeping only the dominant correction\footnote{A detailed derivation can be found in Ref.~\cite{Tahura:2018zuq}}.\st{somewhere we have to give the definitions of dissipative and conservative corrections}
+respectively. Eq.~\eqref{eq:Psi} is already in the PPE format, while  Eq.~\eqref{eq:amp} can be reduced to such a form by keeping only the dominant correction\footnote{A detailed derivation can be found in Ref.~\cite{Tahura:2018zuq}}.
 
 
 %Relation among ppE parameters
@@ -299,7 +319,7 @@ Under the assumptions of a Gaussian and stationary noise, the posterior probabil
 \be
 P\left(\theta^a|s\right) \propto p^{(0)}\left(\theta^a\right) \text{exp}\left[-\frac{1}{2} \Gamma_{ab} \Delta\theta^a\Delta \theta^b \right]\,,
 \ee
-where $\Delta \theta^a=\hat{\theta}^a-\theta^a$ with $\hat{\theta}^a$ being the maximum likelihood values of $\theta^a$. $p^{(0)}\left(\theta^a\right)$ gives the probability distribution of the prior information, \kent{which we take to be in a Gaussian form for simplicity}. $\Gamma_{ab}$ is called the Fisher information matrix which is defined as
+where $\Delta \theta^a=\hat{\theta}^a-\theta^a$ with $\hat{\theta}^a$ being the maximum likelihood values of $\theta^a$. $p^{(0)}\left(\theta^a\right)$ gives the probability distribution of the prior information, which we take to be in a Gaussian form for simplicity. $\Gamma_{ab}$ is called the Fisher information matrix which is defined as
 \be
 \Gamma_{ab}=\left(\partial_a h|\partial_b h \right)\,,
 \ee
@@ -326,7 +346,7 @@ We perform a Monte Carlo simulation by using each set of the posterior samples r
 %%prior on spin
 We impose the prior information such that $-1 \leq \chi \leq 1$, $-\pi \leq (\phi_0, \alpha, \psi) \leq \pi$, and $-\pi/2 \leq ( \delta, \theta_{\text{inc}}) \leq \pi/2$.
 
-%%Detectors
+%Detectors
 We use the detector sensitivity of Advanced LIGO (aLIGO) O1 run~\cite{LIGOScientific:2018mvr} and we consider the two detectors at Hanford and Livingstone. For simplicity, we assume that the Livingstone noise spectrum is identical to that of the Hanford~\cite{Yunes:2009yz}. For Fisher integration, the minimum frequency is taken to be 20 Hz while the maximum frequency is same as the cutoff frequency above which the signal power is negligible~\cite{Ajith:2009bn}.
 
 
@@ -372,7 +392,7 @@ Here, $\Omega_M$ and $\Omega_\Lambda$ are the energy density of matter and dark 
 
 \begin{figure}[htb]
 \includegraphics[width=8.5cm]{graviton.pdf}
-\caption{Cumulative probability distribution of the Compton wavelength of the graviton from GW150914. \kent{We show the ones} obtained from a Fisher analysis with Monte Carlo simulations \kent{(blue solid)} \sout{while the red one is found by LVC via} \kent{and from} a Bayesian analysis \kent{by the LVC (red solid)}. Each of the vertical dashed lines corresponds to the \sout{lower} \kent{upper} bound of the distribution of the same color with 90\% confidence. Observe how the two different analyses give similar bounds.}
+\caption{Cumulative probability distribution of the Compton wavelength of the graviton from GW150914. We show the ones obtained from a Fisher analysis with Monte Carlo simulations (blue solid) and from a Bayesian analysis by the LVC (red solid). Each of the vertical dashed lines corresponds to the lower bound of the distribution of the same color with 90\% confidence. Observe how the two different analyses give similar bounds.}
 \label{fig:graviton}
 \end{figure}
 
@@ -419,7 +439,7 @@ We now derive constraints on EdGB gravity from GW150914 and GW151226. First we e
 
 %Results
 Figure~\ref{fig:pdf-edgb} presents cumulative probability distributions of $\bar{\alpha}^2_{\EDGB}$\footnote{We show the distribution of $\bar{\alpha}^2_{\EDGB}$ instead of $\sqrt{\bar{\alpha}_{\EDGB}}$ as it is the former that directly enters in the waveform.} for GW150914 for three different cases with vertical lines showing the 90\% CL of the corresponding distribution. We found the 90\% CL constraints on  $\sqrt{\bar{\alpha}_{\EDGB}}$ from each of the phase and amplitude corrections as 50.5 km and 76.3 km respectively. Notice that these bounds have the same order of magnitude. On the other hand, combining the amplitude and phase corrections leads to an upper bound of 51.5 km, which is weaker than the  phase-only constraint by 2\%.
-Similar analyses with GW151226 yield 4.3 km and 10.5 km respectively from thephase and amplitude corrections,
+Similar analyses with GW151226 yield 4.3 km and 10.5 km respectively from the phase and amplitude corrections,
 %\footnote{The upper bound on $\sqrt{\bar{\alpha}_{\EDGB}}$ derived from the phase correction with GW151226 agrees with those of ref.~\cite{Nair:2019iur} and~\cite{Yamada:2019zrb}}, 
 while \kent{combining the two only changes the result from including only the phase correction by 0.01\%.} \sout{the difference between the phase-only case and the combined analysis  is only 0.01\%. As we can see,} 
 These bounds are consistent with those in a recent paper~\cite{Nair:2019iur} while Ref.~\cite{Yamada:2019zrb} found even stronger bounds by combining multiple GW events. These GW bounds are comparable to the one obtained from low-mass X-ray binaries~\cite{Yagi:2012gp}.
@@ -448,7 +468,7 @@ with $a=-2$. Here $\alpha_A$ represents the scalar charge of the $A$th binary co
 where $\dot{\phi}$ is the rate of change of $\phi$ with time.
 
 %Results
-One can use Eqs.~\eqref{eq:betaST}--\eqref{eq:alpha_A} and the numerical anlaysis described in Sec.~\ref{data} to find constraints on $\dot{\phi}$ as long as the small coupling approximation $m_A\dot{\phi}<1$ is satisfied. In this regard, only 11.5\% (13.7\%) of the samples of GW150914 satisfies such approximation with 90\% confidence level for the phase (combined) correction, while all of the samples fail to do so for the amplitude correction. Hence GW150914 cannot place any meaningful bound on scalar-tensor theories considered here. On the other hand, 90.4\% of the samples from GW151226 meets the small coupling criterion for the phase-only and combined analyses, while the fraction is only 25\% for the amplitude correction. Thus, we derive reliable constraints from GW151226 with the phase-only and combined analyses and both lead to $\dot{\phi}<1.1\times10^4$/sec\footnote{A previous analysis with the sky-averaged waveform in Ref.~\cite{Yunes:2016jcc} could not place a reliable bound on scalar-tensor theories. Since the posterior distributions of the GW events were not available then, one could not determine how well those events satisfied the small coupling approximation from a simple Fisher analysis.}. This constraint is 10 orders of magnitude weaker than the current most stringent bound obtained from the orbital decay rate of quasar OJ287~\cite{Horbatsch:2011ye}, though this is the first bound obtained in the strong/dynamical regime. \st{May be we can comment on projected constraints on $\dot{\phi}$. But I have some questions regarding this and may be we can talk about it in next meeting}
+One can use Eqs.~\eqref{eq:betaST}--\eqref{eq:alpha_A} and the numerical anlaysis described in Sec.~\ref{data} to find constraints on $\dot{\phi}$ as long as the small coupling approximation $m_A\dot{\phi}<1$ is satisfied. In this regard, only 11.5\% (13.7\%) of the samples of GW150914 satisfies such approximation with 90\% confidence level for the phase (combined) correction, while all of the samples fail to do so for the amplitude correction. Hence GW150914 cannot place any meaningful bound on scalar-tensor theories considered here. On the other hand, 90.4\% of the samples from GW151226 meets the small coupling criterion for the phase-only and combined analyses, while the fraction is only 25\% for the amplitude correction. Thus, we derive reliable constraints from GW151226 with the phase-only and combined analyses and both lead to $\dot{\phi}<1.1\times10^4$/sec\footnote{A previous analysis with the sky-averaged waveform in Ref.~\cite{Yunes:2016jcc} could not place a reliable bound on scalar-tensor theories. Since the posterior distributions of the GW events were not available then, one could not determine how well those events satisfied the small coupling approximation from a simple Fisher analysis.}. This constraint is 10 orders of magnitude weaker than the current most stringent bound obtained from the orbital decay rate of quasar OJ287~\cite{Horbatsch:2011ye}, though this is the first bound obtained in the strong/dynamical regime.
 
 
 \subsection{Varying- $G$ Theories}
@@ -483,7 +503,30 @@ However, future space-borne detectors such as LISA~\cite{Seoane:2013qna,Audley:2
 %The most stringent bound on $|\dot{G}/G|$ is of the order $\lesssim 10^{-14} \,\mathrm{yr}^{-1}$~\cite{2018NatCo...9..289G}.
 
 
-\section{Conclusion}
+\section{Conclusion and Discussion}
+%What we did
+We derived constraints on scalar-tensor, EdGB and varying-$G$ theories from GW150914 and GW151226. To do so we performed Fisher analyses with Monte-Carlo simulations using a phenomB waveform.
+%We focused on theories where the leading correction enters at a negative PN order.
+In particular, we derived reliable constraints on scalar-tensor theory from GW observations for the first time.
+%massive gravity?
+
+
+%Amplitude correction
+We explored how amplitude corrections contribute to the constraints on such theories. We derived three set of bounds on each theory: phase-only, amplitude-only, and combined.
+%Most of the previous work on testing gravity with GWs were focused on phase corrections only since matched filtering is more sensitive to phase corrections.
+We found that for binaries with large masses such as GW150914 where we have less number of cycles the bounds from amplitude and phase can be comparable to each other.
+%Also, a combined analysis where we include no-GR corrections to both phase and amplitude is more accurate compared to a phase-only analysis.
+On the other hand, combined analyses yield constraints that differ from the phase-only case at most by 3.6\% for the theories under consideration. Hence at least in the theories where the leading correction enters at a negative PN order the phase correction only can produce a sufficiently accurate constraint.
+\begin{figure}[htb]
+\includegraphics[width=8.5cm]{combinedvsphase.pdf}
+\caption{Comparision of combined and phase-only analyses at different PN orders from GW150914 with a sky-averaged waveform. $\delta_{\beta}=\lb\beta_{\text{comb}}-\beta_{\text{phase}}\rb/\beta_{\text{phase}}$, where $\beta_{\text{phase}}$ and $\beta_{\text{comb}}$ are the $\beta_{\PPE}$ from phase-only and combined analysis respectively. }
+\label{fig:combinedvsphase}
+\end{figure}
+
+%whether combined analyses give better bound
+Depending on the prior information and the PN order of the non-GR correction a combined analysis can yield stronger or weaker constraint compared to a phase-only one. With the priors mentioned in Sec.~\ref{data} the fractional difference between the $\beta_{\PPE}$'s of the two cases is presented in Fig.~\ref{fig:combinedvsphase}. From -4 PN to -2.5 PN the combined analyses produce slight improvements over the phase-only constraints, while otherwise the former is weaker with a maximum deterioration of 8.5\% at -1 PN. Nonetheless, combined analyses are more reliable since excluding amplitude corrections from the waveform causes more uncertainty in the luminosity distance.
+
+
 \acknowledgments
 
 We thank Carl-Johan Haster for providing valuable comments on the LIGO posterior samples. 
