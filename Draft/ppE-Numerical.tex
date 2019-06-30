@@ -9,12 +9,14 @@
 \usepackage{dcolumn}
 \usepackage[dvips]{graphicx}
 \usepackage{graphics}
+\usepackage[normalem]{ulem}
 %\usepackage[latin1]{inputenc}
 \usepackage{latexsym}
 \usepackage{rotating}
 \usepackage[colorlinks=true]{hyperref}
 \usepackage{xspace} % Sensible space treatment at end of simple macros
 \usepackage[usenames]{color}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{mathrsfs}
 \usepackage{multirow}
 \usepackage{pifont}
@@ -58,6 +60,8 @@
 \newcommand{\ky}[1]{\textcolor{blue}{\it{\textbf{ky: #1}}} }
 \newcommand{\kent}[1]{\textcolor{magenta}{\textbf{#1}} }
 \newcommand{\st}[1]{\textcolor{cyan}{\it{\textbf{ #1}}} }
+\newcommand{\zc}[1]{\textcolor{red}{\it{\textbf{ZC: #1}}} }
+\newcommand{\zack}[1]{\textcolor{orange}{\textbf{#1}} }
 
 %\bibliographystyle{apsrev}
 \begin{document}
@@ -74,22 +78,22 @@
 
 \begin{abstract}
 %GWs for testing gravity
-The detection of gravitational waves offered us the opportunity to explore the dynamical and strong-field regime of gravity.
+The detection of gravitational waves \zack{has} offered us the opportunity to explore the dynamical and strong-field regime of gravity.
 %Why amplitude correction is important
-Since matched filtering is more sensitive to the variation in the GW phase than the amplitude, many tests of gravity with gravitational waves have been carried out using only the former. Such studies cannot probe the non-GR effects that may enter in the amplitude only. Besides, if not accommodated in the waveform template a non-GR effect in the amplitude may induce systematic errors on parameters that are present in GR.
+\sout{Since} \zack{Because} matched filtering is more sensitive to \sout{the} variation\zack{s} in the GW phase than the amplitude, many tests of gravity with gravitational waves have been carried out using only the former. Such studies cannot probe the non-GR effects that may enter \zack{only} in the amplitude \sout{only}. Besides, if not accommodated in the waveform template\zack{,} a non-GR effect in the amplitude may induce \zack{``induce" works but I think ``introduce" sounds better.} systematic errors on parameters \sout{that} \zack{which} are present in GR.
 %PPE formalism
-In this paper we derive constraints on some modified theories of gravity incorporating both the phase and the amplitude corrections. We follow the model-independent approach of parametrized post-Einsteinian formalism.
+In this paper we derive constraints on some modified theories of gravity\zack{,} incorporating both \sout{the} phase and \sout{the} amplitude corrections. We follow the model-independent approach of \zack{the} \sout{parametrized} \zack{parameterized} post-Einsteinian formalism.
 %What we do
-We perform Fisher analyses with Monte-Carlo simulations focusing on non-GR corrections at negative post-Newtonian orders originated from generation mechanisms.
+We perform Fisher analyses with Monte-Carlo simulations focusing on non-GR corrections \zack{entering the waveform} at negative post-Newtonian orders \sout{originated} \zack{originating} from generation mechanisms.
 %time-evolution of scalar field
-In particular, we derive reliable constraints on the time-evolution of a scalar field with in scalar-tensor theory for the first time with gravitational waves.
+In particular, we derive reliable constraints on the time-evolution of a scalar field \sout{with} in \zack{a} scalar-tensor theory for the first time with gravitational waves.
 %three constraints
-We derive constraints by treating phase and amplitude corrections independently and also by combining the both.
+We derive constraints by treating \zack{the} phase and amplitude corrections independently\zack{,} and also by combining the\zack{m} both.
 %comparing constraints from amplitude and phase
 We find that the contributions from amplitude corrections can be comparable to the ones from the phase corrections in case of massive binaries.
 %conclusion
-Also, constraints derived by incorporating both phase and amplitude differ from the ones from the phase  at most by 4\%, suggesting that studying only the phase is sufficient for non-GR generation effects which enter in the waveform at negative post-Newtonian orders.
-\st{Perhaps I am not supposed to use abbreviations such as 'GR' in the abstract. I can replace it with 'general relativity' if you want.}
+Also, constraints derived by incorporating both phase and amplitude \zack{corrections} differ from the ones \sout{from the} \zack{with} phase \zack{corrections only} \sout{at most by 4\%} \zack{by 4\% at most}, suggesting that studying only the phase is sufficient for non-GR generation effects \sout{which} enter\zack{ing} \sout{in} the waveform at negative post-Newtonian orders.
+\st{Perhaps I am not supposed to use abbreviations such as 'GR' in the abstract. I can replace it with 'general relativity' if you want.}\zc{Same for "GW" - I've seen some abstracts with these acronyms in them so maybe their fine?}
 \end{abstract}
 
 \date{\today}
@@ -106,9 +110,7 @@ Also, constraints derived by incorporating both phase and amplitude differ from 
 \section{Introduction}
 %GWs & their  importance in testing gravity
 %General relativity (GR) is the most successful theory of gravitation to date. 
-General relativity (GR) is so far the most successful theory of gravitation. This century-old theory that exquisitely describes gravity as a curvature of spacetime has passed numerous tests with high precision~\cite{Will:2014kxa}. Nonetheless, GR is not expected to be a complete description of gravity. The inconsistency in  galaxy rotation curves~\cite{article,Bosma:1981zz,Begeman:1991iy,Rubin:1970zza,Rubin:1980zd,1973ApJ...186..467O,Ostriker:1993fr} and the accelerated expansion of the universe~\cite{Abbott:1988nx,Copeland:2006wr,Perlmutter:1998np,Riess:1998cb,Riess:2004nr,RevModPhys.61.1,vanAlbada:1984js,WEINBERG201387}  is difficult to explain within the formulation of GR without introducing dark matter and dark energy. Moreover, a new theory is required to reconcile quantum mechanics with classical gravity~\cite{Adler:2010wf,Ng:2003jk}. Hence, one needs to continue testing GR through various experiments and observations. Gravitational wave (GW) observations are the recent addition to this venture~\cite{TheLIGOScientific:2016src,Yunes:2016jcc,LIGOScientific:2019fpa,Monitor:2017mdv,Abbott:2018lct} which enabled us to probe the formerly inaccessible strong, highly nonlinear and dynamical regime of gravity. Since strong-field regime is precisely the place to look for evidence of beyond-GR phenomena due to quantum gravity corrections, it is important to extract as much physics as possible from the available GW data. 
-
-
+General relativity (GR) is \sout{so far} the most successful theory of gravitation \zack{so far}\zc{Alternatively you can put ``So far" at the very beginning.}. This century-old theory \sout{that} \zack{which} exquisitely describes gravity as \sout{a} \zack{the} curvature of spacetime has passed numerous tests with high precision~\cite{Will:2014kxa}. Nonetheless, GR is not expected to be a complete description of gravity. The \sout{inconsistency} \zack{inconsistencies} in  galaxy rotation curves~\cite{article,Bosma:1981zz,Begeman:1991iy,Rubin:1970zza,Rubin:1980zd,1973ApJ...186..467O,Ostriker:1993fr} and the accelerated expansion of the universe~\cite{Abbott:1988nx,Copeland:2006wr,Perlmutter:1998np,Riess:1998cb,Riess:2004nr,RevModPhys.61.1,vanAlbada:1984js,WEINBERG201387}  is difficult to explain within the formulation of GR without introducing dark matter and dark energy. Moreover, a new theory is required to reconcile quantum mechanics with classical gravity~\cite{Adler:2010wf,Ng:2003jk}. Hence, one needs to continue testing GR through various experiments and observations. Gravitational wave (GW) observations are the \zack{most} recent addition to this venture~\cite{TheLIGOScientific:2016src,Yunes:2016jcc,LIGOScientific:2019fpa,Monitor:2017mdv,Abbott:2018lct} which \zack{has} enabled us to probe the formerly inaccessible strong, highly non\zack{-}linear and dynamical regime of gravity. \sout{Since} \zack{Because the} strong-field regime is precisely the place to look for evidence of beyond-GR phenomena due to quantum gravity corrections, it is important to extract as much physics as possible from the available GW data. 
 
 
 %Current and future status of GW astrophysics
@@ -121,19 +123,19 @@ General relativity (GR) is so far the most successful theory of gravitation. Thi
 
 
 %Model independent test of gravity:ppE formalism
-One can adopt either a model-independent or a theory-specific method for testing gravity, although the former is more efficient if one wishes to achieve constraints on multiple theories with gravitaional wave (GW) observations. To be theory-agnostic a data analysis pipeline called TIGER was developed where one introduces parametrized deformations at various PN orders and treats them independently~\cite{Agathos:2013upa,Meidam:2014jpa}. With a similar goal the LIGO scientific collaboration and VIRGO scientific collaboration (LVC) employed the  generalized IMRphenom (gIMR) waveform which included the spin-precession effects well~\cite{Monitor:2017mdv,Abbott:2016izl}. With such waveforms tests of gravity with GW phase have been carried out in~\cite{Monitor:2017mdv,TheLIGOScientific:2016pea,Yunes:2016jcc,Abbott:2017vtc,LIGOScientific:2019fpa,TheLIGOScientific:2016src}. Both TIGER and gIMR have the drawback that they do not take into account the possible non-GR deviations in the GW amplitude. Moreover, they cannot capture the non-GR effects entering at negative PN orders such as the scalar-dipole radiation. Another framework proposed by Yunes \& Pretorius called \emph{parameterized post-Einsteinian} (PPE) formalism circumvents such limitations by introducing generic corrections to both the phase and the amplitude~\cite{Yunes:2009ke,Chatziioannou:2012rf}.
+One can adopt either a model-independent\zack{,} or a theory-specific method for testing gravity, although the former is more efficient if one wishes to achieve constraints on multiple theories with \sout{gravitaional wave} GW\zc{already defined this acronym.} observations. To be theory-agnostic a data analysis pipeline \sout{called} \zack{named} TIGER \sout{was} \zack{has been} developed\zack{,} where one introduces \sout{parametrized} \zack{parameterized} deformations at various PN orders and treats them independently~\cite{Agathos:2013upa,Meidam:2014jpa}. With a similar goal\zack{,} the LIGO \sout{scientific collaboration} and VIRGO scientific collaboration (LVC) employed the generalized IMRphenom (gIMR) waveform \zack{model,} which \zack{has} included \sout{the} spin-precession effects \zack{as} well~\cite{Monitor:2017mdv,Abbott:2016izl}. With such waveforms\zack{,} tests of gravity with \zack{the} GW phase have been carried out in~\cite{Monitor:2017mdv,TheLIGOScientific:2016pea,Yunes:2016jcc,Abbott:2017vtc,LIGOScientific:2019fpa,TheLIGOScientific:2016src}. Both TIGER and gIMR have the drawback that they do not take into account the possible non-GR deviations in the GW amplitude. Moreover, they cannot capture the non-GR effects entering at negative PN orders such as the scalar-dipole radiation. Another framework proposed by Yunes \& Pretorius \sout{called} \zack{named the} \emph{parameterized post-Einsteinian} (PPE) formalism circumvents such limitations by introducing generic corrections to both the phase and the amplitude~\cite{Yunes:2009ke,Chatziioannou:2012rf}.
 
 
 
 
 
 %Importance of amplitude corrections
-Almost all of the templates for matched filtering are based on the restricted post-Newtonian approximation~\cite{VanDenBroeck:2006qu}, which led many of the previous studies to focus only on the phase. Nonetheless, scenarios where amplitude corrections bear importance  are not uncommon.  In some parity-violating theories one of the circularly-polarized mode is amplified while the other one is suppressed, which is called amplitude birefrigence~\cite{Alexander:2007kv,Yunes:2008bu,Yunes:2010yf,Yagi:2017zhb}. Such an effect enters only in the GW amplitude and cannot be revealed by studying the phase. Probing amplitude corrections is also important in constraining gravitational theories with GW stochastic backgrounds~\cite{Maselli:2016ekw}. Furthermore, theories with flat extra dimensions~\cite{Cardoso:2002pa}, Horndeski gravity~\cite{Saltas:2014dha}, and f(R) gravity~\cite{Hwang:1996xh} may predict amplitude damping that scales with the cosmological distance. Such phenomena have been studied in Ref.~\cite{Nishizawa:2017nef}  in terms of a generalized GW propagation (gGP) framework. 
+Almost all of the templates \zack{used} for matched filtering are based on the restricted post-Newtonian approximation~\cite{VanDenBroeck:2006qu}, which led many of the previous studies to focus only on the phase. Nonetheless, scenarios where amplitude corrections bear importance  are not uncommon. In some parity-violating theories\zack{,} one of the circularly-polarized mode\zack{s} is amplified while the other one is suppressed, \sout{which is} \zack{an effect} called amplitude birefrigence~\cite{Alexander:2007kv,Yunes:2008bu,Yunes:2010yf,Yagi:2017zhb}. Such an effect enters only in the GW amplitude and cannot be revealed by studying the phase. Probing amplitude corrections is also important in constraining gravitational theories with GW stochastic backgrounds~\cite{Maselli:2016ekw}. Furthermore, theories with flat extra dimensions~\cite{Cardoso:2002pa}, Horndeski gravity~\cite{Saltas:2014dha}, and f(R) gravity~\cite{Hwang:1996xh} may predict amplitude damping that scales with the cosmological distance. Such phenomena have been studied in Ref.~\cite{Nishizawa:2017nef}  in terms of a generalized GW propagation (gGP) framework. 
 
 
 
 %our work:methodology
-Motivated by the propagation effects in the GW amplitude, we study the generation effects in this paper. PPE amplitude corrections due to generation mechanisms in various example theories have been derived analytically in Reference~\cite{Tahura:2018zuq}. We compute the constraints on some of those theories from both the phase and the amplitude, focusing on leading PN corrections to the tensorial modes only. We choose theories where the leading correction enters at a negative PN order and the sensitivities of BHs are known. Such criteria lead us to choose EdGB, scalar-tensor, and varying-$G$ gravity. We carry out Fisher analyses with Monte-Carlo simulations utilizing the parameter estimation samples of GW151226 and GW150914 released by LIGO~\cite{ligo:sample}. Such analyses with actual posterior samples produce more reliable results compared to the ones with sky-averaged waveforms. In fact, implementing such samples we can determine the credibility of the small coupling approximation in scalar-tensor theory, which allows us to place reliable bounds on the time-evolution of the scalar field from GW observations for the first time.
+Motivated by the propagation effects in the GW amplitude, we study the generation \sout{effects} \zack{mechanisms} in this paper. PPE amplitude corrections due to generation mechanisms in various example theories have been derived analytically in Reference~\cite{Tahura:2018zuq}. We compute the constraints on some of those theories from both the phase and \sout{the} amplitude, focusing on leading PN corrections to the tensorial modes only. We choose theories where the leading correction enters at a negative PN order\zack{,} and the sensitivities of BHs are known. Such criteria lead us to choose \zack{Einstein-Dilaton-Gauss-Bonnet (EdGB)} \sout{EdGB}, scalar-tensor, and varying-$G$ gravit\zack{ies}. We carry out Fisher analyses with Monte-Carlo simulations utilizing the parameter estimation samples of GW151226 and GW150914 released by LIGO~\cite{ligo:sample}. Such analyses with actual posterior samples produce more reliable results compared to the ones with sky-averaged waveforms. In fact, \zack{when} implementing such samples\zack{,} we can determine the credibility of the small coupling approximation in scalar-tensor theory, which allows us to place reliable bounds on the time-evolution of the scalar field from GW observations for the first time.
 
 
 %Table
@@ -160,7 +162,7 @@ Varying-$G$~\cite{Tahura:2018zuq,Yunes:2009bv}&$|\dot{G_0}/G_0|$ [$10^6/\mathrm{
 \hline
 \end{tabular}
 \end{centering}
-\caption{90\% credible constraints on representative parameters of various modified theories of gravity from GW150914 and GW151226. For each of the GW events, ``phase'' and ``amplitude'' correspond to the cases where we include non-GR corrections only to the GW phase and amplitude respectively, while ``combined'' is the case where we include both \st{in the waveform and reduce the two constraints to a single one according to Sec.~\ref{data}.} $\bar{\alpha}_{\EDGB}$ is the EdGB coupling parameter which is related to the dimensionless coupling $\zeta_{\EDGB}$ by $\zeta_\EDGB\equiv 16 \pi \bar{\alpha}_\EDGB^2/m^4$ with $m$ being the total mass of the binary. $m_1\dot{\phi}$ corresponds to a dimensionless parameter in the theory where $m_1$ is the mass of the primary BH while $\phi$ is the scalar field. The bounds are derived by assuming non-GR corrections are subdominant,  which is realized whenever $\zeta_\EDGB \ll 1$ ($m_1\dot{\phi} \ll 1$) in EdGB (scalar-tensor) gravity. Numbers inside brackets mean such criterion is violated and the constraints are unreliable. $G$ is the gravitational constant with the subscript 0 representing the time of coalescence. An overhead dot denotes a derivative with respect to time.}
+\caption{90\% credible constraints on representative parameters of various modified theories of gravity from GW150914 and GW151226. For each of the GW events, ``phase'' and ``amplitude'' correspond to the cases where we include non-GR corrections only to the GW phase and amplitude respectively, while ``combined'' is the case where we include both \st{in the waveform and reduce the two constraints to a single one according to Sec.~\ref{data}.} $\bar{\alpha}_{\EDGB}$ is the EdGB coupling parameter which is related to the dimensionless coupling $\zeta_{\EDGB}$ by $\zeta_\EDGB\equiv 16 \pi \bar{\alpha}_\EDGB^2/m^4$ with $m$ being the total mass of the binary. $m_1\dot{\phi}$ corresponds to a dimensionless parameter in the theory where $m_1$ is the mass of the primary BH while $\phi$ is the scalar field. The bounds are derived by assuming \zack{subdominant} non-GR corrections \sout{are subdominant},  which is realized whenever $\zeta_\EDGB \ll 1$ ($m_1\dot{\phi} \ll 1$) in EdGB (scalar-tensor) gravity. Numbers inside brackets mean such criterion is violated and the constraints are unreliable. $G$ is the gravitational constant with the subscript 0 representing the time of coalescence. An overhead dot denotes a derivative with respect to time.}
 \label{table:ppE}
 \end{table*}
 \endgroup
@@ -169,7 +171,7 @@ Varying-$G$~\cite{Tahura:2018zuq,Yunes:2009bv}&$|\dot{G_0}/G_0|$ [$10^6/\mathrm{
 
 
 %our work:comparision among different constraints
-We also find that the constraints derived from the phase and the amplitude can be comparable in case of massive binary systems like GW150914. Whereas for less massive ones with large number of GW cycles the phase always yields stronger constraints. Moreover, inclusion of an amplitude correction to the waveform impacts the bound on the phase correction as well.  Such effects vary with the PN order of the corrections and the prior information of the analyses. %The constraints on various theories from is presented in Table~\ref{table:ppE}.
+We also find that the constraints derived from the phase and the amplitude can be comparable in case of massive binary systems like GW150914. Whereas for less massive \sout{ones} \zack{binaries} with \zack{a} large number of GW cycles\zack{,} the phase always yields stronger constraints. Moreover, inclusion of an amplitude correction to the waveform impacts the bound on the phase correction as well.  Such effects vary with the PN order of the corrections\zack{,} and the prior information \sout{of} \zack{used in} the analyses. %The constraints on various theories from is presented in Table~\ref{table:ppE}.
 One can obtain a more definitive constraint by combining the ones from the phase and the amplitude. All such constraints in the theories under consideration is presented in Table~\ref{table:ppE}.
 
 
@@ -180,7 +182,7 @@ The rest of the paper is organized as follows. Sec.~\ref{section:ppE} briefly re
 
 \section{Methodology}\label{section:method}
 
-In this section, we explain how we perform our analysis. We first explain the PPE formalism and non-GR waveform template. We then describe the Fisher analysis and how we construct probability distributions of non-GR parameters.
+In this section, we explain how we perform our analysis. We first explain the PPE formalism and \zack{the} non-GR waveform template. We then describe the Fisher analysis and how we construct probability distributions of non-GR parameters.
 
 %------------------------------
 \subsection{PPE Waveform}\label{section:ppE}
@@ -189,7 +191,7 @@ We begin by reviewing the PPE formalism briefly. PPE gravitational waveform for 
 \begin{equation}\label{eq:2a}
 \tilde{h}(f)=\tilde{h}_{\GR}(1+\alpha_{\PPE}\, u^a)e^{i\delta\Psi}\,,
 \end{equation}
-where $\tilde{h}_{\GR}$ is the gravitational waveform in GR. $\alpha_{\PPE}\, u^a$ to the GW amplitude with $u\equiv(\pi \mathcal{M} f)^{1/3}$.  $\mathcal{M}\equiv(m_1m_2)^{3/5}/(m_1+m_2)^{1/5}$ is the chirp mass with component masses $m_1$ and $m_2$ and $f$ is the frequency of the GW. The constant $\alpha_{\PPE}$ controls the overall magnitude of the correction while the index $a$ specifies at which PN order the correction enters. One can write the non-GR phase correction $\delta\Psi$ in a similar manner as that of the amplitude as
+where $\tilde{h}_{\GR}$ is the gravitational waveform in GR. $\alpha_{\PPE}\, u^a$ \zack{is a correction} to the GW amplitude with $u\equiv(\pi \mathcal{M} f)^{1/3}$\zack{,} $\mathcal{M}\equiv(m_1m_2)^{3/5}/(m_1+m_2)^{1/5}$ is the chirp mass with component masses $m_1$ and $m_2$\zack{,} and $f$ is the frequency of the GW. The constant $\alpha_{\PPE}$ controls the overall magnitude of the correction\zack{,} while the index $a$ specifies at which PN order the correction enters. One can write the non-GR phase correction $\delta\Psi$ in a similar manner as that of the amplitude as
 \begin{equation}\label{eq:2b}
 \delta\Psi=\beta_{\PPE} u^b\,.
 \end{equation}
@@ -231,7 +233,7 @@ In fact, the PPE phase and the amplitude parameters may be related as follows. I
 \begin{equation}\label{eq:2w2}
 \alpha_{\PPE} = \frac{8}{15} (a-8)(a-5) \, \beta_{\PPE}\,,
 \end{equation}
-while for the conservative-dominanted case, we obtains
+while for the conservative-\sout{dominanted} \zack{dominated} case, we obtain\sout{s}
 \begin{equation}\label{eq:2w3}
 \alpha_{\PPE} =\frac{8}{15} \frac{(8-a)(5-a)(a^2-4a-6)}{a^2-2a-6} \beta_{\PPE}\,.
 \end{equation}
@@ -314,7 +316,7 @@ and the SNR for a given signal $h(t)$ can be defined as
 \be
 \rho \equiv\sqrt{\left(h|h\right)}\,.
 \ee
-Under the assumptions of a Gaussian and stationary noise, the posterior probability distribution of binary parameters $\theta^a$ takes the following form:
+Under the assumptions of \sout{a} Gaussian and stationary noise, the posterior probability distribution of binary parameters $\theta^a$ takes the following form:
 \be
 P\left(\theta^a|s\right) \propto p^{(0)}\left(\theta^a\right) \text{exp}\left[-\frac{1}{2} \Gamma_{ab} \Delta\theta^a\Delta \theta^b \right]\,,
 \ee
@@ -335,22 +337,22 @@ p^{(0)}\left(\theta^a\right) \text{exp}\left[-\frac{1}{2} \Gamma_{ab} \Delta\the
 We choose the following parameters as our variables for the Fisher analysis:
 \bw
 \ba\label{parameters}
-\theta^a\equiv \lb \ln{\mathcal{M}_z}, \ln{\eta}, \ln{D_L}, \ln{t_0}, \chi, \phi_0, \alpha, \delta, \psi, \theta_{\text{inc}}, \beta_{\PPE}, \alpha_{\PPE} \rb\,.
+\theta^a\equiv \lb \ln{\mathcal{M}_z}, \ln{\eta}, \ln{D_L}, \ln{t_0}, \chi, \phi_0, \alpha, \delta, \psi, \theta_{\text{inc}}, \beta_{\PPE}, \alpha_{\PPE} \rb\,,
 \ea
 \ew
-Here, $\mathcal{M}_z$ is the the redshifted chirp mass and $\chi$ is the effective spin parameter~\footnote{The effective spin parameter is defined as $\chi\equiv\lb m_1 \chi_1+m_2\chi_2\rb /\lb m_1+m_2\rb$, where $\chi_A$ with $A=(1,2)$ is the dimensionless spin of the $A$th body.}. $\alpha, \delta, \psi$, and  $\theta_{\text{inc}}$ are the right ascension, declination, polarization and inclination angles respectively in the detector frame.
+\sout{Here,} \zack{where} $\mathcal{M}_z$ is the the redshifted chirp mass\zack{,} and $\chi$ is the effective spin parameter~\footnote{The effective spin parameter is defined as $\chi\equiv\lb m_1 \chi_1+m_2\chi_2\rb /\lb m_1+m_2\rb$, where $\chi_A$ with $A=(1,2)$ is the dimensionless spin of the $A$th body.}. $\alpha, \delta, \psi$, and  $\theta_{\text{inc}}$ are the right ascension, declination, polarization and inclination angles respectively in the detector frame.
 %All other parameters have the same meanings as in Sec.~\ref{section:method}. 
 %Monte-Carlo
 We perform a Monte Carlo simulation by using each set of the posterior samples released by LIGO~\cite{ligo:sample} for $(\mathcal{M}_z, \eta, D_L, \chi, \alpha, \delta$, $\theta_{\text{inc}})$, while we randomly sample the polarization angle $\psi$ and the coalescence phase $\phi_0$ in $[0,\pi]$ and $[0,2\pi]$ respectively.
 %%prior on spin
-We impose the prior information such that $-1 \leq \chi \leq 1$, $-\pi \leq (\phi_0, \alpha, \psi) \leq \pi$, and $-\pi/2 \leq ( \delta, \theta_{\text{inc}}) \leq \pi/2$.
+We impose \sout{the} prior information such that $-1 \leq \chi \leq 1$, $-\pi \leq (\phi_0, \alpha, \psi) \leq \pi$, and $-\pi/2 \leq ( \delta, \theta_{\text{inc}}) \leq \pi/2$.
 
 %Detectors
-We use the detector sensitivity of Advanced LIGO (aLIGO) O1 run~\cite{LIGOScientific:2018mvr} and we consider the two detectors at Hanford and Livingstone. For simplicity, we assume that the Livingstone noise spectrum is identical to that of the Hanford~\cite{Yunes:2009yz}. For Fisher integration, the minimum frequency is taken to be 20 Hz while the maximum frequency is same as the cutoff frequency above which the signal power is negligible~\cite{Ajith:2009bn}.
+We use the detector sensitivity of Advanced LIGO (aLIGO) O1 run~\cite{LIGOScientific:2018mvr}\zack{,} and we consider the two detectors at Hanford and Livingston\sout{e}. For simplicity, we assume that the Livingston\sout{e} noise spectrum is identical to that of \sout{the} Hanford~\cite{Yunes:2009yz}. For \zack{the} Fisher integration, the minimum frequency is taken to be 20 Hz while the maximum frequency is same as the cutoff frequency above which the signal power is negligible~\cite{Ajith:2009bn}.
 
 
 %The rule of compound probability
-Now we are going to discuss how we achieve the probability distribution of a non-GR parameter from the output of a Fisher analysis with a Monte Carlo simulation. We set the  fiducial value of any non-GR parameter to be zero for our analysis. We perform the following integration numerically to obtain the compound probability density function~\footnote{If the distribution of a random variable $y$ depends on a parameter $x$, and if $x$ is not fixed rather a random variable, the marginal distribution of $y$ is called mixture distribution or compound probability distribution and is given by $P\left(y\right)=\int P\left(y|x\right) P\left(x\right)dx$. The underlying distribution $P\left(x\right)$ is called mixing distribution or latent distribution.~\cite{2016arXiv160204060R}} of any parameter $\xi$~:
+Now we are going to discuss how we \sout{achieve} \zack{compute} the probability distribution of a non-GR parameter from the output of a Fisher analysis with a Monte Carlo simulation. We set the  fiducial value of any non-GR parameter to be zero for our analysis. We perform the following integration numerically to obtain the compound probability density function~\footnote{If the distribution of a random variable $y$ depends on a parameter $x$, and if $x$ is \sout{not fixed rather a random variable} \zack{a random variable, hence not fixed}\zack{I think this is what you mean here? I was confused by the original sentence.}, the marginal distribution of $y$ is called mixture distribution or compound probability distribution and is given by $P\left(y\right)=\int P\left(y|x\right) P\left(x\right)dx$. The underlying distribution $P\left(x\right)$ is called \zack{the} mixing \sout{distribution} or latent distribution.~\cite{2016arXiv160204060R}} of any parameter $\xi$~:
 \be
 \label{eq3:1}
 P\lb\xi\rb=\int P\lb \xi|\sigma_{\xi}\rb P\lb \sigma_{\xi}\rb d\sigma_{\xi}\,,
@@ -360,20 +362,20 @@ where $P\lb\xi\rb$ is the marginal (unconditional) probability density function 
 
 
 %Combining amplitude and phase corrections
-Let us finish this section by explaining how we can utilize both amplitude and phase corrections to derive constraints on some theory. One can include $\alpha_{\PPE}$ and $\beta_{\PPE}$ as variables to the Fisher analysis as in Eq.~\eqref{parameters} and map them to a non-GR parameter of a theory to derive constraints from the phase and amplitude independently. We refer to such constraints as  the ``phase-only'' and ``amplitude-only'' bounds respectively. How can we achieve a single constraint that accommodates both of them? Recall the relations between the PPE parameters in Sec.~\ref{section:ppE}. One can rewrite $\alpha_{\PPE}$ in the waveform in terms of $\beta_{\PPE}$ according to Eqs.~\eqref{eq:2w2} or~\eqref{eq:2w3} and eliminate the former variable from the analysis. The bound derived from $\beta_{\PPE}$ now takes into account non-GR corrections to not only the phase but also the amplitude. We refer to such constraints as the ``phase \& amplitude combined'' bounds
+Let us finish this section by explaining how we can utilize both amplitude and phase corrections to derive constraints on some theory. One can include $\alpha_{\PPE}$ and $\beta_{\PPE}$ as variables to the Fisher analysis as in Eq.~\eqref{parameters} and map them to a non-GR parameter of a theory to derive constraints from the phase and amplitude independently. We refer to such constraints as  the ``phase-only'' and ``amplitude-only'' bounds respectively. How can we achieve a single constraint that accommodates both of them? Recall the relations between the PPE parameters in Sec.~\ref{section:ppE}. One can rewrite $\alpha_{\PPE}$ in the waveform in terms of $\beta_{\PPE}$ according to Eqs.~\eqref{eq:2w2} or~\eqref{eq:2w3} and eliminate the former variable from the analysis. The bound derived from $\beta_{\PPE}$ now takes into account non-GR corrections to not only the phase\zack{,} but also the amplitude. We refer to such constraints as the ``phase \& amplitude combined'' bounds
 \footnote{\st{Alternatively, one can rewrite the PPE corrections in the phase and the amplitude  in terms of non-GR parameters of a theory. Performing Fisher analyses with such parameters as variables lead to similar constraints as the `phase \& amplitude combined'' bounds, although such approach is not theory-agnostic.}}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Results in Example Theories}\label{results}
 
-We now apply our analysis to some example theories. To save computational time for our Monte-Carlo simulations, we use IMRPhenomB waveform. For corrections entering through propagation mechanisms, Ref.~\cite{Yunes:2016jcc} showed that the difference in constraints on PPE parameters between IMRPhenomB and IMRPhenomD waveforms are negligible. In App.~\ref{Appendix}, we perform a similar comparison for generation mechanism corrections using sky-averaged waveforms and show that the former is only suitable for constraining generation mechanisms that enter at negative PN orders. For this reason, we consider below massive gravity, EdGB gravity, scalar-tensor theories and varying-$G$ theories. While in Massive gravity acquires non-GR corrections through propagation mechanisms while others achieve the corrections through generation mechanisms entering at negative PN orders.
+We now apply our analysis to some example theories. To save computational time for our Monte-Carlo simulations, we use IMRPhenomB waveform. For corrections entering through propagation mechanisms, Ref.~\cite{Yunes:2016jcc} showed that the difference in constraints on PPE parameters between IMRPhenomB and IMRPhenomD waveforms are negligible. In App.~\ref{Appendix}, we perform a similar comparison for generation mechanism corrections using sky-averaged waveforms and show that the former is only suitable for constraining generation mechanisms that enter at negative PN orders. For this reason, we consider below massive gravity, EdGB gravity, scalar-tensor theories and varying-$G$ theories. While \sout{in} \sout{M}\zack{m}assive gravity acquires non-GR corrections through propagation mechanisms\zack{,} \sout{while} \zack{the} other\sout{s} \zack{theories} achieve the corrections through generation mechanisms entering at negative PN orders.
 
 
 
 \subsection{Massive Gravity}
 \label{sec:massive}
 %Intro
-The idea of introducing the mass to gravitons is rather old~\cite{Fierz:1939ix} and many attempts have been made to construct a feasible theory that allows to do so~\cite{deRham:2014zqa}.  Such a theory may arise in higher-dimensional setups~\cite{Hinterbichler:2011tt} and has the potential to solve the cosmic acceleration problem~\cite{deRham:2014zqa}. Although gravitons with non-vanishing masses may have additional polarizations as well~\cite{dePaula:2004bc}, we here restrict our attention to the non-GR effects on the tensor modes due to a massive dispersion relation.
+The idea of introducing \sout{the} \zack{a} mass to \zack{the} graviton\sout{s} is rather old~\cite{Fierz:1939ix}\zack{,} and many attempts have been made to construct a feasible theory that allows \zack{one} to do so~\cite{deRham:2014zqa}.  Such a theory may arise in higher-dimensional setups~\cite{Hinterbichler:2011tt} and has the potential to solve the cosmic acceleration problem~\cite{deRham:2014zqa}. Although gravitons with non-vanishing masses may have additional polarizations as well~\cite{dePaula:2004bc}, we here restrict our attention to the non-GR effects on the tensor modes due to a massive dispersion relation.
 
 %such as Fierz-Pauli theory and Lorentz violating massive gravity~\cite{Fierz:1939ix,Rubakov:2008nh,Rubakov:2004eb,Dubovsky:2004sg}.
 
@@ -387,16 +389,16 @@ where
 \be
 D=\frac{z}{H_0\sqrt{\Omega_M+\Omega_{\Lambda}}}\left[1-\frac{z}{4}\left(\frac{3\Omega_M}{\Omega_M+\Omega_{\Lambda}} \right )+\mathcal{O}(z^2)\right]\,.
 \ee
-Here, $\Omega_M$ and $\Omega_\Lambda$ are the energy density of matter and dark energy respectively. $H_0$ is the Hubble constant while $z$ is the redshift of the source. $\lambda_g$ is the Compton wavelength of the graviton that is related to $m_g$ as $\lambda_g\equiv h/\lb m_gc\rb$, where $h$ is the Planck's constant.
+Here, $\Omega_M$ and $\Omega_\Lambda$ are the energy density of matter and dark energy respectively. $H_0$ is the Hubble constant while $z$ is the redshift of the source. $\lambda_g$ is the Compton wavelength of the graviton that is related to $m_g$ as $\lambda_g\equiv h/\lb m_gc\rb$, where $h$ is \sout{the} Planck's constant.
 
 \begin{figure}[htb]
 \includegraphics[width=8.5cm]{graviton.pdf}
-\caption{Cumulative probability distribution of the Compton wavelength of the graviton from GW150914. We show the ones obtained from a Fisher analysis with Monte Carlo simulations (blue solid) and from a Bayesian analysis by the LVC (red solid). Each of the vertical dashed lines corresponds to the lower bound of the distribution of the same color with 90\% confidence. Observe how the two different analyses give similar bounds.}
+\caption{\zc{Is there any reason why the red Bayesian CDF is choppy, and not smooth like the other CDFs?}Cumulative probability distribution of the \zack{graviton} Compton wavelength \sout{of the graviton} from GW150914. We show the ones obtained from a Fisher analysis with Monte Carlo simulations (blue solid) and from a Bayesian analysis by the LVC (red solid). Each of the vertical dashed lines corresponds to the lower bound of the distribution of the same color with 90\% confidence. Observe how the two different analyses give similar bounds.}
 \label{fig:graviton}
 \end{figure}
 
 %Result
-We compute the probability distribution of $\lambda_g$ from GW150914 according to the procedure outlined in Sec.~\ref{section:method} and compare with the one obtained by the LVC~\cite{TheLIGOScientific:2016src} (Fig.~\ref{fig:graviton}). The Fisher analysis with Monte Carlo simulation yields $\lambda_g<1.2\times 10^{13}$ km at 90\% CL which is in a good agreement with the LVC bound of $1.0\times10^{13}$ km. The difference in the two cumulative distributions of $\lambda_g$ presented in Fig.~\ref{fig:graviton} can be attributed to the fact that the LVC used a more accurate Baysian analysis and imposed a uniform prior on the graviton mass.
+We compute the probability distribution of $\lambda_g$ from GW150914 according to the procedure outlined in Sec.~\ref{section:method} and compare with the one obtained by the LVC~\cite{TheLIGOScientific:2016src} (Fig.~\ref{fig:graviton}). The Fisher analysis with Monte Carlo simulation yields $\lambda_g<1.2\times 10^{13}$ km at 90\% CL which is in a good agreement with the LVC bound of $1.0\times10^{13}$ km. The difference in the two cumulative distributions of $\lambda_g$ presented in Fig.~\ref{fig:graviton} can be attributed to the fact that the LVC used a more accurate \sout{Baysian} \zack{Bayesian} analysis and imposed a uniform prior on the graviton mass.
 %assuming a standard \text{$\Lambda$}CDM cosmology.
 The GW bound has recently been updated by combining multiple events~\cite{LIGOScientific:2019fpa}. The new bound is stronger than binary pulsar constraints~\cite{Finn:2001qi,Miao:2019nhf} but slightly weaker than the updated solar system bounds~\cite{Will:2018gku}. The bound is also weaker than the ones from the observations of galactic clusters~\cite{Goldhaber:1974wg}, gravitational lensing~\cite{Choudhury:2002pu}, and the absence of superradiant instability in supermassive black holes~\cite{Brito:2013wya}.
 
@@ -405,7 +407,7 @@ The GW bound has recently been updated by combining multiple events~\cite{LIGOSc
 %%Importance
 EdGB gravity endows one of the simplest high-energy modification to GR~\cite{Moura:2006pz,Pani:2009wy}. Such a theory is motivated from low-energy effective string theories and also arises as a special case of Horndeski gravity~\cite{Zhang:2017unx,Berti:2015itd}. 
 %%Definition
-The EdGB action is given by introducing a quadratic-curvature correction (Gauss-Bonnet invariant) to the GR action that is non-minimally coupled to a scalar field (dilaton) with a coupling constant $\bar{\alpha}_\EDGB$~\cite{Kanti:1995vq}\footnote{We use barred quantities for coupling constants in order to distinguish them from the PPE parameters.}.
+The EdGB action is given by introducing a quadratic-curvature correction (Gauss-Bonnet invariant) to the GR action \sout{that} \zack{which} is non-minimally coupled to a scalar field (dilaton) with a coupling constant $\bar{\alpha}_\EDGB$~\cite{Kanti:1995vq}\footnote{We use barred quantities for coupling constants in order to distinguish them from the PPE parameters.}.
 
 %ppE parameters
 In EdGB gravity, BHs acquire scalar monopole charges which may generate scalar dipole radiation if they form binaries~\cite{Yagi:2011xp,Sotiriou:2014pfa,Berti:2018cxi,Prabhu:2018aun}. Such radiation leads to an earlier coalescence of BH binaries compared to that of GR and modifies the gravitational waveform with the PPE parameters given by~\cite{Yunes:2016jcc,Yagi:2011xp}
@@ -437,9 +439,8 @@ We now derive constraints on EdGB gravity from GW150914 and GW151226. First we e
 
 
 %Results
-Figure~\ref{fig:pdf-edgb} presents cumulative probability distributions of $\bar{\alpha}^2_{\EDGB}$\footnote{We show the distribution of $\bar{\alpha}^2_{\EDGB}$ instead of $\sqrt{\bar{\alpha}_{\EDGB}}$ as it is the former that directly enters in the waveform.} for GW150914 for three different cases with vertical lines showing the 90\% CL of the corresponding distribution. We found the 90\% CL constraints on  $\sqrt{\bar{\alpha}_{\EDGB}}$ from each of the phase and amplitude corrections as 50.5 km and 76.3 km respectively. Notice that these bounds have the same order of magnitude. On the other hand, combining the amplitude and phase corrections leads to an upper bound of 51.5 km, which is weaker than the  phase-only constraint by 2\%.
-Similar analyses with GW151226 yield 4.32 km and 10.5 km respectively from the phase and amplitude corrections, while combining the two only changes the result from the phase-only case by 0.01\%. These bounds are consistent with those in a recent paper~\cite{Nair:2019iur} while Ref.~\cite{Yamada:2019zrb} found even stronger bounds by combining multiple GW events. These GW bounds are comparable to the one obtained from low-mass X-ray binaries~\cite{Yagi:2012gp}. Although GW150914 leads to weaker constraints on EdGB gravity compared to GW151226, the effect of amplitude correction is more manifest for the former event. This is because GW150914 has a smaller number of GW cycles and thus the amplitude contribution becomes relatively higher than GW151226.
-
+Figure~\ref{fig:pdf-edgb} presents cumulative probability distributions of $\bar{\alpha}^2_{\EDGB}$\footnote{We show the distribution of $\bar{\alpha}^2_{\EDGB}$ instead of $\sqrt{\bar{\alpha}_{\EDGB}}$ as it is the former that directly enters in the waveform.} for GW150914 for three different cases with vertical lines \sout{showing} \zack{representing} the 90\% CL of the corresponding distribution. We found the 90\% CL constraints on  $\sqrt{\bar{\alpha}_{\EDGB}}$ from each of the phase and amplitude corrections as 50.5 km and 76.3 km respectively. Notice that these bounds have the same order of magnitude. On the other hand, combining the amplitude and phase corrections leads to an upper bound of 51.5 km, which is weaker than the  phase-only constraint by 2\%.
+Similar analyses with GW151226 yield 4.32 km and 10.5 km respectively from the phase and amplitude corrections, while combining the two only changes the result from the phase-only case by 0.01\%. These bounds are consistent with those in a recent paper~\cite{Nair:2019iur} while Ref.~\cite{Yamada:2019zrb} found even stronger bounds by combining multiple GW events. These GW bounds are comparable to the one obtained from low-mass X-ray binaries~\cite{Yagi:2012gp}. Although GW150914 leads to weaker constraints on EdGB gravity compared to GW151226, the effect of amplitude correction is more manifest for the former event. This is because GW150914 has a smaller number of GW cycles\zack{,} and thus the amplitude contribution becomes relatively higher than GW151226.
 
 %Why does the inclusion of the amplitude correction deteriorates the bound slightly from the case where one only includes the phase correction? This may sound counter-intuitive as one might think adding more EdGB corrections should improve the bound. Indeed, if one neglects correlations among $\bar \alpha^2_\EDGB$ and other binary parameters, addition of the amplitude correction improves the bound. However, such amplitude correction introduces a strong correlation between $\bar \alpha^2_\EDGB$ and the luminosity distance. As a result, the bound derived by including both the amplitude and phase corrections becomes weaker than that from the latter only.
 
@@ -448,7 +449,7 @@ Similar analyses with GW151226 yield 4.32 km and 10.5 km respectively from the p
 Scalar-Tensor theories of gravity emerge from the dimensional reduction of higher-dimensional theories such as the Kaluza-Klein theory~\cite{Fujii:2003pa,Overduin:1998pn} and string theories~\cite{polchinski1,polchinski2}. In addition to the spacetime curvature, scalar fields mediate an additional force which is introduced through non-minimal couplings of scalar fields and gravity~\cite{Berti:2015itd,Chiba:1997ms,PhysRevD.6.2077}. Such theories can explain the accelerated expansion of the universe~\cite{Brax:2004qh,PhysRevD.73.083510,PhysRevD.62.123510,PhysRevD.66.023525,Schimd:2004nq}, inflation~\cite{Burd:1991ns,Barrow:1990nv,Clifton:2011jh}, primordial nucleosynthesis~\cite{Coc:2006rt,Damour:1998ae,Larena:2005tu,Torres:1995je}, and the structure formation~\cite{Brax:2005ew}. 
 
 %PPE parameters
-Certain scalar-tensor theories predict scalarization of NSs~\cite{PhysRevLett.70.2220,Barausse:2012da}, which can also happen for BHs if the scalar field evolves with time cosmologically~\cite{Jacobson:1999vr,Horbatsch:2011ye}. Compact binaries formed by such objects emit dipole radiation which modifies the GW phase with~\cite{Freire:2012mg,Wex:2014nva,Tahura:2018zuq}
+Certain scalar-tensor theories predict scalarization of NSs~\cite{PhysRevLett.70.2220,Barausse:2012da}, which can also happen \st{for} \zack{to} BHs if the scalar field evolves with time cosmologically~\cite{Jacobson:1999vr,Horbatsch:2011ye}. Compact binaries formed by such objects emit dipole radiation which modifies the GW phase with~\cite{Freire:2012mg,Wex:2014nva,Tahura:2018zuq}
 \be\label{eq:betaST}
 \beta_{\ST}=-\frac{5}{7168}\eta ^{2/5}(\alpha_1-\alpha_2)^2
 \ee
@@ -463,12 +464,12 @@ with $a=-2$. Here $\alpha_A$ represents the scalar charge of the $A$th binary co
 where $\dot{\phi}$ is the rate of change of $\phi$ with time.
 
 %Results
-One can use Eqs.~\eqref{eq:betaST}--\eqref{eq:alpha_A} and the numerical anlaysis described in Sec.~\ref{data} to find constraints on $\dot{\phi}$ as long as the small coupling approximation $m_A\dot{\phi}<1$ is satisfied. In this regard, only 11.7\% (13.5\%) of the samples of GW150914 satisfies such approximation with 90\% confidence level for the phase (combined) correction, while all of the samples fail to do so for the amplitude correction. Hence GW150914 cannot place any meaningful bound on scalar-tensor theories considered here. On the other hand, 90.4\% of the samples from GW151226 meets the small coupling criterion for the phase-only and combined analyses, while the fraction is only 25\% for the amplitude correction. Thus, we derive reliable constraints from GW151226 with the phase-only and combined analyses and both lead to $\dot{\phi}<1.1\times10^4$/sec\footnote{A previous analysis with the sky-averaged waveform in Ref.~\cite{Yunes:2016jcc} could not place a reliable bound on scalar-tensor theories. Since the posterior distributions of the GW events were not available then, one could not determine how well those events satisfied the small coupling approximation from a simple Fisher analysis.}. This constraint is 10 orders of magnitude weaker than the current most stringent bound obtained from the orbital decay rate of quasar OJ287~\cite{Horbatsch:2011ye}, though this is the first bound obtained in the strong/dynamical regime.
+One can use Eqs.~\eqref{eq:betaST}--\eqref{eq:alpha_A} and the numerical anlaysis described in Sec.~\ref{data} to find constraints on $\dot{\phi}$ as long as the small coupling approximation $m_A\dot{\phi}<1$ is satisfied. In this regard, only 11.7\% (13.5\%) of the samples of GW150914 satisfies such approximation with 90\% confidence level for the phase (combined) correction, while all of the samples fail to do so for the amplitude correction. Hence GW150914 cannot place any meaningful bound on scalar-tensor theories considered here. On the other hand, 90.4\% of the samples from GW151226 meets the small coupling criterion for the phase-only and combined analyses, while the fraction is only 25\% for the amplitude correction. Thus, we derive reliable constraints from GW151226 with the phase-only and combined analyses\zack{,} \sout{and} \zack{with} both lead\zack{ing} to $\dot{\phi}<1.1\times10^4$/sec\footnote{A previous analysis with the sky-averaged waveform in Ref.~\cite{Yunes:2016jcc} could not place a reliable bound on scalar-tensor theories. Since the posterior distributions of the GW events were not available then, one could not determine how well those events satisfied the small coupling approximation from a simple Fisher analysis.}. This constraint is 10 orders of magnitude weaker than the current most stringent bound obtained from the orbital decay rate of quasar OJ287~\cite{Horbatsch:2011ye}, though this is the first bound obtained in the strong/dynamical regime.
 
 
 \subsection{Varying- $G$ Theories}\label{vaying-G}
 %Introduction
-Many metric theories of gravity that violate strong equivalence principle~\cite{DiCasola:2013iia,Will:2014kxa,0264-9381-7-10-007} predicts time variation in the gravitational coupling parameter $G$~\cite{uzan:2010pm}. Scalar-tensor theories are examples where $G$ varies as a function of the asymptotic scalar field~\cite{Will2006}, which may vary over time. Any such time-dependence of $G$ leads to a variation in the effective masses of compact bodies, which in turn makes them experience anomalous cosmic acceleration~\cite{PhysRevLett.65.953}. Such phenomena alter the gravitational waveform through the modifications of the binary orbital evolution and the energy balance law~\cite{Tahura:2018zuq}.
+Many metric theories of gravity that violate \zack{the} strong equivalence principle~\cite{DiCasola:2013iia,Will:2014kxa,0264-9381-7-10-007} predict\sout{s} time variation in the gravitational coupling parameter $G$~\cite{uzan:2010pm}. Scalar-tensor theories are examples where $G$ varies as a function of the asymptotic scalar field~\cite{Will2006}, which may vary over time. Any such time-dependence of $G$ leads to a variation in the effective masses of compact bodies, which in turn makes them experience anomalous cosmic acceleration~\cite{PhysRevLett.65.953}. Such phenomena alter the gravitational waveform through the modifications of the binary orbital evolution and the energy balance law~\cite{Tahura:2018zuq}.
 
 %PPE parameters
 We now show the PPE modifications due to a time variation in the gravitational constant. In fact, the amount of gravitational coupling that appear in different sectors of a  gravitational theory may not be unique. Einstein-\AE ther theory~\cite{Yagi:2013ava} and Brans-Dicke theory with a cosmologically evolving scalar field~\cite{Will2006} are examples of such theories in which various gravitational constants exist. Reference~\cite{Tahura:2018zuq} studied a generic case with two distinct gravitational constants in Kepler's law (conservative sector) and GW luminosity (dissipative sector). Here we place constraints on the special case where these two constants coincide with each other. Let the masses and the Newton's constant vary according to the following equations:
@@ -489,7 +490,7 @@ with $b=-13$, and
  \alpha_{\dot{G}}&=&\frac{5}{512}\eta_0^{3/5}\dot{G}_{C,0}\left[-7m_0+(s_{1,0}+s_{2,0}-\delta_\Gdot)m_0 \right. \nonumber \\
  && \left.+13 (m_{1,0}s_{1,0}+m_{2,0}s_{2,0})\right]\, 
  \end{eqnarray}
-with $a=-8$ respectively. Here $s_A$ is the sensitivity of the $A$th binary component.
+with $a=-8$ respectively. Here $s_A$ is the sensitivity of the $A$th binary component\zc{Maybe give a reference or footnote on how to compute $s_A$?}.
  
 %Results
 Employing Eqs.~\eqref{eq:beta_gdot} and~\eqref{eq:alpha_gdot}, GW150914 (GW151226) imposes constraints on $|\dot{G_0}/G_0|$ from the phase-only and amplitude-only analyses as $7.30\times10^6\, \mathrm{yr}^{-1}$ ($2.24\times10^4\, \mathrm{yr}^{-1}$) and $1.37\times10^8\, \mathrm{yr}^{-1}$ ($3.82\times10^5\, \mathrm{yr}^{-1}$) respectively, with the combined analyses yielding slight improvements over the phase-only results.
@@ -500,14 +501,14 @@ However, future space-borne detectors such as LISA~\cite{Seoane:2013qna,Audley:2
 
 \section{Conclusion and Discussion}\label{conclusion}
 %What we did
-We derived constraints on scalar-tensor, EdGB and varying-$G$ theories from GW150914 and GW151226. To do so we performed Fisher analyses with Monte-Carlo simulations using the PhenomB waveform.
+\zack{In this analysis, we have} \sout{We} derived constraints on scalar-tensor, EdGB and varying-$G$ theories from GW150914 and GW151226. To do so\zack{,} we performed Fisher analyses with Monte-Carlo simulations using the PhenomB waveform.
 %We focused on theories where the leading correction enters at a negative PN order.
 In particular, we derived reliable constraints on the time-evolution of the scalar field in scalar-tensor theory from GW observations for the first time. 
 %massive gravity?
 
 
 %Amplitude correction
-We explored how amplitude corrections contribute to the constraints on such theories. We derived three set of bounds on each theory: phase-only, amplitude-only, and combined. We found that for binaries with large masses, such as GW150914 where we have less number of cycles, the bounds from the amplitude and phase can be comparable to each other. On the other hand, combined analyses yield constraints that differ from the phase-only case at most by 3.6\% for the theories under consideration. Hence at least in theories where the leading corrections enter at negative PN orders, the phase-only corrections can produce sufficiently accurate constraints.
+We explored how amplitude corrections contribute to the constraints on such theories. We derived three set\zack{s} of bounds on each theory: phase-only, amplitude-only, and \zack{from both phase and amplitude} combined. We found that for binaries with large masses\sout{,} such as GW150914\zack{,} where we have less number of cycles, the bounds from the amplitude and phase can be comparable to each other. On the other hand, combined analyses yield constraints that differ from the phase-only case at most by 3.6\% for the theories under consideration. Hence\zack{,} at least in theories where the leading corrections enter at negative PN orders, the phase-only corrections can produce sufficiently accurate constraints.
 \begin{figure}[htb]
 \includegraphics[width=8.5cm]{combinedvsphase.pdf}
 \caption{Comparision of combined and phase-only analyses at different PN orders from GW150914 with a sky-averaged phenomB waveform. We show $\delta_{\beta}=\lb\beta_{\text{comb}}-\beta_{\text{phase}}\rb/\beta_{\text{phase}}$, where $\beta_{\text{phase}}$ and $\beta_{\text{comb}}$ are $\beta_{\PPE}$ from phase-only and combined analyses respectively. }
@@ -529,22 +530,22 @@ K.Y. would like to also acknowledge support by the COST Action GWverse CA16104 a
 \section{Comparison of Bounds on PPE parameters with PhenomB and PhenomD Waveforms}\label{Appendix}
 
 %Introduction
-Despite the fact that the PhenomD waveform produces more accurate results, we utilized the PhenomB one in this paper throughout since the latter is simpler and saves computational time when performing Monte Carlo simulations. In this appendix, we compare constraints on the PPE parameter $\alpha_\PPE$ from both waveforms to justify our method. 
+Despite the fact that the PhenomD waveform produces more accurate results, we utilized the PhenomB one in this paper throughout \sout{since} \zack{because} the latter is simpler and saves computational time when performing Monte Carlo simulations. In this appendix, we compare constraints on the PPE parameter $\alpha_\PPE$ from both waveforms to justify our method. 
  
  %Comparison of waveforms
-Let us discuss the distinct features of the two waveforms first. Both PhenomB and PhenomD waveforms are spin-aligned (non-precessing) frequency-domain phenomenological models of gravitational waveforms~\cite{Ajith:2009bn,Khan:2015jqa}. The PhenomB waveform is calibrated for mass ratios up to $m_1/m_2 = 4$ and spin components of $\chi_i\in[-0.85,0.85]$ are unified into a single effective spin. On the other hand, the PhenomD waveform covers a larger region of the parameter space with a mass ratio of 18 and spins of $\chi_i\in[-0.95,0.95]$ with both spins introduced independently. The waveform  contains higher order PN terms in the inspiral and further introduces an intermediate phase connecting the inspiral and merger-ringdown portions,
+Let us discuss the distinct features of the two waveforms first. Both PhenomB and PhenomD waveforms are spin-aligned (non-precessing) frequency-domain phenomenological models of gravitational waveforms~\cite{Ajith:2009bn,Khan:2015jqa}. The PhenomB waveform is calibrated for mass ratios up to $m_1/m_2 = 4$ and spin components of $\chi_i\in[-0.85,0.85]$ are unified into a single effective spin. On the other hand, the PhenomD waveform covers a larger region of the parameter space with \sout{a} mass ratio\zack{s up to} \sout{of} 18 and spins of $\chi_i\in[-0.95,0.95]$\zack{,} with both spins introduced independently. The waveform contains higher order PN terms in the inspiral and further introduces an intermediate phase connecting the inspiral and merger-ringdown portions,
 %Moreover, the PhenomD amplitude and phase are continuous over the inspiral, merger and  ringdown stages, while in PhenomB the continuity is ensured only in the amplitude. 
 which make such waveforms more reliable than the PhenomB ones.
 
 \begin{figure}[htb]
 \includegraphics[width=8.5cm]{phenomBvsphenomD.pdf}
-\caption{Comparison of 90\% confidence constraints on $\alpha_{\PPE}$ from GW1501914 with PhenomB and PhenomD waveforms for generation effects. }
+\caption{Comparison of 90\% confidence constraints on $\alpha_{\PPE}$ from GW1501914 with \zack{the} PhenomB and PhenomD waveforms for generation effects. }
 \label{fig:phenomBvsD}
 \end{figure}
 
 \begin{figure}[htb]
 \includegraphics[width=8.5cm]{phenomBvsphenomD-insp.pdf}
-\caption{Similar to Fig.~\ref{fig:phenomBvsD} but with inspirals only. The Fisher analyses are truncated at 104Hz which is the transition frequency between inspiral and merger of the PhenomB waveform, and we use the inspiral portion of the PhenomD waveform all the way up to this cutoff frequency.}
+\caption{Similar to Fig.~\ref{fig:phenomBvsD} but with inspiral\sout{s} \zack{signals} only. The Fisher analyses are truncated at 104Hz \sout{which is} \zack{corresponding to} the transition frequency between \zack{the} inspiral and merger \zack{portions} of the PhenomB waveform, and we use the inspiral portion of the PhenomD waveform all the way up to this cutoff frequency.}
 \label{fig:phenomBvsD-insp}
 \end{figure}
 
@@ -555,7 +556,6 @@ On the other hand, truncating the Fisher analyses at the end of the inspiral pha
 
 %Conclusion
 The example theories considered in this paper acquire leading non-GR corrections either from propagation effects or from the generation effects entering in negative PN orders. A comparison between the PhenomB and PhenomD results for constraining $\beta_{\PPE}$ presented in Ref~\cite{Yunes:2016jcc} reveals consistency on constraining modifications to propagation mechanisms at both positive and negative PN orders, while the two waveforms show agreement only at negative PN orders for constraining modifications to generation mechanisms. Together with the results on amplitude corrections discussed above confirms that the results of this paper should not change significantly if one utilizes the PhenomD waveform instead. On the other hand, for constraining theories like dynamical Chern-Simons or noncommutative gravity where the leading correction enters at a positive PN order, the PhenomB waveform is not expected to produce reliable results.
-
 
 
 %------------------------------------------------------- 
